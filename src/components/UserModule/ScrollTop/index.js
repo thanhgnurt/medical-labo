@@ -1,9 +1,9 @@
 import React from "react";
 import Zoom from "@material-ui/core/Zoom";
 import Fab from "@material-ui/core/Fab";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import { withStyles } from "@material-ui/core";
-import styles from './styles';
+import styles from "./styles";
+import ArrowUpwardOutlinedIcon from '@material-ui/icons/ArrowUpwardOutlined';
 
 function ScrollTop(props) {
   const { trigger, classes } = props;
@@ -19,8 +19,8 @@ function ScrollTop(props) {
   return (
     <Zoom in={trigger}>
       <div onClick={handleClick} role="presentation" className={classes.root}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
+        <Fab className={classes.backToTop} size="small" aria-label="scroll back to top">
+          <ArrowUpwardOutlinedIcon />
         </Fab>
       </div>
     </Zoom>

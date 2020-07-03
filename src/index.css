@@ -1,0 +1,10 @@
+button:focus{
+    outline: none ;
+}
+
+#demoCss {
+    color: rgb(41, 40, 40);
+    text-transform: lowercase;
+
+}
+

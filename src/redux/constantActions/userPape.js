@@ -1,0 +1,2 @@
+export const MOBILE_MENU_TOGGLE = "MOBILE_MENU_TOGGLE";
+export const CHANGE_THEME = "CHANGE_THEME";

@@ -1,0 +1,31 @@
+a {
+  text-decoration: none !important;
+}
+
+a.selected {
+  color: rgb(235, 74, 16);
+}
+
+@media screen and (max-width: 700px) {
+  .cartMedical {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .buttonLogin {
+    display: block !important;
+    height: 30px !important;
+    margin-top: 10px !important;
+  }
+}
+@media screen and (min-width: 700px) {
+  .buttonLogin {
+    display: none !important;
+  }
+}
+
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.2) ,
+     0px 1px 10px 0px rgba(0, 0, 0, 0.2) !important;
+}
