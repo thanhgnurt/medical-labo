@@ -6,7 +6,9 @@ const styles = (theme) => ({
   fullList: {
     width: "100%",
     height: "100%",
-    backgroundColor : theme.palette.primary.main
+    backgroundColor : theme.palette.primary.backgroundPaper,
+    position : "fixed",
+    zIndex : 1000
     
   },
   drawerPaper: {

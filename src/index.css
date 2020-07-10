@@ -3,8 +3,12 @@ button:focus{
 }
 
 #demoCss {
-    color: rgb(41, 40, 40);
+    color: rgba(255, 255, 255, 0.445);
     text-transform: lowercase;
+    background-size: cover;
+   background-repeat: none;
+   background-position: center;
+   border-bottom: 1px solid white !important;
 
 }
 

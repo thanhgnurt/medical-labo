@@ -12,7 +12,6 @@ import Container from "@material-ui/core/Container";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    marginTop: 40,
   },
   button: {
     marginTop: theme.spacing(1),
@@ -27,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
   steps: {},
   tittle: {
     textAlign: "center",
-	 padding:20,
-	 color: theme.palette.secondary.main
+    padding: 20,
+    color: theme.palette.secondary.main,
+    background: "linear-gradient(to top,rgb(243, 242, 242,0.5),transparent 100%)"
   },
 }));
 
@@ -74,7 +74,7 @@ export default function RegistrationTutorial() {
     <Container maxWidth="md" className={classes.root}>
       <Paper>
         <div className={classes.tittle}>
-          <h4 >Các bước xét nghiệm máu tại nhà</h4>
+          <h4>Các bước xét nghiệm máu tại nhà</h4>
         </div>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
@@ -112,7 +112,9 @@ export default function RegistrationTutorial() {
         </Stepper>
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
-            <Typography>Click để xem lại các bước làm xét nghiệm tại nhà</Typography>
+            <Typography>
+              Click để xem lại các bước làm xét nghiệm tại nhà
+            </Typography>
             <Button
               variant="outlined"
               color="secondary"

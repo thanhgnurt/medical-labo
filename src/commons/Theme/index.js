@@ -10,11 +10,13 @@ export const themeLight = createMuiTheme({
       cancel: COLORS.GRAY,
       backToTop : COLORS.BLUE_O,
       backgroundPaper : COLORS.LIGHT_O,
-      backgroundGrounpTestItem : COLORS.LIGHT_0
+      backgroundGrounpTestItem : COLORS.LIGHT_0,
+      backgroundDialog :COLORS.BLUE,
+      backgroundLine : COLORS.LIGHT_LINE,
       
     },
     secondary: {
-      main: COLORS.BLUE_O,
+      main: COLORS.YELLOW_O,
       extra: COLORS.BLUE,
       boxShadow : COLORS.YELLOW_H,
       textColor: COLORS.LIGHT,
@@ -45,7 +47,10 @@ export const themeDark = createMuiTheme({
       cancel: COLORS.GRAY,
       backToTop : COLORS.DARK_O,
       backgroundPaper : COLORS.DARK_O,
-      backgroundGrounpTestItem : COLORS.DARK_LIGHT
+      backgroundGrounpTestItem : COLORS.DARK_LIGHT,
+      backgroundDialog : COLORS.DARK_8,
+      backgroundLine : COLORS.DARK_LINE,
+      
     },
     secondary: {
       main: COLORS.ORANGE_O,

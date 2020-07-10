@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import AuthExample from './TrainingReactRoute'
 
 export default function AdminPageContainer() {
     return (
@@ -6,13 +7,14 @@ export default function AdminPageContainer() {
             <h2>Admin page</h2>
             <br></br>
             <br></br>
+            <AuthExample/>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            nguyen van a
+          
         </div>
     )
 }

@@ -1,7 +1,7 @@
 const styles = (theme)=>({
-    // dialog : {
-    //     backgroundColor : theme.background.login.main
-    // },
+    dialog: {
+        backgroundImage :"url(./images/bg_1.jpg)"
+    },
     dialogActions : {
         marginRight : 16
     },

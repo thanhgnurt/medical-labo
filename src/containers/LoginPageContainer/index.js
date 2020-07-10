@@ -8,30 +8,38 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
 import styles from "./styles";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Grid } from "@material-ui/core";
 import * as loginSignupActions from "./../../redux/actions/loginSignup";
-import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function LoginPageContainer(props) {
-  const { classes, loginOpen } = props;
+  let history = useHistory();
+  const { classes } = props;
+
   const handleClose = () => {
-    const { actLoginToggle } = props.loginSignCreators;
-    actLoginToggle();
+    // const { actLoginToggle } = props.loginSignCreators;
+    // actLoginToggle();
+    if (history) {
+      history.push("/");
+    }
   };
 
   const handleSignupOpen = () => {
-    const { actSignupToggle } = props.loginSignCreators;
-    actSignupToggle();
+    // const { actSignupToggle } = props.loginSignCreators;
+    // actSignupToggle();
+    if (history) {
+      history.push("/signup");
+    }
   };
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
   return (
-    <div className={classes.login}>
+    <Grid container className={classes.login}>
       <Dialog
-        open={loginOpen}
-        onClose={handleClose}
+        open={true}
+        // onClose={handleClose}
         aria-labelledby="form-dialog-title"
         className={classes.dialog}
       >
@@ -41,14 +49,14 @@ function LoginPageContainer(props) {
           </DialogTitle>
           <DialogContent>
             <TextField
-              margin="dense"
+              margin="normal"
               id="username"
               label="Tên Đăng Nhập / SĐT"
               type="text"
               fullWidth
             />
             <TextField
-              margin="dense"
+              margin="normal"
               id="password"
               label="Mật Khẩu"
               type="password"
@@ -56,32 +64,42 @@ function LoginPageContainer(props) {
             />
           </DialogContent>
           <DialogActions className={classes.dialogActions}>
-            <Button size="small" variant="contained" onClick={handleClose} color="primary">
+            <Button
+              size="small"
+              variant="contained"
+              onClick={handleClose}
+              color="secondary"
+            >
               Hủy Bỏ
             </Button>
-            <Button size="small" variant="contained" type="submit" color="secondary">
+            <Button
+              size="small"
+              variant="contained"
+              type="submit"
+              color="primary"
+            >
               Đăng Nhập
             </Button>
           </DialogActions>
 
           <DialogContent id="form-dialog-title" className={classes.signup}>
             Bạn chưa có tài khoản ?
-            <NavLink to="/signup" onClick={handleSignupOpen}>
-              <Button color="secondary">Đăng Ký</Button>
-            </NavLink>
+            <Button color="primary" onClick={handleSignupOpen}>
+              Đăng Ký
+            </Button>
           </DialogContent>
         </form>
       </Dialog>
-    </div>
+    </Grid>
   );
 }
-const mapStateToProps = (state) => ({
-  loginOpen: state.loginSignup.loginOpen,
-});
+// const mapStateToProps = (state) => ({
+//   loginOpen: state.loginSignup.loginOpen,
+// });
 const mapDispatchToProps = (dispatch) => ({
   loginSignCreators: bindActionCreators(loginSignupActions, dispatch),
 });
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
+const withConnect = connect(null, mapDispatchToProps);
 
 export default compose(withStyles(styles), withConnect)(LoginPageContainer);

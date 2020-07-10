@@ -2,6 +2,7 @@ import * as actionTypes from "./../constantActions/test";
 
 const initialState = {
   listGroupTest: [],
+  paperSelect : 1
 };
 
 const myReducer = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const myReducer = (state = initialState, action) => {
         ...state,
         listGroupTest: [],
       };
+    case actionTypes.SELECT_PAPER_TEST:
+      return {
+        ...state,
+        paperSelect : action.paper
+      }
 
     default:
       return { ...state };

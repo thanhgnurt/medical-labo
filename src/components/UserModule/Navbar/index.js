@@ -25,6 +25,10 @@ import CloseIcon from "@material-ui/icons/Close";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import MenuDesktops from "./../MenuDesktops";
 import * as changeThemeActions from "./../../../redux/actions/userPape";
+import {useHistory} from 'react-router-dom';
+import ControlTheme from '../SomeSmallFeature/Switch';
+
+
 
 Navbar.propTypes = {
   window: PropTypes.func,
@@ -32,6 +36,7 @@ Navbar.propTypes = {
 };
 
 function Navbar(props) {
+  let history = useHistory()
   const { window, classes, mobileMenu } = props;
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
@@ -40,12 +45,11 @@ function Navbar(props) {
   });
 
   const handleLogin = (props, path) => {
-    const { history } = props;
     if (history) {
       history.push(path);
     }
-    const { actLoginToggle } = props.loginActionCreators;
-    actLoginToggle(true);
+    // const { actLoginToggle } = props.loginActionCreators;
+    // actLoginToggle(true);
   };
 
   const handleChangeTheme = () => {
@@ -65,7 +69,7 @@ function Navbar(props) {
               justify="space-between"
               alignItems="center"
             >
-              <Grid item>
+              <Grid item className={classes.logo}>
                 <IconButton
                   edge="start"
                   className={classes.menuButton}
@@ -75,6 +79,7 @@ function Navbar(props) {
                 >
                   <AcUnitIcon />
                 </IconButton>
+                <ControlTheme/>
               </Grid>
               <Grid item>
                 <div className={classes.menu_list}>

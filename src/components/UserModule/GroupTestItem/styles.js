@@ -1,6 +1,6 @@
 const styles = theme =>({
     root: {
-        maxWidth: 345,
+        // maxWidth: 270,
         // backgroundColor: theme.palette.primary.backgroundGrounpTestItem,
         // color: theme.palette.primary.textColor,
       },
@@ -33,6 +33,7 @@ const styles = theme =>({
         "&:hover": {
           backgroundColor: theme.palette.primary.hoverColor,
           boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,
+          color : theme.palette.primary.textColor
         },
       },
       descreption: {

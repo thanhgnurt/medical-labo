@@ -2,10 +2,9 @@
 const styles = (theme) => ({
   root: {
     position: "fixed",
-   
     bottom: theme.spacing(2),
     right: theme.spacing(2),
-    zIndex : 9999,
+    zIndex : 999,
   },
   backToTop : {
     backgroundColor : theme.palette.primary.backToTop,
@@ -15,7 +14,9 @@ const styles = (theme) => ({
       boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,
     },
   },
-  
+  defaultAppBar: {
+
+  },
  
   appBarQueryScroll: {
   
@@ -55,6 +56,10 @@ const styles = (theme) => ({
   sectionMobile: {
  
   },
+
+  logo :{
+    
+  }
 
 
  

@@ -77,5 +77,9 @@ const styles = (theme) => ({
     },
     justifyContent: "flex-end",
   },
+  logo :{
+    display : "flex"
+  },
+  
 });
 export default styles;

@@ -47,3 +47,6 @@ img {
   color: rgb(255, 5, 5) !important;
  
 }
+:focus {
+  outline: none;
+}

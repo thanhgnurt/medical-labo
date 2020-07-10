@@ -8,12 +8,12 @@ import MenuLaboratorys from "../MenuLaboratorys";
 import styles from "./styles";
 
 function ListGroupTest(props) {
-  const { listGroupTest, classes } = props;
-  const showGroupTest = (groupTests) => {
-    if (groupTests.length > 0) {
-      return groupTests.map((groupTest, index) => {
+  const { divideGroup, classes, paperSelect } = props;
+  const showGroupTest = (divideGroup) => {
+    if (divideGroup.length > 0) {
+      return divideGroup[paperSelect-1].map((groupTest, index) => {
         return (
-          <Grid item key={index}>
+          <Grid xs={12} md={4} sm={6} item key={index}>
             <GroupTestItem groupTest={groupTest} />
           </Grid>
         );
@@ -25,11 +25,11 @@ function ListGroupTest(props) {
     <div className={classes.header_paper}>
       <React.Fragment>
         <CssBaseline />
-        <Container maxWidth="lg">
+        <Container maxWidth="md">
           <div className={classes.root}>
             <MenuLaboratorys />
-            <Grid container spacing={3} justify="center" direction="row">
-              {showGroupTest(listGroupTest)}
+            <Grid container spacing={3} direction="row">
+              {showGroupTest(divideGroup)}
             </Grid>
           </div>
         </Container>

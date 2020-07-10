@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1),
     },
-    padding : '20px 0'
+    padding: "20px 0",
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
@@ -20,27 +20,29 @@ export default function MenuLaboratorys() {
 
   return (
     <div className={classes.root}>
-      <Fab variant="extended">
+      <Fab variant="extended" color="secondary">
         <i className="fas fa-flask mr-2"></i>
-        Sinh Hóa
-      </Fab>
-      <Fab variant="extended">
-        <i className="fas fa-dna mr-2"></i>
+        Sinh Hóa -<i className="fas fa-dna mr-2"></i>
         Miễn Dịch
       </Fab>
-      <Fab variant="extended">
-        <i className="fas fa-vial mr-2"></i>
-        Huyết Học
-      </Fab>
-      <Fab variant="extended">
-        <i className="fas fa-virus mr-2"></i>
+      {/* <Fab variant="extended">
+        <i className="fas fa-dna mr-2"></i>
+        Miễn Dịch
+      </Fab> */}
+      <Fab variant="extended" color="secondary">
+        <i className="fas fa-vial mx-2"></i>
+        Huyết Học -<i className="fas fa-virus mx-2"></i>
         Vi Sinh
       </Fab>
-      <Fab variant="extended">
+      {/* <Fab variant="extended">
+        <i className="fas fa-virus mr-2"></i>
+        Vi Sinh
+      </Fab> */}
+      {/* <Fab variant="extended">
         <i className="fas fa-bacon mr-2"></i>
         Ký Sinh Trùng
-      </Fab>
-      <Fab variant="extended">
+      </Fab> */}
+      <Fab variant="extended" color="secondary">
         <AllInclusiveOutlinedIcon className={classes.extendedIcon} />
         Tất Cả
       </Fab>

@@ -2,7 +2,6 @@ import React from "react";
 import NavBar from "./Navbar";
 import MenuMobile from "./MenuMobiles";
 import Carousel from "./Carousel";
-import ListGroupTest from "./ListGroupTest";
 import { withStyles } from "@material-ui/core";
 import styles from "./styles";
 

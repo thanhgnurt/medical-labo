@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
   loginSignup,
   userPape,
   theme,
-  ui
+  ui,
+
 });
 export default rootReducer;

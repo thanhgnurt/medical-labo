@@ -9,10 +9,12 @@ export const fetchListGroupTestRequest = () => {
     listGroupTestApis
       .getListGroupTest()
       .then((data) => {
+        setTimeout( ()=>{dispatch(closeLoading())},500)
         dispatch(fetchListGroupTestSuccess(data, dispatch));
       })
       .catch((error) => {
         dispatch(fetchListGroupTestFaild(error));
+        dispatch(closeLoading())
       });
   };
 };
@@ -21,7 +23,7 @@ export const fetchListGroupTest = () => ({
   type: testActionTypes.FETCH_GROUP_TEST,
 });
 export const fetchListGroupTestSuccess = (data, dispatch) => {
-  setTimeout( ()=>{dispatch(closeLoading())},1000)
+  
   return {
     type: testActionTypes.FETCH_GROUP_TEST_SUCCESS,
     payload: {
@@ -35,3 +37,7 @@ export const fetchListGroupTestFaild = (error) => ({
     error,
   },
 });
+export const selectPaperTest = (paper)=>({
+  type : testActionTypes.SELECT_PAPER_TEST,
+  paper
+})

@@ -8,7 +8,6 @@ export const ADMIN_ROUTES = [
   {
     path: "/admin",
     name: "Page admin",
-    exact: true,
     component: AdminPageContainer,
   },
 
@@ -17,20 +16,20 @@ export const USER_ROUTES = [
   {
     path : '/',
     name : 'Home Page User',
-    exact : true,
-    component :UserModuleContainer,
+    // exact : true,
+    component : UserModuleContainer,
 
   }
 ]
 
 export const ROUTES = [
   {
-    path: "/login",
+    path: "/",
     name: "Login",
     component: LoginPageContainer,
   },
   {
-    path: "/signup",
+    path: "/",
     name: "Sign Up",
     component: SignupPageContainer,
   },

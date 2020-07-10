@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import AlarmOnIcon from "@material-ui/icons/AlarmOn";
 import DetailsIcon from "@material-ui/icons/Details";
 import clsx from "clsx";
-import styles from './styles';
+import styles from "./styles";
 import "./styles.css";
 
 function GroupTestItem(props) {
