@@ -24,15 +24,4 @@ const styles = (theme) => ({
     marginTop: 10,
   },
 });
-export default styles;
-<Route
-{...remainProps}
-render={(routeProps) => {
- return ( <Redirect
-  to={{
-    pathname: "/",
-    // state: { from: location }
-  }}
-/>)
-}}
-/>
+
