@@ -22,7 +22,6 @@ import { connect } from "react-redux";
 import { compose, bindActionCreators } from "redux";
 import * as loginActions from "./../../../redux/actions/loginSignup";
 import CloseIcon from "@material-ui/icons/Close";
-import AcUnitIcon from "@material-ui/icons/AcUnit";
 import MenuDesktops from "./../MenuDesktops";
 import * as changeThemeActions from "./../../../redux/actions/userPape";
 import {useHistory} from 'react-router-dom';
@@ -52,7 +51,7 @@ function Navbar(props) {
     // actLoginToggle(true);
   };
 
-  const handleChangeTheme = () => {
+  const changeTheme = () => {
     props.handleChangeTheme()
   };
 
@@ -70,7 +69,7 @@ function Navbar(props) {
               alignItems="center"
             >
               <Grid item className={classes.logo}>
-                <IconButton
+                {/* <IconButton
                   edge="start"
                   className={classes.menuButton}
                   color="inherit"
@@ -78,8 +77,8 @@ function Navbar(props) {
                   onClick={handleChangeTheme}
                 >
                   <AcUnitIcon />
-                </IconButton>
-                <ControlTheme/>
+                </IconButton> */}
+                <ControlTheme changeTheme={changeTheme}/>
               </Grid>
               <Grid item>
                 <div className={classes.menu_list}>

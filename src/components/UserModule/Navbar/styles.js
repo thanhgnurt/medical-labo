@@ -15,7 +15,7 @@ const styles = (theme) => ({
     
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    
   },
 
   paper: {
@@ -44,6 +44,7 @@ const styles = (theme) => ({
     height: 35,
     marginTop: 6,
     borderRadius: "100px",
+    borderBottom: "1px solid white",
     backgroundColor: theme.palette.secondary.extra,
     color : theme.palette.secondary.textColor,
     "&:hover": {
@@ -78,7 +79,8 @@ const styles = (theme) => ({
     justifyContent: "flex-end",
   },
   logo :{
-    display : "flex"
+    display : "flex",
+    width : 80
   },
   
 });

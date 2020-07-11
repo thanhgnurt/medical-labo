@@ -1,8 +1,7 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect,Switch, useHistory  } from "react-router-dom";
 import SignupPageContainer from "./../../../containers/SignupPageContainer";
 import LoginPageContainer from "./../../../containers/LoginPageContainer";
-import { Switch, useHistory } from "react-router-dom";
 
 export default function UserLayoutRoute(props) {
   const { component: YourComponent, ...remainProps } = props;
@@ -15,13 +14,13 @@ export default function UserLayoutRoute(props) {
       <Route path="/login">
         <LoginPageContainer />
       </Route>
-      {/* <Route
+      <Route
         {...remainProps}
         render={(routeProps) => {
           return <YourComponent {...routeProps} />;
         }}
-      /> */}
-
+      />
+{/* 
       <Route
         {...remainProps}
         render={(routeProps) =>
@@ -36,7 +35,7 @@ export default function UserLayoutRoute(props) {
             />
           )
         }
-      />
+      /> */}
     </Switch>
   );
 }

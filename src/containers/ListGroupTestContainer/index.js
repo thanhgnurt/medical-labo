@@ -6,19 +6,25 @@ import {
   selectPaperTest,
 } from "./../../redux/actions/listGroupTest";
 import BasicPagination from "../../components/UserModule/BasicPagination";
+import { Switch, Route } from "react-router-dom";
+import Demo from "./demo";
+import ListGroupTestDemo from "./../../components/UserModule/ListGroupTestDemo";
+import GroupTestLayoutRoute from './../../commons/Layout/GroupTestLayoutRoute';
+
 
 function ListGroupTestContainer(props) {
-  const { listGroupTest,paperSelect } = props.listGroupTest;
-  const totalPapers =(n)=>{
-    let papers = 0
-    if ((listGroupTest.length + 1 )%n ===0) {
-      papers = (listGroupTest.length + 1 )/n
+  const { listGroupTest, paperSelect } = props.listGroupTest;
+  const totalPapers = (n) => {
+    let papers = 0;
+    if ((listGroupTest.length + 1) % n === 0) {
+      papers = (listGroupTest.length + 1) / n;
     } else {
-      papers = ((listGroupTest.length + 1 )-(listGroupTest.length + 1 )%n + n)/6
+      papers =
+        (listGroupTest.length + 1 - ((listGroupTest.length + 1) % n) + n) / 6;
     }
-    return papers
-  }
-  const papers = (listGroupTest.length + 1 )/ 6;
+    return papers;
+  };
+  const papers = (listGroupTest.length + 1) / 6;
   const divideGroup = () => {
     let devideGroupTest = [];
     if (listGroupTest.length > 0) {
@@ -35,15 +41,39 @@ function ListGroupTestContainer(props) {
   };
   const devideGroupTest = divideGroup(6);
 
-  const selectPaperTest = paper =>{
-    props.selectPaperTest(paper)
+  const selectPaperTest = (paper) => {
+    props.selectPaperTest(paper);
+  };
 
-  }
+  const renderListGroupTest = (ListGroupTestDemo) => {
+    let xhtml = [];
+    if (listGroupTest.length > 0) {
+      for (let i = totalPapers(6); i >= 1; i--) {
+        xhtml.push(
+          <GroupTestLayoutRoute key={i} page={i} devideGroupTest={devideGroupTest} path={i===1 ? "/" : `/trang-${i}`} component={ListGroupTestDemo}/>
+        )
+      }
+    }
+    return xhtml;
+  };
 
   return (
     <div>
-      <ListGroupTest divideGroup={devideGroupTest} paperSelect = {paperSelect}/>
-      <BasicPagination selectPaperTest={selectPaperTest} papers={totalPapers(6)}/>
+      <Switch>
+        {/* <Route path="/trang1">
+          <Demo demo="trang 1" />
+        </Route>
+        <Route path="/trang2">
+          <Demo demo="Trang 2" />
+        </Route> */}
+        {renderListGroupTest(ListGroupTestDemo)}
+      </Switch>
+
+      {/* <ListGroupTest divideGroup={devideGroupTest} paperSelect={paperSelect} /> */}
+      <BasicPagination
+        selectPaperTest={selectPaperTest}
+        papers={totalPapers(6)}
+      />
     </div>
   );
 }
@@ -55,9 +85,9 @@ const mapDispatchToProps = (dispatch) => ({
   fetchListGroupTest: () => {
     dispatch(fetchListGroupTestRequest());
   },
-  selectPaperTest : (paper)=>{
-    dispatch(selectPaperTest(paper))
-  }
+  selectPaperTest: (paper) => {
+    dispatch(selectPaperTest(paper));
+  },
 });
 
 export default connect(
