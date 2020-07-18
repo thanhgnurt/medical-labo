@@ -8,14 +8,14 @@ import styles from './styles';
 
 
 function BasicPagination(props) {
-  const {papers, classes} = props
+  const {papers, classes, page} = props
   const changePager =(event, paper)=>{
     props.selectPaperTest(paper)
   }
   return (
     <Container maxWidth="md" >
       <div className={classes.root}>
-        <Pagination count={papers} color="primary" className={classes.countPage} onChange={changePager}/>
+        <Pagination count={papers} page={page} color="primary" className={classes.countPage} onChange={changePager}/>
       </div>
     </Container>
   );

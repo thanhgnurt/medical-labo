@@ -1,0 +1,6 @@
+.MuiStepLabel-label.MuiStepLabel-active {
+    font-weight: 600 !important ;
+}
+.MuiStepLabel-label.MuiStepLabel-completed {
+    font-weight: 600 !important;
+};

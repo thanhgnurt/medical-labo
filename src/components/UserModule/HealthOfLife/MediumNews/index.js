@@ -12,15 +12,15 @@ function MediumNews(props) {
       <Grid item xs={6} sm={4} md={4}>
         <div>
           <img
-            src="./images/imgCarousel-6.jpg"
+            src="/images/imgCarousel-6.jpg"
             className={classes.imageMedium}
             alt="news"
           ></img>
         </div>
         <div>
-          <div type="button" className={classes.tittleNews}>
+          <h6 type="button" className={classes.tittleNews}>
             Gerard Butler cùng bồ cũ Deadpool tham gia Greenland
-          </div>
+          </h6>
         </div>
         <div>
           <div className={classes.textNews}>
@@ -35,7 +35,7 @@ function MediumNews(props) {
       <Grid item xs={6} sm={4} md={4}>
         <div>
           <img
-            src="./images/imgCarousel-6.jpg"
+            src="/images/imgCarousel-6.jpg"
             className={classes.imageMedium}
             alt="news"
           ></img>
@@ -56,7 +56,7 @@ function MediumNews(props) {
         <MenuIconStatus />
       </Grid>
 
-      <Grid item md={4} sm={4} xs={12} container>
+      <Grid item md={4} sm={4} xs={12}>
 
         {/* small news */}
         <SmallNews />

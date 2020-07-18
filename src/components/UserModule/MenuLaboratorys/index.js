@@ -34,14 +34,7 @@ export default function MenuLaboratorys() {
         Huyết Học -<i className="fas fa-virus mx-2"></i>
         Vi Sinh
       </Fab>
-      {/* <Fab variant="extended">
-        <i className="fas fa-virus mr-2"></i>
-        Vi Sinh
-      </Fab> */}
-      {/* <Fab variant="extended">
-        <i className="fas fa-bacon mr-2"></i>
-        Ký Sinh Trùng
-      </Fab> */}
+   
       <Fab variant="extended" color="secondary">
         <AllInclusiveOutlinedIcon className={classes.extendedIcon} />
         Tất Cả

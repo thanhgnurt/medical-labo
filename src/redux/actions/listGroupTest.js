@@ -9,7 +9,7 @@ export const fetchListGroupTestRequest = () => {
     listGroupTestApis
       .getListGroupTest()
       .then((data) => {
-        setTimeout( ()=>{dispatch(closeLoading())},500)
+        setTimeout( ()=>{dispatch(closeLoading())},1000)
         dispatch(fetchListGroupTestSuccess(data, dispatch));
       })
       .catch((error) => {
@@ -22,7 +22,7 @@ export const fetchListGroupTestRequest = () => {
 export const fetchListGroupTest = () => ({
   type: testActionTypes.FETCH_GROUP_TEST,
 });
-export const fetchListGroupTestSuccess = (data, dispatch) => {
+export const fetchListGroupTestSuccess = (data) => {
   
   return {
     type: testActionTypes.FETCH_GROUP_TEST_SUCCESS,

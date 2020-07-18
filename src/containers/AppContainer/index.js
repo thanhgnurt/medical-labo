@@ -1,22 +1,29 @@
 import React from "react";
 import styles from "./styles";
-import { ADMIN_ROUTES, USER_ROUTES } from "../../constantPages/routes";
+import {
+  ADMIN_ROUTES,
+  USER_ROUTES,
+  LOGIN_SIGNUP_ROUTES,
+  SET_SCHEDULE_ROUTE
+} from "../../constantPages/routes";
 import { withStyles } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { themeLight, themeDark } from "../../commons/Theme";
-import { Switch } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import AdminLayoutRoute from "../../commons/Layout/AdminLayoutRoute";
 import UserLayoutRoute from "../../commons/Layout/UserLayoutRoute";
+import LoginSignupRoute from "../../commons/Layout/LoginSignupRoute";
 import { connect } from "react-redux";
 import { compose } from "redux";
+import SetScheduleLayoutRoute from './../../commons/Layout/SetScheduleLayoutRoute';
 
 function AppContainer(props) {
-  const { theme } = props
+  const { theme } = props;
 
   const renderAdminRoutes = () => {
     let xhtml = null;
-    xhtml = ADMIN_ROUTES.map((route) => { 
+    xhtml = ADMIN_ROUTES.map((route) => {
       return (
         <AdminLayoutRoute
           key={route.path}
@@ -45,15 +52,43 @@ function AppContainer(props) {
     return xhtml;
   };
 
+  const renderLoginSignupRoutes = () => {
+    let xhtml = null;
+    xhtml = LOGIN_SIGNUP_ROUTES.map((route) => {
+      return (
+        <LoginSignupRoute
+          key={route.path}
+          path={route.path}
+          component={route.component}
+          exact={route.exact}
+          name={route.name}
+        />
+      );
+    });
+    return xhtml;
+  };
+
+  const renderSetScheduleRoutes = () => {
+    return (
+      // <Route path="/dat-lich/:id">
+      //   <SetSchedule />
+      // </Route>
+      <SetScheduleLayoutRoute path={SET_SCHEDULE_ROUTE.path} name={SET_SCHEDULE_ROUTE.name} component={SET_SCHEDULE_ROUTE.component} />
+    );
+  };
+
   return (
     <ThemeProvider theme={theme ? themeLight : themeDark}>
       <CssBaseline />
-    
-        <Switch >
+      <Switch>
         {renderAdminRoutes()}
         {renderUserRoutes()}
+        {renderLoginSignupRoutes()}
+        {renderSetScheduleRoutes()}
+        <Route path="">
+          <Redirect to="/"></Redirect>
+        </Route>
       </Switch>
- 
     </ThemeProvider>
   );
 }

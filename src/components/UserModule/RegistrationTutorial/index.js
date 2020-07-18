@@ -8,12 +8,17 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import * as Scroll from 'react-scroll';
+import './styles.css'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
   },
   button: {
+    fontFamily: "'Quicksand', sans-serif",
+    fontWeight : 500,
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
   },
@@ -21,15 +26,39 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   resetContainer: {
+    fontFamily: "'Quicksand', sans-serif",
+    fontWeight : 600,
     padding: theme.spacing(3),
   },
-  steps: {},
+  steps: {
+    "& span" :{
+      fontFamily: "'Quicksand', sans-serif",
+      fontWeight : 600,
+      fontSize : 16
+    }
+
+  
+  },
   tittle: {
+    fontFamily: "'Quicksand', sans-serif",
+    fontWeight : 600,
     textAlign: "center",
     padding: 20,
     color: theme.palette.secondary.main,
     background: "linear-gradient(to top,rgb(243, 242, 242,0.5),transparent 100%)"
   },
+  content :{
+    fontFamily: "'Quicksand', sans-serif ",
+      fontWeight : 500,
+      fontSize : 15
+  },
+  reset:{
+    fontFamily: "'Quicksand', sans-serif ",
+    fontWeight : 500,
+    fontSize : 16
+  },
+
+ 
 }));
 
 function getSteps() {
@@ -71,7 +100,9 @@ export default function RegistrationTutorial() {
   };
 
   return (
-    <Container maxWidth="md" className={classes.root}>
+    <Scroll.Element name="NOTE">
+ <div id="ID_NOTE">
+        <Container maxWidth="md" className={classes.root}>
       <Paper>
         <div className={classes.tittle}>
           <h4>Các bước xét nghiệm máu tại nhà</h4>
@@ -81,7 +112,7 @@ export default function RegistrationTutorial() {
             <Step key={label}>
               <StepLabel className={classes.steps}>{label}</StepLabel>
               <StepContent>
-                <Typography>{getStepContent(index)}</Typography>
+                <Typography className={classes.content}>{getStepContent(index)}</Typography>
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
@@ -112,7 +143,7 @@ export default function RegistrationTutorial() {
         </Stepper>
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
-            <Typography>
+            <Typography className={classes.reset}>
               Click để xem lại các bước làm xét nghiệm tại nhà
             </Typography>
             <Button
@@ -127,5 +158,9 @@ export default function RegistrationTutorial() {
         )}
       </Paper>
     </Container>
+    </div>
+    </Scroll.Element>
+   
+  
   );
 }

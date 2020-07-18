@@ -11,8 +11,10 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <GlobalLoading/>
-        <AppContainer />
+        <React.Fragment>
+          <GlobalLoading />
+          <AppContainer />
+        </React.Fragment>
       </BrowserRouter>
     </Provider>
   );

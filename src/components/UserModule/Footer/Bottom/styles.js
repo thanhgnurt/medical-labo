@@ -7,6 +7,8 @@ const styles = (theme) => ({
   content: {
     paddingTop: 20,
     display: "flex",
+    color : theme.palette.primary.textColor,
+    opacity : "80%"
   },
   text: {
     fontSize: 15,

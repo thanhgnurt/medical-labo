@@ -41,7 +41,7 @@ function MenuMobile(props) {
   );
 
   return (
-    <div className={classes.vidu}>
+    <div className={classes.menuMobile}>
       <React.Fragment key="right">
         <Drawer
           anchor="right"

@@ -3,6 +3,9 @@ import HealthOfLife from '../../components/UserModule/HealthOfLife'
 
 export default function HealthOfLifeContainer() {
     return (
-        <HealthOfLife/>
+        <div id="health_of_life">
+
+            <HealthOfLife/>
+        </div>
     )
 }

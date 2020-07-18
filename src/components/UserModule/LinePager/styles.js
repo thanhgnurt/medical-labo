@@ -4,11 +4,6 @@ const styles = (theme) => ({
     height: "80px",
     marginTop: "30px",
   },
-  //   line:{
-  //     backgroundImage : "url(./images/linePaper.png)",
-  //     paddingTop: 100,
-  //     backgroundSize : "100%",
-  //     marginTop : 30
-  //   }
+
 });
 export default styles;

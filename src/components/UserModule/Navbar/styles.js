@@ -1,13 +1,19 @@
 const styles = (theme) => ({
   appBarQueryScroll: {
-    backgroundColor: theme.palette.primary.backgroundPaper,
+    backgroundColor: theme.palette.primary.navbarScroll,
     color: theme.palette.primary.textColor,
+    "& a" : {
+      color : theme.palette.primary.textColor
+    }
+    
    
   },
 
   defaultAppBar:{
     color:theme.palette.primary.extra,
-    
+    "& a" : {
+      color : theme.palette.primary.extra
+    }
   },
 
   grow: {
@@ -39,6 +45,8 @@ const styles = (theme) => ({
     },
   },
   buttonLogin: {
+    fontFamily: "'Quicksand', sans-serif",
+    fontWeight : 600,
     display: "block",
     textTransform: "none",
     height: 35,
@@ -53,6 +61,21 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       display: "none",
+    },
+  },
+  buttonLoginMobile :{
+    fontFamily: "'Quicksand', sans-serif",
+    fontWeight : 600,
+    textTransform: "none",
+    height: 35,
+    marginTop: 6,
+    borderRadius: "100px",
+    borderBottom: "1px solid white",
+    backgroundColor: theme.palette.secondary.extra,
+    color : theme.palette.secondary.textColor,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.hoverColor,
+      boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,
     },
   },
   menu_list: {
@@ -82,6 +105,7 @@ const styles = (theme) => ({
     display : "flex",
     width : 80
   },
+
   
 });
 export default styles;

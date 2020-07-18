@@ -7,11 +7,14 @@ import styles from "./styles";
 import { Typography, Button } from "@material-ui/core";
 import MediumNews from "./MediumNews";
 import MenuIconStatus from "./MenuIconStatus";
+import * as Scroll from 'react-scroll';
 
 function HealthOfLife(props) {
   const { classes } = props;
   return (
-    <React.Fragment>
+    <Scroll.Element name="NEWS_MEDICAL">
+       <div id="ID_NEWS_MEDICAL">
+      <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
         <Typography align="center" variant="h5" className={classes.header}>
@@ -24,7 +27,7 @@ function HealthOfLife(props) {
               <Grid item xs={12} md={6} sm={6}>
                 <div>
                   <img
-                    src="./images/imgCarousel-6.jpg"
+                    src="/images/imgCarousel-6.jpg"
                     className={classes.imageLarge}
                     alt="news"
                   ></img>
@@ -47,7 +50,7 @@ function HealthOfLife(props) {
               <Grid item xs={12} md={6} sm={6}>
                 <div>
                   <img
-                    src="./images/imgCarousel-6.jpg"
+                    src="/images/imgCarousel-6.jpg"
                     className={classes.imageLarge}
                     alt="news"
                   ></img>
@@ -79,6 +82,10 @@ function HealthOfLife(props) {
         </div>
       </Container>
     </React.Fragment>
+    </div>
+    
+    </Scroll.Element>
+   
   );
 }
 export default withStyles(styles)(HealthOfLife);

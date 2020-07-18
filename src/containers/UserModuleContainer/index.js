@@ -1,39 +1,78 @@
-import React from "react";
-import UserModule from "./../../components/UserModule";
+import React, { useEffect } from "react";
+import { withStyles } from "@material-ui/core";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
-import * as userPageActionTypes from "./../../redux/actions/userPape";
-import ListGroupTestContainer from "../ListGroupTestContainer";
-import RegistrationTutorial from "../../components/UserModule/RegistrationTutorial";
-import { withStyles } from "@material-ui/core";
-import styles from "./styles";
-import { fetchListGroupTestRequest } from "./../../redux/actions/listGroupTest";
-import { useEffect } from "react";
-import HealthOfLifeContainer from "../HealthOfLifeContainer";
-import LinePager from "../../components/UserModule/LinePager";
 import Progess from "../../components/Progess";
+import LinePager from "../../components/UserModule/LinePager";
+import RegistrationTutorial from "../../components/UserModule/RegistrationTutorial";
 import FooterContainer from "../FooterContainer";
-// import { Switch, Route } from "react-router-dom";
-// import SignupPageContainer from "../SignupPageContainer";
-// import LoginPageContainer from "../LoginPageContainer";
+import HealthOfLifeContainer from "../HealthOfLifeContainer";
+import ListGroupTestContainer from "../ListGroupTestContainer";
+import NavbarContainer from "../NavbarContainer";
+import UserModule from "./../../components/UserModule";
+import { fetchListGroupTestRequest } from "./../../redux/actions/listGroupTest";
+import * as userPageActionTypes from "./../../redux/actions/userPape";
+import styles from "./styles";
+import { useLocation } from "react-router-dom";
+import { animateScroll as scroll, scroller } from "react-scroll";
 
 function UserModuleContainer(props) {
   const { classes, showLoading } = props;
-  const { mobileMenu } = props.userPape;
-  const mobileMenuToggle = () => {
-    const { mobileMenuToggle } = props.userPapeCreators;
-    mobileMenuToggle();
-  };
+  let location = useLocation();
 
   const { fetchListGroupTest } = props;
   useEffect(() => {
+    if (location.prepage !== "/") {
+      switch (location.prepage ) {
+        case "/":
+          setTimeout(() => {
+            scroll.scrollTo(0);
+          }, 700);
+
+          break;
+        case "/danh-muc-xet-nghiem":
+          setTimeout(() => {
+            scroller.scrollTo("CATEGORY_TEST", {
+              duration: 1500,
+              delay: 100,
+              smooth: true,
+              offset: -70,
+            });
+          }, 700);
+          break;
+        case "/luu-y-khi-lay-mau":
+          setTimeout(() => {
+            scroller.scrollTo("NOTE", {
+              duration: 1500,
+              delay: 100,
+              smooth: true,
+              offset: -100,
+            });
+          }, 700);
+          break;
+        case "/tin-tuc-y-khoa":
+          setTimeout(() => {
+            scroller.scrollTo("NEWS_MEDICAL", {
+              duration: 1500,
+              delay: 100,
+              smooth: true,
+              offset: -100,
+            });
+          }, 700);
+          break;
+
+        default:
+          break;
+      }
+    }
     fetchListGroupTest();
-  }, [fetchListGroupTest]);
+  }, [fetchListGroupTest,location.prepage]);
 
   return (
     <div className={classes.userPaper}>
       <Progess showProgess={showLoading} />
-      <UserModule mobileMenuToggle={mobileMenuToggle} mobileMenu={mobileMenu} />
+      <NavbarContainer />
+      <UserModule />
       <ListGroupTestContainer />
       <LinePager />
       <RegistrationTutorial />
@@ -41,7 +80,7 @@ function UserModuleContainer(props) {
       <HealthOfLifeContainer />
       <LinePager />
       <FooterContainer />
-   
+    
     </div>
   );
 }
@@ -52,7 +91,6 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   userPapeCreators: bindActionCreators(userPageActionTypes, dispatch),
-  // fetchListGroupTest: bindActionCreators(groupTestActionTypes, dispatch),
   fetchListGroupTest: () => {
     dispatch(fetchListGroupTestRequest());
   },

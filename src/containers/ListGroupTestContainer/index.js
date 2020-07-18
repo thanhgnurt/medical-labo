@@ -1,19 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import BasicPagination from "../../components/UserModule/BasicPagination";
 import ListGroupTest from "../../components/UserModule/ListGroupTest";
 import {
   fetchListGroupTestRequest,
-  selectPaperTest,
+  selectPaperTest
 } from "./../../redux/actions/listGroupTest";
-import BasicPagination from "../../components/UserModule/BasicPagination";
-import { Switch, Route } from "react-router-dom";
-import Demo from "./demo";
-import ListGroupTestDemo from "./../../components/UserModule/ListGroupTestDemo";
-import GroupTestLayoutRoute from './../../commons/Layout/GroupTestLayoutRoute';
-
 
 function ListGroupTestContainer(props) {
   const { listGroupTest, paperSelect } = props.listGroupTest;
+  
   const totalPapers = (n) => {
     let papers = 0;
     if ((listGroupTest.length + 1) % n === 0) {
@@ -45,34 +41,19 @@ function ListGroupTestContainer(props) {
     props.selectPaperTest(paper);
   };
 
-  const renderListGroupTest = (ListGroupTestDemo) => {
-    let xhtml = [];
-    if (listGroupTest.length > 0) {
-      for (let i = totalPapers(6); i >= 1; i--) {
-        xhtml.push(
-          <GroupTestLayoutRoute key={i} page={i} devideGroupTest={devideGroupTest} path={i===1 ? "/" : `/trang-${i}`} component={ListGroupTestDemo}/>
-        )
-      }
-    }
-    return xhtml;
-  };
+
 
   return (
     <div>
-      <Switch>
-        {/* <Route path="/trang1">
-          <Demo demo="trang 1" />
-        </Route>
-        <Route path="/trang2">
-          <Demo demo="Trang 2" />
-        </Route> */}
-        {renderListGroupTest(ListGroupTestDemo)}
-      </Switch>
-
-      {/* <ListGroupTest divideGroup={devideGroupTest} paperSelect={paperSelect} /> */}
+      
+      <ListGroupTest
+        devideGroupTest={devideGroupTest}
+        paperSelect={paperSelect}
+      />
       <BasicPagination
         selectPaperTest={selectPaperTest}
         papers={totalPapers(6)}
+        page ={paperSelect}
       />
     </div>
   );

@@ -3,7 +3,7 @@ export const COLORS={
     DARK : "rgb(0, 0, 0)",
     BLUE : "rgb(24, 77, 250)",
     RED : "rgb(245, 37, 37)",
-    ORANGE : "rgb(248, 55, 21)",
+    ORANGE : "rgb(218, 60, 50)",
     GRAY : "rgb(128, 128, 128)",
     VIOLET : "rgb(90, 23, 245)",
     YELLOW : "rgba(209, 127, 19)",
@@ -19,10 +19,11 @@ export const COLORS={
     VIOLET_O : "rgb(90, 23, 245, 0.9)",
     DARK_8 : "rgb(0, 0, 0,0.8)",
     BLUE_8 :"rgb(24, 77, 250, 0.8)",
+    GRAY_LIGHT : "#eee",
     
     YELLOW_H : "rgba(209, 127, 19,0.25)",
     ORANGE_H : "rgb(248, 55, 21, 0.25)",
 
-    LIGHT_LINE : "rgb(231, 230, 230, 0.5)",
+    LIGHT_LINE : "rgb(200, 200, 200, 0.5)",
     DARK_LINE : "rgb(19, 19, 19, 0.5)"
 }

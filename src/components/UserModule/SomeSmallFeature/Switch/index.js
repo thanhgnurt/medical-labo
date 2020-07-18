@@ -23,16 +23,20 @@ function CustomizedSwitches(props) {
 
   const IOSSwitch = withStyles((theme) => ({
     root: {
-      width: 42,
+      "&:hover": {
+        border : "1px solid white",
+      },
+      width: 41,
       height: 25,
       padding: 0,
       margin: theme.spacing(1),
       borderRadius: 100,
       borderBottom: "1px solid white",
-      boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)'
+      boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
     },
+   
     switchBase: {
-      color:theme.palette.primary.main,
+      color:"white",
       padding: 1,
       "&$checked": {
         transform: "translateX(16px)",
@@ -41,7 +45,17 @@ function CustomizedSwitches(props) {
           backgroundColor: theme.palette.primary.main,
           opacity: 1,
           border: "none",
+          
         },
+            // "&:hover": {
+            //   "& + $track": {
+            //     backgroundColor: theme.palette.primary.hoverColor,
+            //     opacity: 1,
+            //     border: "none",
+                
+            //   },
+              
+            // },
        
       },
       "&$focusVisible $thumb": {
@@ -55,10 +69,11 @@ function CustomizedSwitches(props) {
     },
     track: {
       borderRadius: 26 / 2,
-      border: `1px solid ${theme.palette.grey[400]}`,
-      backgroundColor: theme.palette.grey[50],
+      backgroundColor: theme.palette.primary.main,
       opacity: 1,
       transition: theme.transitions.create(["background-color", "border"]),
+      borderBottom: "1px solid white",
+      boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
     },
     checked: {},
     focusVisible: {},

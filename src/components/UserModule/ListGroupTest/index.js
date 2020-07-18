@@ -5,16 +5,17 @@ import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 import GroupTestItem from "../GroupTestItem";
 import MenuLaboratorys from "../MenuLaboratorys";
+import * as Scroll from 'react-scroll';
 import styles from "./styles";
 
 function ListGroupTest(props) {
-  const { divideGroup, classes, paperSelect } = props;
-  const showGroupTest = (divideGroup) => {
-    if (divideGroup.length > 0) {
-      return divideGroup[paperSelect-1].map((groupTest, index) => {
+  const { devideGroupTest, classes, paperSelect } = props;
+  const showGroupTest = () => {
+    if (devideGroupTest.length > 0) {
+      return devideGroupTest[paperSelect-1].map((setTest, index) => {
         return (
           <Grid xs={12} md={4} sm={6} item key={index}>
-            <GroupTestItem groupTest={groupTest} />
+            <GroupTestItem setTest={setTest} />
           </Grid>
         );
       });
@@ -22,19 +23,22 @@ function ListGroupTest(props) {
   };
 
   return (
-    <div className={classes.header_paper}>
+<Scroll.Element name="CATEGORY_TEST">
+  <div className={classes.header_paper} id="ID_CATEGORY_TEST">
       <React.Fragment>
         <CssBaseline />
         <Container maxWidth="md">
           <div className={classes.root}>
             <MenuLaboratorys />
             <Grid container spacing={3} direction="row">
-              {showGroupTest(divideGroup)}
+              {showGroupTest()}
             </Grid>
           </div>
         </Container>
       </React.Fragment>
     </div>
+</Scroll.Element>
+    
   );
 }
 

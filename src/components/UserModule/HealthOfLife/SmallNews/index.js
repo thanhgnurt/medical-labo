@@ -8,7 +8,7 @@ function SmallNews(props) {
     <div className={classes.smallNews}>
       <div className={classes.image}>
         <img
-          src="./images/imgCarousel-6.jpg"
+          src="/images/imgCarousel-6.jpg"
           className={classes.imageSmall}
           alt="news"
         ></img>

@@ -1,22 +1,40 @@
-import React from 'react';
-import { withStyles } from '@material-ui/core';
-import styles from './styles';
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { withStyles } from "@material-ui/core";
+import styles from "./styles";
+import { Link } from "react-scroll";
+import { useLocation, NavLink } from "react-router-dom";
 
 function MenuDesktops(props) {
-    const {classes, menus, trigger}= props
-    return menus.map((menu) => {
-        return (
-          <NavLink
-            to={menu.to}
-            className={trigger? classes.menuScrolled : classes.menuMains}
-            activeClassName={classes.selectedMenu}
-            key={menu.to}
-          >
+  const { classes, menus, trigger } = props;
+  let location = useLocation();
+  return menus.map((menu) => {
+    if ((location.pathname === "/" || location.pathname ==="/danh-muc-xet-nghiem" || location.pathname==="/luu-y-khi-lay-mau" || location.pathname==="/tin-tuc-y-khoa")) {
+      return (
+        <Link
+          key={menu.to}
+          href=""
+          to={menu.scroll.id}
+          activeClass={classes.active}
+          spy={true}
+          smooth={true}
+          offset={menu.scroll.offset}
+          duration={500}
+        >
+          <div className={trigger ? classes.menuScrolled : classes.menuMains}>
             {menu.name}
-          </NavLink>
-        );
-      });
+          </div>
+        </Link>
+      );
+    } else {
+      return(
+      <NavLink key={menu.to} to={{pathname:"/", prepage:menu.to}} >
+        <div className={trigger ? classes.menuScrolled : classes.menuMains}>
+          {menu.name}
+        </div>
+      </NavLink>
+      )
+    }
+  });
 }
 
-export default withStyles(styles)(MenuDesktops)
+export default withStyles(styles)(MenuDesktops);

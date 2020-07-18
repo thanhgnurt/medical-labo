@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -6,35 +6,57 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { connect } from "react-redux";
-import { bindActionCreators, compose } from "redux";
+import { compose } from "redux";
 import styles from "./styles";
 import { withStyles, Grid } from "@material-ui/core";
-import * as loginSignupActions from "./../../redux/actions/loginSignup";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import { userLogin } from "./../../redux/actions/userActions";
 
 function LoginPageContainer(props) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   let history = useHistory();
-  const { classes } = props;
+  let location = useLocation()
+  const { classes} = props;
 
   const handleClose = () => {
-    // const { actLoginToggle } = props.loginSignCreators;
-    // actLoginToggle();
     if (history) {
       history.push("/");
     }
   };
 
   const handleSignupOpen = () => {
-    // const { actSignupToggle } = props.loginSignCreators;
-    // actSignupToggle();
     if (history) {
       history.push("/signup");
     }
   };
+  const handelOnChange = (event) => {
+    switch (event.target.name) {
+      case "username":
+        setUsername(event.target.value);
+        break;
+      case "password":
+        setPassword(event.target.value);
+        break;
+      default:
+        break;
+    }
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
+    props.userLogin({
+      user: {
+        taiKhoan: username,
+        matKhau: password,
+      },
+      history: history,
+      navigation : location.prepage
+      
+    });
   };
-
+  if (localStorage.getItem("USER")) {
+    return <div history={history.goBack()} />;
+  }
   return (
     <Grid container className={classes.login}>
       <Dialog
@@ -43,7 +65,7 @@ function LoginPageContainer(props) {
         aria-labelledby="form-dialog-title"
         className={classes.dialog}
       >
-        <form className={classes.form} onClick={handleSubmit}>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <DialogTitle id="form-dialog-title" className={classes.tittle}>
             Đăng Nhập
           </DialogTitle>
@@ -51,16 +73,20 @@ function LoginPageContainer(props) {
             <TextField
               margin="normal"
               id="username"
+              name="username"
               label="Tên Đăng Nhập / SĐT"
               type="text"
               fullWidth
+              onChange={handelOnChange}
             />
             <TextField
               margin="normal"
+              name="password"
               id="password"
               label="Mật Khẩu"
               type="password"
               fullWidth
+              onChange={handelOnChange}
             />
           </DialogContent>
           <DialogActions className={classes.dialogActions}>
@@ -93,13 +119,15 @@ function LoginPageContainer(props) {
     </Grid>
   );
 }
-// const mapStateToProps = (state) => ({
-//   loginOpen: state.loginSignup.loginOpen,
-// });
+const mapStateToProps = (state) => ({
+  userLoginStatus: state.userReducer.userLogin,
+});
 const mapDispatchToProps = (dispatch) => ({
-  loginSignCreators: bindActionCreators(loginSignupActions, dispatch),
+  userLogin: (user) => {
+    dispatch(userLogin(user));
+  },
 });
 
-const withConnect = connect(null, mapDispatchToProps);
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 export default compose(withStyles(styles), withConnect)(LoginPageContainer);

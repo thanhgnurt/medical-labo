@@ -1,12 +1,16 @@
 const styles = (theme)=>({
     root: {
         "& > *": {
-          marginTop: theme.spacing(2),
+          marginTop: theme.spacing(3),
+          // "& button" :{
+          //   fontFamily: "'Quicksand', sans-serif",
+          // fontWeight : 600,
+          // }
+            
         },
-        textAlign: "center",
-      
       },
       countPage :{
+      
         "& ul" : {
           "& li" : {
             "& button":{

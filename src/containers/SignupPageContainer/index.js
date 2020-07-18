@@ -1,36 +1,37 @@
-import React from "react";
+import { withStyles } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import React from "react";
 import { connect } from "react-redux";
-import { bindActionCreators, compose } from "redux";
-import styles from "./styles";
-import { withStyles } from "@material-ui/core";
-import * as singupActions from "./../../redux/actions/loginSignup";
 import { useHistory } from "react-router-dom";
+import { compose } from "redux";
+import { Field, reduxForm } from "redux-form";
+import renderTextField from "./../../components/FormHelper/TextField";
+import styles from "./styles";
+import validate from "./validate";
 
 function SignupPageContainer(props) {
-  let history= useHistory()
-  const { classes } = props;
+  let history = useHistory();
+  const { classes, submitting, handleSubmit, invalid } = props;
+  const handelSubmitForm = (data) => {
+    console.log(data);
+  };
   const handleClose = () => {
-    // const { actSignupToggle } = props.signupActionCreators;
-    // actSignupToggle();
     if (history) {
       history.push("/");
     }
-
   };
   const handelOpenLogin = () => {
-    // const { actSignupToggle, actLoginToggle } = props.signupActionCreators;
-    // actSignupToggle();
-    // actLoginToggle();
     if (history) {
       history.push("/login");
     }
   };
+  if (localStorage.getItem("USER")) {
+    return <div history={history.goBack()} />;
+  }
 
   return (
     <div className={classes.signup}>
@@ -45,49 +46,57 @@ function SignupPageContainer(props) {
         <DialogTitle id="form-dialog-title" className={classes.tittle}>
           Đăng Ký
         </DialogTitle>
-        <DialogContent >
-          <TextField
-            margin="normal"
+        <form  onSubmit={handleSubmit(handelSubmitForm)}>
+        <DialogContent>
+          <Field
             id="lastnameAndName"
             label="Họ Và Tên"
             type="text"
+            className={classes.textField}
+            margin="normal"
+            name="lastnameAndName"
             fullWidth
+            component={renderTextField}
           />
-          {/* <TextField
-            margin="normal"
-            id="adress"
-            label="Địa Chỉ"
-            type="text"
-            fullWidth
-          /> */}
-          <TextField
-            margin="normal"
+          <Field
             id="phoneNumber"
             label="Số Điện Thoại"
             type="text"
-            fullWidth
-          />
-          <TextField
+            className={classes.textField}
             margin="normal"
+            name="phoneNumber"
+            fullWidth
+            component={renderTextField}
+          />
+          <Field
             id="username"
             label="Username"
             type="text"
-            fullWidth
-          />
-          <TextField
+            className={classes.textField}
             margin="normal"
+            name="username"
+            fullWidth
+            component={renderTextField}
+          />
+          <Field
             id="password"
             label="Mật Khẩu"
-            type="password"
-            fullWidth
-          />
-          <TextField
+            type="text"
+            className={classes.textField}
             margin="normal"
+            name="password"
+            fullWidth
+            component={renderTextField}
+          />
+          <Field
             id="repassword"
             label="Nhập Lại Mật Khẩu"
-            type="password"
-            fullWidth
+            type="text"
             className={classes.textField}
+            margin="normal"
+            name="repassword"
+            fullWidth
+            component={renderTextField}
           />
         </DialogContent>
         <DialogActions className={classes.dialogActions}>
@@ -100,15 +109,16 @@ function SignupPageContainer(props) {
             Hủy Bỏ
           </Button>
           <Button
-            onClick={handleClose}
             size="small"
             variant="contained"
             type="submit"
             color="primary"
+            disabled={invalid || submitting}
           >
             Đăng Ký
           </Button>
         </DialogActions>
+        </form>
         <div id="form-dialog-title" className={classes.askLogin}>
           Bạn đã có tài khoản ?
           <Button color="primary" onClick={handelOpenLogin}>
@@ -119,13 +129,19 @@ function SignupPageContainer(props) {
     </div>
   );
 }
-// const mapStateToProps = (state) => ({
-//   signupOpen: state.loginSignup.signupOpen,
-// });
-const mapDispatchToProps = (dispatch) => ({
-  signupActionCreators: bindActionCreators(singupActions, dispatch),
+
+const FORM_NAME = "TASK_MANAGEMANT";
+const withReduxForm = reduxForm({
+  form: FORM_NAME,
+  validate,
 });
+const mapStateToProps = (state) => ({});
+const mapDispatchToProps = (dispatch) => ({});
 
-const withConnect = connect(null, mapDispatchToProps);
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-export default compose(withStyles(styles), withConnect)(SignupPageContainer);
+export default compose(
+  withStyles(styles),
+  withConnect,
+  withReduxForm
+)(SignupPageContainer);

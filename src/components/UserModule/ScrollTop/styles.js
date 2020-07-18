@@ -59,6 +59,9 @@ const styles = (theme) => ({
 
   logo :{
     
+  },
+  buttonLoginMobile :{
+    
   }
 
 

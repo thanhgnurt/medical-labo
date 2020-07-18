@@ -18,6 +18,6 @@ const styles = (theme) => ({
     marginLeft: 15,
     color: theme.palette.primary.textColor,
   },
-
+ 
 });
 export default styles;

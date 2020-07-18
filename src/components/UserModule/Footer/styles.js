@@ -1,13 +1,14 @@
 const styles = (theme) => ({
   imgBacground: {
-    backgroundImage: "url(./images/bg-footer.jpg)",
+    backgroundImage: "url(/images/bg-footer.jpg)",
     backgroundSize: "cover",
     backgroundRepeat: "none",
     backgroundPosition: "center",
     height: 400,
+    position :"relative"
   },
   layout: {
-    backgroundColor: "rgb(0, 0, 0, 0.7)",
+    backgroundColor: "rgb(10, 32, 41)",
     height: "100%",
   },
   content: {

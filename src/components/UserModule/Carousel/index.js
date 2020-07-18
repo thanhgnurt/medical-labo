@@ -5,7 +5,7 @@ function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <img src="./images/next-session.png" alt="movie-2" />
+      <img src="/images/next-session.png" alt="movie-2" />
     </div>
   );
 }
@@ -14,7 +14,7 @@ function SamplePrevArrow(props) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      {/* <img src="./images/back-session.png" alt="movie-2" /> */}
+      <img src="./images/back-session.png" alt="movie-2" />
     </div>
   );
 }
