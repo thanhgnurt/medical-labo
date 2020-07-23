@@ -3,12 +3,15 @@ const styles = (theme) => ({
     height: 75,
     flexGrow: 1,
     width: "100%",
+    
+  },
+  background :{
+    backgroundColor: "white"
   },
   content: {
     paddingTop: 20,
     display: "flex",
-    color : theme.palette.primary.textColor,
-    opacity : "80%"
+    color : "rgba(0, 0, 0, 0.767)",
   },
   text: {
     fontSize: 15,
@@ -18,6 +21,7 @@ const styles = (theme) => ({
     "-webkit-line-clamp": 1,
     "-webkit-box-orient": "vertical",
     display: "-webkit-box",
+    color :"rgba(0, 0, 0, 0.767)"
   },
   paper: {
     textAlign: "left",

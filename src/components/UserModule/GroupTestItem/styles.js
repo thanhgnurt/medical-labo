@@ -16,6 +16,7 @@ const styles = (theme) => ({
     justifyContent: "center",
     top: -30,
     width: "90%",
+    height : "180px",
   
     borderRadius: 6,
     position: "relative",
@@ -56,12 +57,12 @@ const styles = (theme) => ({
     transform: 'translate(-50%, -50%)',
   
   },
-  descreption :{
-    textAlign : "justify",
+  description :{
     overflow: "hidden",
     "-webkit-line-clamp": 3,
     "-webkit-box-orient": "vertical",
     display: "-webkit-box",
+    textAlign : "justify"
   }
 });
 export default styles;

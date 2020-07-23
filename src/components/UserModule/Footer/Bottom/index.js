@@ -8,7 +8,8 @@ import Container from "@material-ui/core/Container";
 function Bottom(props) {
   const { classes } = props;
   return (
-    <React.Fragment>
+    <div className={classes.background}>
+        <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
         <div className={classes.bottom}>
@@ -38,6 +39,8 @@ function Bottom(props) {
         </div>
       </Container>
     </React.Fragment>
+    </div>
+  
   );
 }
 export default withStyles(styles)(Bottom);

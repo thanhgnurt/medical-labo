@@ -14,6 +14,9 @@ export const themeLight = createMuiTheme({
       backgroundDialog :COLORS.BLUE,
       backgroundLine : COLORS.LIGHT_LINE,
       navbarScroll : COLORS.LIGHT_O,
+      backgroudSetSchedule : COLORS.BACKGROUND_SET_SCHEDULE_LIGHT,
+      layoutFooter : COLORS.LAYOUT_FOOTER_LIGHT,
+      layoutFooterHome : COLORS.DARK_O7
 
       
     },
@@ -53,6 +56,9 @@ export const themeDark = createMuiTheme({
       backgroundDialog : COLORS.DARK_8,
       backgroundLine : COLORS.DARK_LINE,
       navbarScroll : COLORS.DARK_O9,
+      backgroudSetSchedule : COLORS.BACKGROUND_SET_SCHEDULE_DARK,
+      layoutFooter : COLORS.LAYOUT_FOOTER_DARK,
+      layoutFooterHome : COLORS.DARK_O9
       
     },
     secondary: {

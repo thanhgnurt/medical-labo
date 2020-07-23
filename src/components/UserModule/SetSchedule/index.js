@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
   background: {
-    background: "linear-gradient(to top, rgb(10, 32, 41), transparent 100%)",
+    background: theme.palette.primary.backgroudSetSchedule,
     position: "absolute",
     top: 0,
     bottom: 0,

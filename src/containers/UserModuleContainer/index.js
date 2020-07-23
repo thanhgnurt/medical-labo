@@ -46,7 +46,7 @@ function UserModuleContainer(props) {
               duration: 1500,
               delay: 100,
               smooth: true,
-              offset: -100,
+              offset: -70,
             });
           }, 700);
           break;

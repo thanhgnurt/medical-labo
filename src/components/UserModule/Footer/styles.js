@@ -1,3 +1,6 @@
+
+
+
 const styles = (theme) => ({
   imgBacground: {
     backgroundImage: "url(/images/bg-footer.jpg)",
@@ -7,10 +10,16 @@ const styles = (theme) => ({
     height: 400,
     position :"relative"
   },
-  layout: {
-    backgroundColor: "rgb(10, 32, 41)",
+  layoutSecondary: {
+    backgroundColor: theme.palette.primary.layoutFooter,
     height: "100%",
   },
+  layoutPrimary : {
+    backgroundColor : theme.palette.primary.layoutFooterHome,
+    height : "100%"
+  },
+
+
   content: {
     flexGrow: 1,
   },

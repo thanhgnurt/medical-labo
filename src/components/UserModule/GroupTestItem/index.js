@@ -31,10 +31,10 @@ function GroupTestItem(props) {
       <CardContent>
         <Typography
           variant="body2"
-          className={classes.descreption}
+          className={classes.description}
           component="p"
         >
-          {setTest.descreption}
+          {setTest.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

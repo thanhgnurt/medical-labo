@@ -11,6 +11,8 @@ export const COLORS={
     LIGHT_O : "rgb(255, 255, 255, 0.95)",
     DARK_O : "rgb(0, 0, 0, 0.85)",
     DARK_O9 : "rgb(0, 0, 0, 0.9)",
+    DARK_O7 : "rgb(0, 0, 0, 0.7)",
+    DARK_O5 : "rgb(0, 0, 0, 0.5)",
     BLUE_O : "rgb(24, 77, 250, 0.9)",
     ORANGE_O : "rgb(255, 97, 70, 0.95)",
     RED_O : "rgb(245, 37, 37, 0.9)",
@@ -25,5 +27,10 @@ export const COLORS={
     ORANGE_H : "rgb(248, 55, 21, 0.25)",
 
     LIGHT_LINE : "rgb(200, 200, 200, 0.5)",
-    DARK_LINE : "rgb(19, 19, 19, 0.5)"
+    DARK_LINE : "rgb(19, 19, 19, 0.5)",
+
+    BACKGROUND_SET_SCHEDULE_LIGHT : "linear-gradient(to top, rgb(10, 32, 41), transparent 100%)",
+    BACKGROUND_SET_SCHEDULE_DARK : "linear-gradient(to top, rgb(23, 24, 24), transparent 100%)",
+    LAYOUT_FOOTER_LIGHT : "rgb(10, 32, 41)",
+    LAYOUT_FOOTER_DARK : "rgb(23, 24, 24)",
 }
