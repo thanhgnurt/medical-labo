@@ -4,7 +4,8 @@ import {
   ADMIN_ROUTES,
   USER_ROUTES,
   LOGIN_SIGNUP_ROUTES,
-  SET_SCHEDULE_ROUTE
+  SET_SCHEDULE_ROUTE,
+  VIEW_RESULT_ROUTE
 } from "../../constantPages/routes";
 import { withStyles } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -16,7 +17,8 @@ import UserLayoutRoute from "../../commons/Layout/UserLayoutRoute";
 import LoginSignupRoute from "../../commons/Layout/LoginSignupRoute";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import SetScheduleLayoutRoute from './../../commons/Layout/SetScheduleLayoutRoute';
+import SetScheduleLayoutRoute from "./../../commons/Layout/SetScheduleLayoutRoute";
+import ViewResultLayoutRoute from "../../commons/Layout/ViewResultLayoutRoute";
 
 function AppContainer(props) {
   const { theme } = props;
@@ -73,7 +75,20 @@ function AppContainer(props) {
       // <Route path="/dat-lich/:id">
       //   <SetSchedule />
       // </Route>
-      <SetScheduleLayoutRoute path={SET_SCHEDULE_ROUTE.path} name={SET_SCHEDULE_ROUTE.name} component={SET_SCHEDULE_ROUTE.component} />
+      <SetScheduleLayoutRoute
+        path={SET_SCHEDULE_ROUTE.path}
+        name={SET_SCHEDULE_ROUTE.name}
+        component={SET_SCHEDULE_ROUTE.component}
+      />
+    );
+  };
+  const renderViewResult = () => {
+    return (
+      <ViewResultLayoutRoute
+        path={VIEW_RESULT_ROUTE.path}
+        name={VIEW_RESULT_ROUTE.name}
+        component={VIEW_RESULT_ROUTE.component}
+      />
     );
   };
 
@@ -85,6 +100,7 @@ function AppContainer(props) {
         {renderUserRoutes()}
         {renderLoginSignupRoutes()}
         {renderSetScheduleRoutes()}
+        {renderViewResult()}
         <Route path="">
           <Redirect to="/"></Redirect>
         </Route>

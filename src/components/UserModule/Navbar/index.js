@@ -19,6 +19,7 @@ import Logged from "./Logged";
 import NotLogged from "./NotLogged";
 import styles from "./styles";
 import "./styles.css";
+import { NavLink } from "react-router-dom";
 
 Navbar.propTypes = {
   window: PropTypes.func,
@@ -38,6 +39,27 @@ function Navbar(props) {
 
   const changeTheme = () => {
     props.handleChangeTheme();
+  };
+
+  const viewResultNavLink = () => {
+    if (localStorage.getItem("USER")) {
+      // let user = JSON.parse(localStorage.getItem("USER"));
+      return (
+        <NavLink to="/ket-qua">
+          <div className={trigger ? classes.menuScrolled : classes.menuMains}>
+            Kết Quả
+          </div>
+        </NavLink>
+      );
+    } else {
+      return (
+        <NavLink to={{pathname:"/login", prepage : "/ket-qua"}}>
+          <div className={trigger ? classes.menuScrolled : classes.menuMains}>
+            Kết Quả
+          </div>
+        </NavLink>
+      );
+    }
   };
 
   return (
@@ -69,6 +91,16 @@ function Navbar(props) {
                       alignItems="center"
                     >
                       <MenuDesktops menus={MENUS} trigger={trigger} />
+                      {viewResultNavLink()}
+                      {/* <NavLink to="/ket-qua/:id">
+                        <div
+                          className={
+                            trigger ? classes.menuScrolled : classes.menuMains
+                          }
+                        >
+                          Kết Quả
+                        </div>
+                      </NavLink> */}
                     </Grid>
                   </div>
                 </Grid>
@@ -95,7 +127,6 @@ function Navbar(props) {
         </Container>
         <ScrollTop {...props} trigger={trigger} />
       </React.Fragment>
-   
     </div>
   );
 }

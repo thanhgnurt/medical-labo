@@ -4,7 +4,7 @@ import SignupPageContainer from "./../containers/SignupPageContainer";
 import AdminPageContainer from "../containers/AdminModuleContainer";
 import UserModuleContainer from "./../containers/UserModuleContainer";
 import SetSchedule from './../containers/SetScheduleContainer';
-
+import ViewResult from './../containers/ViewResultContainer';
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
 import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
@@ -79,4 +79,10 @@ export const SET_SCHEDULE_ROUTE = {
   path : "/dat-lich/:id",
   name : "Set a sampling schedule",
   component : SetSchedule
+}
+
+export const VIEW_RESULT_ROUTE = {
+  path : "/ket-qua",
+  name : "View result",
+  component : ViewResult,
 }

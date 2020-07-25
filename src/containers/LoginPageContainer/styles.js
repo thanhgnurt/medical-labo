@@ -12,6 +12,12 @@ const styles = (theme)=>({
     form : {
         top : 10
     },
+    note:{
+        fontSize : 16,
+        color : theme.palette.primary.hoverColor,
+        marginLeft : 25,
+
+    }
     
 });
 export default styles;

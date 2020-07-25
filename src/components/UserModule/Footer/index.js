@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Bottom from "./Bottom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function Footer(props) {
   const { classes } = props;
@@ -13,12 +13,19 @@ function Footer(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-        <div>
-          <div className={classes.imgBacground}>
-            <div className={location.pathname === "/" ? classes.layoutPrimary : classes.layoutSecondary}>
-      <Container maxWidth="lg">
+      <div>
+        <div className={classes.imgBacground}>
+          <div
+            className={
+
+              location.pathname.startsWith("/dat-lich")
+              ? classes.layoutSecondary
+              : classes.layoutPrimary
+            }
+          >
+            <Container maxWidth="lg">
               <div className={classes.content}>
-                <Grid container >
+                <Grid container>
                   <Grid item md={7} sm={12}>
                     <div className={classes.paper}>
                       <span className="fa fa-user-md mr-3"></span>
@@ -39,11 +46,11 @@ function Footer(props) {
                   </Grid>
                 </Grid>
               </div>
-      </Container>
-            </div>
+            </Container>
           </div>
-          <Bottom />
         </div>
+        <Bottom />
+      </div>
     </React.Fragment>
   );
 }

@@ -16,7 +16,7 @@ export const MENUS = [
     }
   },
   {
-    name: "Danh mục xét nghiệm",
+    name: "Danh mục",
     to: "/danh-muc-xet-nghiem",
     icon: <FormatListBulletedOutlinedIcon />,
     scroll : {
@@ -36,7 +36,7 @@ export const MENUS = [
     }
   },
   {
-    name: "Tin tức y khoa",
+    name: "Tin tức",
     to: "/tin-tuc-y-khoa",
     icon: <ListAltIcon />,
     scroll : {
@@ -46,9 +46,14 @@ export const MENUS = [
     }
   },
   // {
-  //   name: "Đặt lịch lấy mẫu",
+  //   name: "Kết Quả",
   //   to: "/lienhe",
   //   icon: <AccessAlarmOutlinedIcon />,
+  //   scroll : {
+  //     id : "ID_NEWS_MEDICAL",
+  //     offset : -85,
+
+  //   }
   // },
 ];
 

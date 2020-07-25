@@ -38,6 +38,9 @@ const handleSeting = ()=>{
 }
   const handleLogout = () => {
     localStorage.removeItem("USER");
+    if (history.location.pathname === "/ket-qua") {
+      history.replace("/")
+    }
     history.replace(history.location.pathname);
   };
 

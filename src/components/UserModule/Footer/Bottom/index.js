@@ -16,7 +16,7 @@ function Bottom(props) {
           <Grid container spacing={1} className={classes.content}>
             <Grid item xs={12} sm={12} md={7}>
               <div className={classes.text}>
-                © 2020 Be Clinic. All rights reserved | Design by Legnurt
+                © 2020 Be Clinic. All rights reserved | Design by Thanhgnurt
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={5} className={classes.paper}>

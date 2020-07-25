@@ -11,13 +11,12 @@ import styles from "./styles";
 import { withStyles, Grid } from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
 import { userLogin } from "./../../redux/actions/userActions";
-
 function LoginPageContainer(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   let history = useHistory();
-  let location = useLocation()
-  const { classes} = props;
+  let location = useLocation();
+  const { classes } = props;
 
   const handleClose = () => {
     if (history) {
@@ -50,8 +49,7 @@ function LoginPageContainer(props) {
         matKhau: password,
       },
       history: history,
-      navigation : location.prepage
-      
+      navigation: location.prepage,
     });
   };
   if (localStorage.getItem("USER")) {
@@ -69,6 +67,12 @@ function LoginPageContainer(props) {
           <DialogTitle id="form-dialog-title" className={classes.tittle}>
             Đăng Nhập
           </DialogTitle>
+          {location.prepage==="/ket-qua" ? (
+            <div id="form-dialog-title" className={classes.note}>
+              Vui lòng đăng nhập để xem kết quả !
+            </div>
+          ) : null}
+
           <DialogContent>
             <TextField
               margin="normal"

@@ -62,7 +62,21 @@ const styles = (theme) => ({
   },
   buttonLoginMobile :{
     
-  }
+  },
+  menuScrolled : {
+
+  },
+  menuMains :{
+
+  },
+  selectedMenu:{
+
+  },
+  active :{
+
+  },
+
+
 
 
  
