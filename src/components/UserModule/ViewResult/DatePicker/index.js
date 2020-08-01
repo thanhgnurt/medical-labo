@@ -1,46 +1,72 @@
-import 'date-fns';
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import DateFnsUtils from '@date-io/date-fns';
-import styles from './styles';
+import "date-fns";
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import DateFnsUtils from "@date-io/date-fns";
+import styles from "./styles";
 // import MomentUtils from '@date-io/moment';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from '@material-ui/pickers';
-import { withStyles } from '@material-ui/core';
+} from "@material-ui/pickers";
+import { withStyles, Button } from "@material-ui/core";
+import SearchIcon from '@material-ui/icons/Search';
 
 function DatePicker(props) {
-  const {classes}= props
+  const { classes } = props;
   // The first commit of Material-UI
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
+  const [selectedDateTo, setSelectedDateTo] = React.useState(new Date());
+  const [selectedDateFrom, setSelectedDateFrom] = React.useState(new Date());
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const handleDateChangeTo = (date) => {
+    setSelectedDateTo(date);
+  };
+  const handleDateChangeFrom = (date) => {
+    setSelectedDateFrom(date);
   };
 
   return (
-      <div className={classes.datePicker}>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justify="space-around">
-
-        <KeyboardDatePicker
-          margin="normal"
-          id="date-picker-dialog"
-          label="Ngày xét nghiệm"
-          format="MM/dd/yyyy"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
-    
+    <Grid className={classes.datePicker} container>
+      <Grid item xs={6} sm={4} md={8} xm={12}>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <Grid container justify="left">
+            <KeyboardDatePicker
+              margin="normal"
+              id="date-picker-dialog"
+              label="Từ ngày"
+              format="MM/dd/yyyy"
+              value={selectedDateTo}
+              onChange={handleDateChangeTo}
+              KeyboardButtonProps={{
+                "aria-label": "change date",
+              }}
+            />
+          </Grid>
+        </MuiPickersUtilsProvider>
       </Grid>
-    </MuiPickersUtilsProvider>
-      </div>
+      <Grid xs={6} sm={4} md={8} item>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <Grid container justify="left">
+            <KeyboardDatePicker
+              margin="normal"
+              id="date-picker-dialog"
+              label="Đến ngày"
+              format="MM/dd/yyyy"
+              value={selectedDateFrom}
+              onChange={handleDateChangeFrom}
+              KeyboardButtonProps={{
+                "aria-label": "change date",
+              }}
+            />
+          </Grid>
+        </MuiPickersUtilsProvider>
+        
+      </Grid>
+      <Grid item xs={12} sm={4} md={12}>
 
-  
+        <Button className={classes.viewResult}><SearchIcon/> Xem</Button>
+        
+      </Grid>
+    </Grid>
   );
 }
-export default withStyles(styles)(DatePicker)
+export default withStyles(styles)(DatePicker);

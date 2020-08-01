@@ -19,7 +19,7 @@ import Logged from "./Logged";
 import NotLogged from "./NotLogged";
 import styles from "./styles";
 import "./styles.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 Navbar.propTypes = {
   window: PropTypes.func,
@@ -29,7 +29,7 @@ Navbar.propTypes = {
 };
 
 function Navbar(props) {
-  // let history = useHistory();
+  let location = useLocation()
   const { window, classes } = props;
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
@@ -47,7 +47,9 @@ function Navbar(props) {
       return (
         <NavLink to="/ket-qua">
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
-            Kết Quả
+            <span className={location.pathname==="/ket-qua" ? classes.result : ""}>
+              Kết Quả
+              </span>
           </div>
         </NavLink>
       );

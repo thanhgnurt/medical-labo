@@ -1,6 +1,5 @@
 .triple-spinner {
   display: block;
-
   z-index: 10000;
   width: 125px;
   height: 125px;
@@ -69,5 +68,5 @@
   right: 0;
   position: fixed;
   z-index: 10000;
-  background-color: rgba(0, 0, 0, 0.404);
+  background-color: rgba(0, 0, 0, 0.1);
 }

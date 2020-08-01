@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
 import Progess from "../../components/Progess";
 import LinePager from "../../components/UserModule/LinePager";
-import RegistrationTutorial from "../../components/UserModule/RegistrationTutorial";
 import FooterContainer from "../FooterContainer";
 import HealthOfLifeContainer from "../HealthOfLifeContainer";
 import ListGroupTestContainer from "../ListGroupTestContainer";
@@ -15,6 +14,7 @@ import * as userPageActionTypes from "./../../redux/actions/userPape";
 import styles from "./styles";
 import { useLocation } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
+import RegistrationTutorialContainer from "../RegistrationTutorialContainer";
 
 function UserModuleContainer(props) {
   const { classes, showLoading } = props;
@@ -36,7 +36,7 @@ function UserModuleContainer(props) {
               duration: 1500,
               delay: 100,
               smooth: true,
-              offset: -70,
+              offset: -65,
             });
           }, 700);
           break;
@@ -46,7 +46,7 @@ function UserModuleContainer(props) {
               duration: 1500,
               delay: 100,
               smooth: true,
-              offset: -70,
+              offset: -65,
             });
           }, 700);
           break;
@@ -56,7 +56,7 @@ function UserModuleContainer(props) {
               duration: 1500,
               delay: 100,
               smooth: true,
-              offset: -100,
+              offset: -75,
             });
           }, 700);
           break;
@@ -75,7 +75,7 @@ function UserModuleContainer(props) {
       <UserModule />
       <ListGroupTestContainer />
       <LinePager />
-      <RegistrationTutorial />
+      <RegistrationTutorialContainer />
       <LinePager />
       <HealthOfLifeContainer />
       <LinePager />

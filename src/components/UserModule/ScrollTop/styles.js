@@ -75,6 +75,9 @@ const styles = (theme) => ({
   active :{
 
   },
+  result : {
+
+  },
 
 
 

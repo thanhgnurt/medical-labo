@@ -1,6 +1,17 @@
 const styles = theme=>({
     datePicker :{
-        marginLeft : 20,
+        paddingLeft : 20,
+        justifyContent : "left",
+        "& .MuiInput-formControl":{
+            width : 145
+        }
+    },
+    viewResult : {
+        "& button" : {
+
+        },
+        position : "relative",
+        top: "45%"
     }
 });
 export default styles;

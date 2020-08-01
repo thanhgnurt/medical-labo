@@ -1,8 +1,7 @@
-import Checkbox from "@material-ui/core/Checkbox";
+import React from "react";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-import React from "react";
 
 export default function TableBodyResult(props) {
   const {
@@ -17,6 +16,7 @@ export default function TableBodyResult(props) {
     handleClick,
     selected,
     rows,
+    normalValue
   } = props;
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
@@ -38,19 +38,19 @@ export default function TableBodyResult(props) {
               key={row.name}
               selected={isItemSelected}
             >
-              <TableCell padding="checkbox">
+              {/* <TableCell padding="checkbox">
                 <Checkbox
                   checked={isItemSelected}
                   inputProps={{ "aria-labelledby": labelId }}
                 />
-              </TableCell>
-              <TableCell component="th" id={labelId} scope="row" padding="none">
+              </TableCell> */}
+              <TableCell component="th" id={labelId} scope="row" padding="default">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left" name="result">{row.result}</TableCell>
+            <TableCell align="left" name="normalValue">{normalValue.creatinin.below} - {normalValue.creatinin.above}</TableCell>
+              <TableCell align="left" name="unit">{normalValue.creatinin.unit}</TableCell>
+              <TableCell align="left" name= "note">{row.result > normalValue.creatinin.above ? "binh thuong" : row.result < normalValue.creatinin.above && row.result > normalValue.creatinin.below ? (<span className="text-warning">giam</span>) : "tang"}</TableCell>
             </TableRow>
           );
         })}

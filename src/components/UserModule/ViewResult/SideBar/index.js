@@ -1,107 +1,60 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import { withStyles } from '@material-ui/core';
+import styles from './styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import Divider from '@material-ui/core/Divider';
+import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-  nested: {
-    paddingLeft: theme.spacing(4),
-  },
-}));
 
-export default function ViewResult() {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+function SideBar(props) {
+  const {classes}= props
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleListItemClick = (event, index) => {
+    setSelectedIndex(index);
   };
-
   return (
-    <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
-      }
-      className={classes.root}
-    >
-      <ListItem button>
+    <div className={classes.root}>
+      <Divider />
+    <List component="nav" aria-label="main mailbox folders">
+      <ListItem
+        button
+        selected={selectedIndex === 0}
+        onClick={(event) => handleListItemClick(event, 0)}
+      >
         <ListItemIcon>
-          <SendIcon />
+          <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Sent mail" />
+        <ListItemText primary="Inbox" />
       </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <SendIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sent mail" />
-      </ListItem>
-      <ListItem button>
+      <ListItem
+        button
+        selected={selectedIndex === 1}
+        onClick={(event) => handleListItemClick(event, 1)}
+      >
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
         <ListItemText primary="Drafts" />
       </ListItem>
-      <ListItem button onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Inbox" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItem>
-        </List>
-      </Collapse>
     </List>
-  );
+    <List component="nav" aria-label="secondary mailbox folder">
+      <ListItem
+        button
+        selected={selectedIndex === 2}
+        onClick={(event) => handleListItemClick(event, 2)}
+      >
+        <ListItemText primary="Trash" />
+      </ListItem>
+    
+    </List>
+    <Divider />
+  </div>
+  )
 }
+
+export default withStyles(styles)(SideBar);

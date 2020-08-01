@@ -5,9 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    
-  },
+  container: {},
   root: {
     display: "flex",
     flexWrap: "wrap",
@@ -23,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       filter: "blur(15px)",
       height: 600,
       margin: "-11px 0 -5px -10px",
-    width: "calc(100% + 5px)"
+      width: "calc(100% + 5px)",
     },
   },
   content: {
@@ -42,8 +40,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 0,
     left: 0,
-}
-  
+  },
 }));
 
 export default function SetSchedule() {
@@ -56,7 +53,10 @@ export default function SetSchedule() {
       <CssBaseline />
       <div className={classes.container}>
         <div className={classes.setSchedule}>
-          <img src="/images/imgCarousel-6.jpg" alt="backgroud set schedule"></img>
+          <img
+            src="/images/imgCarousel-6.jpg"
+            alt="backgroud set schedule"
+          ></img>
           <div className={classes.content}>
             <div className={classes.root}>
               <Paper />

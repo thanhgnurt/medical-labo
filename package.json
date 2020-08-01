@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "classname": "^0.0.0",
     "date-fns": "^2.15.0",
     "jquery": "^3.5.1",
     "moment": "^2.27.0",
@@ -23,10 +24,12 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.8.0",
     "react-slick": "^0.26.1",
     "redux": "^4.0.5",
     "redux-form": "^8.3.6",
     "redux-thunk": "^2.3.0",
+    "scroll": "^3.0.1",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

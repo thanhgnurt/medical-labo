@@ -131,6 +131,9 @@
       }
     }
   ],
+
+
+
   "newsMedical": [
     {
       "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
@@ -187,5 +190,83 @@
       "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
       "image": "./images/imgCarousel-6.jpg"
     }
-  ]
+  ],
+
+  "resultTest" : [
+    {
+        "name" : "Creatinin",
+        "result" : "95"
+
+    },
+    {
+        "name" : "Ure",
+        "result" : "7.6"
+
+    },
+    {
+        "name" : "Glucose",
+        "result" : "9.5"
+
+    },
+    {
+        "name" : "AST",
+        "result" : "45"
+
+    },
+    {
+        "name" : "ALT",
+        "result" : "27"
+
+    },
+    {
+        "name" : "GGT",
+        "result" : "55"
+
+    },
+    {
+        "name" : "Cholesterol",
+        "result" : "5.9"
+
+    },
+    {
+        "name" : "Triglycerid",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "Caxi",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "HDL",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "LDL",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "Na",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "Ka",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "Cl",
+        "result" : "3.5"
+
+    },
+    {
+        "name" : "Mg",
+        "result" : "95"
+
+    }
+]
 }

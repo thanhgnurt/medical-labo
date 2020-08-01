@@ -133,6 +133,10 @@ const styles = (theme) => ({
     "& div" : {
       color :theme.palette.primary.hoverColor
     }
+  },
+
+  result : {
+    color :theme.palette.primary.hoverColor
   }
 
   

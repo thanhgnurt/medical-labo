@@ -1,4 +1,4 @@
-import * as listGroupTestApis from "./../../apis/listGroupTest";
+import {getListGroupTest} from "./../../apis/getApis"
 import * as testActionTypes from "./../constantActions/test";
 import { openLoading, closeLoading } from "./ui";
 
@@ -6,11 +6,10 @@ export const fetchListGroupTestRequest = () => {
   return (dispatch) => {
     dispatch(fetchListGroupTest());
     dispatch(openLoading());
-    listGroupTestApis
-      .getListGroupTest()
+    getListGroupTest()
       .then((data) => {
-        setTimeout( ()=>{dispatch(closeLoading())},1000)
         dispatch(fetchListGroupTestSuccess(data, dispatch));
+        setTimeout( ()=>{dispatch(closeLoading())},1000)
       })
       .catch((error) => {
         dispatch(fetchListGroupTestFaild(error));

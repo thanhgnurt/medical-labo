@@ -8,13 +8,40 @@ import ViewResult from './../containers/ViewResultContainer';
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
 import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
+import ContentAdmin from './../containers/AdminModuleContainer/Content';
 export const ADMIN_ROUTES = [
   {
     path: "/admin",
+    exact : true,
     name: "Page admin",
     component: AdminPageContainer,
   },
+
 ];
+
+export const ADMIN_MENUS = [
+  {
+    path : "/admin/menu1fgf",
+    name : "Xem kết quả",
+    component : ContentAdmin
+  },
+  {
+    path : "/admin/mefdnu1fgf",
+    name : "Quản lý tài khoản",
+    component : ContentAdmin
+  },
+ 
+  {
+    path : "/admin/menu1gg",
+    name : "Cài đặt xét nghiệm",
+    component : ContentAdmin
+  },
+  {
+    path : "/admin/menu1gfg",
+    name : "Thống kê",
+    component : ContentAdmin
+  },
+]
 export const USER_ROUTES = [
   {
     path: "/",

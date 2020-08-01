@@ -41,7 +41,7 @@ export const MENUS = [
     icon: <ListAltIcon />,
     scroll : {
       id : "ID_NEWS_MEDICAL",
-      offset : -85,
+      offset : -75,
 
     }
   },

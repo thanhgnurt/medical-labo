@@ -1,5 +1,7 @@
 import * as actionTypes from "./../constantActions/user";
 import * as userApi from "./../../apis/user";
+import { openLoading, closeLoading } from "./ui";
+import {getListResultTest} from './../../apis/getApis';
 
 export const userLogin = (dataLogin) => {
   return (dispatch) => {
@@ -28,3 +30,36 @@ export const userLoginFaild = (error) => {
     payload: { error },
   };
 };
+
+
+export const fetchResultRequest = ()=>{
+  return (dispatch)=>{
+    dispatch(openLoading())
+    getListResultTest()
+    .then(data=>{
+      dispatch(fetchResultSuccess(data))
+      setTimeout( ()=>{dispatch(closeLoading())},800)
+    })
+    .catch(error=>{
+      dispatch(fetchResultFaild(error))
+      dispatch(closeLoading())
+
+    })
+
+
+  }
+}
+
+export const fetchResultSuccess = (data)=>{
+  return {
+    type : actionTypes.USER_LOADDING_RESULT_SUCCESS,
+    payload : {data}
+  }
+}
+
+export const fetchResultFaild = (error)=>{
+  return {
+    type : actionTypes.USER_LOADDING_RESULT_FAILD,
+    payload : {error}
+  }
+}
