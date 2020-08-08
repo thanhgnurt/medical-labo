@@ -50,7 +50,7 @@ const styles = (theme) => ({
   },
 
   detail :{
-    marginTop : -60,
+    marginTop : -50,
     position : "absolute",
     justifyContent : "center",
     left: '50%',

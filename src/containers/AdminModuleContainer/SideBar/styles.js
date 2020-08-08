@@ -61,7 +61,7 @@ const styles = (theme) => ({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
   },
 
   img_bg: {
@@ -73,13 +73,13 @@ const styles = (theme) => ({
   listMenu: {
     position: "relative",
     zIndex: 10,
-    color : "white"
+    color : "black"
   },
   toolbar: {
     position: "relative",
   },
   icon :{
-    color : "white"
+    color : "black"
   }
 });
 export default styles;

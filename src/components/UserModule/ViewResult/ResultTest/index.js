@@ -17,6 +17,7 @@ import TableBodyResult from "../TableBodyResult";
 import TableResultHeader from "./../TableResultHeader";
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
+import { Checkbox } from "@material-ui/core";
 
 
 
@@ -229,6 +230,13 @@ export default function ResultTest(props) {
        <div className={classes.root}>
       <Paper className={classes.paper}>
         <EnhancedTableToolbar numSelected={selected.length} />
+        <Checkbox
+        indeterminate={selected.length > 0 && selected.length < resultTest.length}
+        checked={resultTest.length > 0 && selected.length === resultTest.length}
+        onChange={handleSelectAllClick}
+        inputProps={{ "aria-label": "select all desserts" }}
+        className={classes.checkbox}
+      />
         <TableContainer>
           <Table
             className={classes.table}
@@ -237,7 +245,7 @@ export default function ResultTest(props) {
             aria-label="enhanced table"
           >
             <TableResultHeader
-              classes={classes}
+             
               numSelected={selected.length}
               order={order}
               orderBy={orderBy}

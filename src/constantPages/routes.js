@@ -3,45 +3,57 @@ import LoginPageContainer from "./../containers/LoginPageContainer";
 import SignupPageContainer from "./../containers/SignupPageContainer";
 import AdminPageContainer from "../containers/AdminModuleContainer";
 import UserModuleContainer from "./../containers/UserModuleContainer";
-import SetSchedule from './../containers/SetScheduleContainer';
-import ViewResult from './../containers/ViewResultContainer';
+import SetSchedule from "./../containers/SetScheduleContainer";
+import ViewResult from "./../containers/ViewResultContainer";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
 import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
-import ContentAdmin from './../containers/AdminModuleContainer/Content';
+import ContentAdmin from "./../containers/AdminModuleContainer/Content";
+import AdminLogin from "./../containers/AdminModuleContainer/AdminLogin";
 export const ADMIN_ROUTES = [
   {
     path: "/admin",
-    exact : true,
+    exact: true,
     name: "Page admin",
     component: AdminPageContainer,
   },
-
+  {
+    path: "/admin/login",
+    exact: false,
+    name: "Page admin",
+    component: AdminLogin,
+  },
 ];
 
 export const ADMIN_MENUS = [
   {
-    path : "/admin/menu1fgf",
-    name : "Xem kết quả",
-    component : ContentAdmin
+    path: "/admin/menu1fgf",
+    name: "Xem kết quả",
+    component: ContentAdmin,
+  },
+
+  {
+    path: "/admin/add-news",
+    name: "Thêm Tin Tức",
+    component: ContentAdmin,
+  },
+
+  {
+    path: "/admin/menu1gg",
+    name: "Cài đặt xét nghiệm",
+    component: ContentAdmin,
   },
   {
-    path : "/admin/mefdnu1fgf",
-    name : "Quản lý tài khoản",
-    component : ContentAdmin
-  },
- 
-  {
-    path : "/admin/menu1gg",
-    name : "Cài đặt xét nghiệm",
-    component : ContentAdmin
+    path: "/admin/menu1gfggfg",
+    name: "Thêm kết quả ",
+    component: ContentAdmin,
   },
   {
-    path : "/admin/menu1gfg",
-    name : "Thống kê",
-    component : ContentAdmin
+    path: "/admin/menu1gfg",
+    name: "Thống kê",
+    component: ContentAdmin,
   },
-]
+];
 export const USER_ROUTES = [
   {
     path: "/",
@@ -54,10 +66,9 @@ export const USER_ROUTES = [
     path: "/danh-muc-xet-nghiem",
     exact: true,
     icon: <FormatListBulletedOutlinedIcon />,
-    scroll : {
-      id : "ID_CATEGORY_TEST",
-      offset : -65,
-
+    scroll: {
+      id: "ID_CATEGORY_TEST",
+      offset: -65,
     },
     component: UserModuleContainer,
   },
@@ -67,10 +78,9 @@ export const USER_ROUTES = [
     exact: true,
     name: "Lưu ý",
     icon: <CommentOutlinedIcon />,
-    scroll : {
-      id : "ID_NOTE",
-      offset : -140
-
+    scroll: {
+      id: "ID_NOTE",
+      offset: -140,
     },
     component: UserModuleContainer,
   },
@@ -79,14 +89,12 @@ export const USER_ROUTES = [
     path: "/tin-tuc-y-khoa",
     exact: true,
     icon: <ListAltIcon />,
-    scroll : {
-      id : "ID_NEWS_MEDICAL",
-      offset : -120,
-
+    scroll: {
+      id: "ID_NEWS_MEDICAL",
+      offset: -120,
     },
     component: UserModuleContainer,
   },
-
 ];
 
 export const LOGIN_SIGNUP_ROUTES = [
@@ -103,13 +111,13 @@ export const LOGIN_SIGNUP_ROUTES = [
 ];
 
 export const SET_SCHEDULE_ROUTE = {
-  path : "/dat-lich/:id",
-  name : "Set a sampling schedule",
-  component : SetSchedule
-}
+  path: "/dat-lich/:id",
+  name: "Set a sampling schedule",
+  component: SetSchedule,
+};
 
 export const VIEW_RESULT_ROUTE = {
-  path : "/ket-qua",
-  name : "View result",
-  component : ViewResult,
-}
+  path: "/ket-qua",
+  name: "View result",
+  component: ViewResult,
+};

@@ -46,7 +46,7 @@ function SignupPageContainer(props) {
         <DialogTitle id="form-dialog-title" className={classes.tittle}>
           Đăng Ký
         </DialogTitle>
-        <form  onSubmit={handleSubmit(handelSubmitForm)}>
+        <form  onSubmit={handleSubmit(handelSubmitForm)} autocomplete="off">
         <DialogContent>
           <Field
             id="lastnameAndName"

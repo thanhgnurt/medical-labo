@@ -22,7 +22,9 @@ function GroupTestItem(props) {
           alt="movie-2"
         />
       </div>
-      <div className={classes.detail}>vvvvv</div>
+      <div className={classes.detail}>
+      <Button color="primary">Chi tiết</Button>
+      </div>
       <CardHeader
         className={classes.tittle}
         title={setTest.nameTest}

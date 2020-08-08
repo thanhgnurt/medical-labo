@@ -1,6 +1,6 @@
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
 import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { makeStyles } from "@material-ui/core/styles";
 import Content from "./Content";
 import Header from "./Header";
 import SideBar from "./SideBar";
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MiniDrawer() {
   const classes = useStyles();
-  const theme = useTheme();
+ 
   const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {

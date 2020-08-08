@@ -1,0 +1,5 @@
+export const ADMIN_LOGIN = "ADMIN_LOGIN";
+export const ADMIN_LOGIN_SUCCESS = "ADMIN_LOGIN_SUCCESS";
+export const ADMIN_LOGIN_FAILD = "ADMIN_LOGIN_FAID";
+
+

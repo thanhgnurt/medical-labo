@@ -56,7 +56,7 @@ function SideBar(props) {
         ))}
       </List>
       <Divider />
-        <img src="/images/bg-brain.jpg" className={classes.img_bg}></img>
+        <img src="/images/bg-brain.jpg" className={classes.img_bg} alt="bg-sidebar"></img>
         <div className={classes.bg}>
 
         </div>

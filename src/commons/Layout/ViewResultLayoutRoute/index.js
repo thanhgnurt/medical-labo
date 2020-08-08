@@ -1,14 +1,13 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import NavbarContainer from "../../../containers/NavbarContainer";
-import FooterContainer from "../../../containers/FooterContainer";
 import BottomContact from './../../../components/UserModule/Footer/Bottom'
 
 export default function ViewResultLayoutRoute(props) {
   const { component: YourComponent, name, ...remainProps } = props;
 
   return (
-    <Switch>
+    <div>
       {!localStorage.getItem("USER") ? (
         <Route {...remainProps}>
           <Redirect to={{pathname:"/login", prepage : "/ket-qua"}}></Redirect>
@@ -27,6 +26,6 @@ export default function ViewResultLayoutRoute(props) {
           );
         }}
       />
-    </Switch>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 const styles = theme =>({
-    checkbox : {
+    check_box : {
         padding : "0 10px"
     }
 })

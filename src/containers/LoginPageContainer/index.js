@@ -63,11 +63,16 @@ function LoginPageContainer(props) {
         aria-labelledby="form-dialog-title"
         className={classes.dialog}
       >
-        <form className={classes.form} onSubmit={handleSubmit}>
+        <form
+          className={classes.form}
+          onSubmit={handleSubmit}
+          noValidate
+          autoComplete="off"
+        >
           <DialogTitle id="form-dialog-title" className={classes.tittle}>
             Đăng Nhập
           </DialogTitle>
-          {location.prepage==="/ket-qua" ? (
+          {location.prepage === "/ket-qua" ? (
             <div id="form-dialog-title" className={classes.note}>
               Vui lòng đăng nhập để xem kết quả !
             </div>

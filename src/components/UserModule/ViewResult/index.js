@@ -10,7 +10,7 @@ function ViewResult(props) {
   const {classes}= props;
   return (
     <Grid container>
-      <Grid item md={2} xs={0} className={classes.sidebar} >
+      <Grid item md={2}  className={classes.sidebar} >
         <DatePicker />
         <SideBar />
       </Grid>

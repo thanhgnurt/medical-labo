@@ -1,4 +1,4 @@
-const drawerWidth = 240;
+
 const styles = theme =>({
 
  
@@ -6,7 +6,8 @@ const styles = theme =>({
     width : "100%"
   },
   menuPerson :{
-    margin : "5px 10px"
+    margin : "5px 10px",
+    color :"black"
   },
   buttonMenuToggle :{
     margin : "5px 10px"

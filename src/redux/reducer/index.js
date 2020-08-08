@@ -5,6 +5,7 @@ import theme from './theme';
 import ui from './ui';
 import userReducer from './userReducer';
 import resultTest from './resultTest';
+import adminReducer from './adminReducer';
 import { reducer as formReducer } from 'redux-form';
 
 
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   ui,
   userReducer,
   resultTest,
+  adminReducer,
   form: formReducer
 });
 export default rootReducer;

@@ -8,8 +8,7 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
-import { withStyles, Button } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import { withStyles } from "@material-ui/core";
 
 function DatePicker(props) {
   const { classes } = props;
@@ -28,10 +27,10 @@ function DatePicker(props) {
     <Grid className={classes.datePicker} container>
       <Grid item xs={6} sm={4} md={8} xm={12}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <Grid container justify="left">
+          <Grid container justify="flex-start">
             <KeyboardDatePicker
               margin="normal"
-              id="date-picker-dialog"
+              id="date-start"
               label="Từ ngày"
               format="MM/dd/yyyy"
               value={selectedDateTo}
@@ -45,10 +44,10 @@ function DatePicker(props) {
       </Grid>
       <Grid xs={6} sm={4} md={8} item>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <Grid container justify="left">
+          <Grid container justify="flex-start">
             <KeyboardDatePicker
               margin="normal"
-              id="date-picker-dialog"
+              id="date-end"
               label="Đến ngày"
               format="MM/dd/yyyy"
               value={selectedDateFrom}
@@ -61,11 +60,7 @@ function DatePicker(props) {
         </MuiPickersUtilsProvider>
         
       </Grid>
-      <Grid item xs={12} sm={4} md={12}>
-
-        <Button className={classes.viewResult}><SearchIcon/> Xem</Button>
-        
-      </Grid>
+  
     </Grid>
   );
 }
