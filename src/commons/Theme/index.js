@@ -58,7 +58,7 @@ export const themeDark = createMuiTheme({
       navbarScroll : COLORS.DARK_O9,
       backgroudSetSchedule : COLORS.BACKGROUND_SET_SCHEDULE_DARK,
       layoutFooter : COLORS.LAYOUT_FOOTER_DARK,
-      layoutFooterHome : COLORS.DARK_O9
+      layoutFooterHome : COLORS.DARK_O8
       
     },
     secondary: {

@@ -4,6 +4,9 @@ const styles = (theme) => ({
     marginTop: "20px",
     color : theme.palette.primary.textColor
   },
+  heathOfLife:{
+    marginBottom : 50
+  },
   header: {
     marginTop: 20,
     color : theme.palette.primary.textColor
@@ -48,7 +51,8 @@ const styles = (theme) => ({
     // fontSize: "15px",
     marginTop: 10,
     opacity : "90%",
-    marginBottom : 15
+    marginBottom : 15,
+    color : "black"
 
   },
 });

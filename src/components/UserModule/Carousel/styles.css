@@ -1,5 +1,15 @@
+/* .carousel-1 {
+  position: relative;
+  top: -7.0px;
+}
+.carousel-2 {
+  position: relative;
+  top:-3px
+  
+} */
 .carousel {
   position: relative;
+  top: -3px;
 }
 
 .slick-prev {

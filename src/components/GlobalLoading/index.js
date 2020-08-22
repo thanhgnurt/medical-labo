@@ -7,7 +7,10 @@ import { compose } from "redux";
 import "./styles.css";
 
 function GlobalLoading(props) {
-  const { showLoading } = props;
+  const { 
+    showLoading, 
+    // classes
+  } = props;
   let xhtml = null;
   if (showLoading) {
     // xhtml = (

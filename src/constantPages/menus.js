@@ -37,7 +37,7 @@ export const MENUS = [
   },
   {
     name: "Tin tức",
-    to: "/tin-tuc-y-khoa",
+    to: "/tin-tuc-&-cuoc-song",
     icon: <ListAltIcon />,
     scroll : {
       id : "ID_NEWS_MEDICAL",

@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import NavbarContainer from "../../../containers/NavbarContainer";
 import FooterContainer from "../../../containers/FooterContainer"
 
-export default function SetScheduleLayoutRoute(props) {
+export default function HeathOfLifeLayoutRoute(props) {
   const { component: YourComponent, name, ...remainProps } = props;
 
   return (

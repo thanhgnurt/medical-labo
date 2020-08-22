@@ -31,7 +31,8 @@ const styles = (theme) => ({
 
   button: {
     left: 8,
-    bottom: 0,
+    bottom: 8,
+    
     "&:hover": {
       backgroundColor: theme.palette.primary.hoverColor,
       boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,

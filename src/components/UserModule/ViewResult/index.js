@@ -1,10 +1,10 @@
 import React from "react";
 import SideBar from "./SideBar";
-import ResultTest from "./ResultTest";
 import Grid from "@material-ui/core/Grid";
 import DatePicker from "./DatePicker";
 import { withStyles } from "@material-ui/core";
 import styles from './styles';
+import PaperResultContainer from './PaperResultContainer';
 
 function ViewResult(props) {
   const {classes}= props;
@@ -15,7 +15,8 @@ function ViewResult(props) {
         <SideBar />
       </Grid>
       <Grid item sm={12} xs={12} md={10} className={classes.contentResult}>
-        <ResultTest resultTest={props.resultTest} />
+        <PaperResultContainer resultTest={props.resultTest}/>
+        {/* <ResultTest  /> */}
       </Grid>
     </Grid>
   );

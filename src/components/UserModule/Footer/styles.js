@@ -1,22 +1,35 @@
 
-
-
 const styles = (theme) => ({
   imgBacground: {
-    backgroundImage: "url(/images/bg-footer.jpg)",
-    backgroundSize: "cover",
-    backgroundRepeat: "none",
-    backgroundPosition: "center",
-    height: 400,
+    // backgroundImage: "url(/images/bg-footer.jpg)",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "none",
+    // backgroundPosition: "center",
+    // height: 400,
     position :"relative"
   },
+
+  images:{
+    filter: "blur(15px)",
+    height:280,
+    margin: "30px 0 -5px -10px",
+    width: "calc(100% + 5px)",
+    position: "absolute",
+    objectFit: "cover",
+
+  },
+  
   layoutSecondary: {
     backgroundColor: theme.palette.primary.layoutFooter,
     height: "100%",
+    position: "relative",
+    zIndex: 10,
   },
   layoutPrimary : {
     backgroundColor : theme.palette.primary.layoutFooterHome,
-    height : "100%"
+    height : "100%",
+    position: "relative",
+    zIndex: 10,
   },
 
 

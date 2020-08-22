@@ -21,6 +21,7 @@ import styles from "./styles";
 import "./styles.css";
 import { NavLink, useLocation } from "react-router-dom";
 
+
 Navbar.propTypes = {
   window: PropTypes.func,
   classes: PropTypes.object,

@@ -3,13 +3,15 @@ import LoginPageContainer from "./../containers/LoginPageContainer";
 import SignupPageContainer from "./../containers/SignupPageContainer";
 import AdminPageContainer from "../containers/AdminModuleContainer";
 import UserModuleContainer from "./../containers/UserModuleContainer";
-import SetSchedule from "./../containers/SetScheduleContainer";
+import SetScheduleContainer from "./../containers/SetScheduleContainer";
 import ViewResult from "./../containers/ViewResultContainer";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
 import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
 import ContentAdmin from "./../containers/AdminModuleContainer/Content";
 import AdminLogin from "./../containers/AdminModuleContainer/AdminLogin";
+import HeathOfLifeItemContainer from './../containers/HeathOfLifeItemContainer';
+
 export const ADMIN_ROUTES = [
   {
     path: "/admin",
@@ -113,7 +115,12 @@ export const LOGIN_SIGNUP_ROUTES = [
 export const SET_SCHEDULE_ROUTE = {
   path: "/dat-lich/:id",
   name: "Set a sampling schedule",
-  component: SetSchedule,
+  component: SetScheduleContainer,
+};
+export const HEATH_OF_LIFE_ROUTE = {
+  path: "/tin-tuc-&-cuoc-song/:id",
+  name: "Heath of life",
+  component: HeathOfLifeItemContainer,
 };
 
 export const VIEW_RESULT_ROUTE = {

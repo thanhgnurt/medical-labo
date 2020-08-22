@@ -1,50 +1,38 @@
+import { Checkbox, Grid } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import IconButton from "@material-ui/core/IconButton";
-import Paper from "@material-ui/core/Paper";
-import { lighten, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Switch from "@material-ui/core/Switch";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 import TablePagination from "@material-ui/core/TablePagination";
-import Toolbar from "@material-ui/core/Toolbar";
-import Tooltip from "@material-ui/core/Tooltip";
-import Typography from "@material-ui/core/Typography";
-import FilterListIcon from "@material-ui/icons/FilterList";
-import clsx from "clsx";
-import PropTypes from "prop-types";
+import ZoomInIcon from "@material-ui/icons/ZoomIn";
+import ZoomOutIcon from "@material-ui/icons/ZoomOut";
 import React from "react";
 import TableBodyResult from "../TableBodyResult";
 import TableResultHeader from "./../TableResultHeader";
-import ZoomInIcon from '@material-ui/icons/ZoomIn';
-import ZoomOutIcon from '@material-ui/icons/ZoomOut';
-import { Checkbox } from "@material-ui/core";
-
-
-
-
 
 const normalValue = {
-  creatinin : {
-    below : 63,
-    above : 110,
-    unit : "mg/L"
+  creatinin: {
+    below: 63,
+    above: 110,
+    unit: "mg/L",
   },
-  ure : {
-    below : 63,
-    above : 110,
-    unit : "mg/L"
+  ure: {
+    below: 63,
+    above: 110,
+    unit: "mg/L",
   },
-  ast : {
-    below : 63,
-    above : 110,
-    unit : "mg/L"
+  ast: {
+    below: 63,
+    above: 110,
+    unit: "mg/L",
   },
-  alt : {
-    below : 63,
-    above : 110,
-    unit : "mg/L"
-  }
-}
+  alt: {
+    below: 63,
+    above: 110,
+    unit: "mg/L",
+  },
+};
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -72,72 +60,6 @@ function stableSort(array, comparator) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-const useToolbarStyles = makeStyles((theme) => ({
-  root: {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(1),
-  },
-  highlight:
-    theme.palette.type === "light"
-      ? {
-          color: theme.palette.secondary.main,
-          backgroundColor: lighten(theme.palette.secondary.light, 0.85),
-        }
-      : {
-          color: theme.palette.text.primary,
-          backgroundColor: theme.palette.secondary.dark,
-        },
-  title: {
-    flex: "1 1 100%",
-  },
-}));
-
-const EnhancedTableToolbar = (props) => {
-  const classes = useToolbarStyles();
-  const { numSelected } = props;
-
-  return (
-    <Toolbar
-      className={clsx(classes.root, {
-        [classes.highlight]: numSelected > 0,
-      })}
-    >
-      {numSelected > 0 ? (
-        <Typography
-          className={classes.title}
-          color="inherit"
-          variant="h6"
-          component="div"
-        >
-          
-         Bảng Kết Quả Xét Nghiệm ({numSelected} )
-        </Typography>
-      ) : (
-        <Typography
-          className={classes.title}
-          variant="h6"
-          id="tableTitle"
-          component="div"
-        >
-          Bảng Kết Quả Xét Nghiệm
-        </Typography>
-      )}
-
-    
-        <Tooltip title="Filter list">
-          <IconButton aria-label="filter list">
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
-      
-    </Toolbar>
-  );
-};
-
-EnhancedTableToolbar.propTypes = {
-  numSelected: PropTypes.number.isRequired,
-};
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -161,10 +83,14 @@ const useStyles = makeStyles((theme) => ({
     top: 20,
     width: 1,
   },
+  zoom: {
+    marginLeft: 10,
+    marginTop: 10,
+  },
 }));
 
 export default function ResultTest(props) {
-  const {resultTest}= props;
+  const { resultTest } = props;
   const classes = useStyles();
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
@@ -221,75 +147,73 @@ export default function ResultTest(props) {
     setDense(event.target.checked);
   };
 
-
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, resultTest.length - page * rowsPerPage);
 
   return (
     <div>
-       <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <EnhancedTableToolbar numSelected={selected.length} />
-        <Checkbox
-        indeterminate={selected.length > 0 && selected.length < resultTest.length}
+      <Checkbox
+        indeterminate={
+          selected.length > 0 && selected.length < resultTest.length
+        }
         checked={resultTest.length > 0 && selected.length === resultTest.length}
         onChange={handleSelectAllClick}
         inputProps={{ "aria-label": "select all desserts" }}
         className={classes.checkbox}
       />
-        <TableContainer>
-          <Table
-            className={classes.table}
-            aria-labelledby="tableTitle"
-            size={dense ? "medium" : "small"}
-            aria-label="enhanced table"
-          >
-            <TableResultHeader
-             
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={resultTest.length}
-            />
+      <TableContainer>
+        <Table
+          className={classes.table}
+          aria-labelledby="tableTitle"
+          size={dense ? "medium" : "small"}
+          aria-label="enhanced table"
+        >
+          <TableResultHeader
+            numSelected={selected.length}
+            order={order}
+            orderBy={orderBy}
+            onSelectAllClick={handleSelectAllClick}
+            onRequestSort={handleRequestSort}
+            rowCount={resultTest.length}
+          />
 
-            <TableBodyResult
-              stableSort={stableSort}
-              getComparator={getComparator}
-              order={order}
-              orderBy={orderBy}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              dense={dense}
-              emptyRows={emptyRows}
-              handleClick={handleClick}
-              selected={selected}
-              rows={resultTest}
-              normalValue ={normalValue}
-             
-            />
- 
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={resultTest.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-          labelRowsPerPage="Số hàng mỗi trang"
-        />
-      </Paper>
-      <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label={dense ? <ZoomOutIcon/> : <ZoomInIcon/>}
-      />
-      
+          <TableBodyResult
+            stableSort={stableSort}
+            getComparator={getComparator}
+            order={order}
+            orderBy={orderBy}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            dense={dense}
+            emptyRows={emptyRows}
+            handleClick={handleClick}
+            selected={selected}
+            rows={resultTest}
+            normalValue={normalValue}
+          />
+        </Table>
+      </TableContainer>
+      <Grid container justify="space-between" direction="row-reverse">
+        <Grid item>
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={resultTest.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+            labelRowsPerPage="Số hàng mỗi trang"
+          />
+        </Grid>
+        <Grid item>
+          <FormControlLabel
+            className={classes.zoom}
+            control={<Switch checked={dense} onChange={handleChangeDense} />}
+            label={dense ? <ZoomOutIcon /> : <ZoomInIcon />}
+          />
+        </Grid>
+      </Grid>
     </div>
-    </div>
-   
   );
 }

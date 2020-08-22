@@ -1,17 +1,19 @@
 const styles = (theme) => ({
   bottom: {
-    height: 75,
+    // height: 75,
     flexGrow: 1,
     width: "100%",
+    position: "relative",
+    zIndex: 10,
     
   },
   background :{
-    backgroundColor: "white"
+    backgroundColor: "rgba(0, 0, 0, 0.1)"
   },
   content: {
     paddingTop: 20,
     display: "flex",
-    color : "rgba(0, 0, 0, 0.767)",
+    color : "rgba(0, 0, 0)",
   },
   text: {
     fontSize: 15,

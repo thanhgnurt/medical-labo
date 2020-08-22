@@ -1,6 +1,6 @@
 const styles = theme =>({
     contentResult :{
-        minHeight : 575
+        minHeight : 588
     },
     sidebar :{
         width : "100%"

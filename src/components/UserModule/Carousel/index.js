@@ -26,7 +26,7 @@ export default class CustomArrows extends Component {
       infinite: true,
       autoplay: true,
       // speed: 3000,
-      autoplaySpeed: 3000,
+      // autoplaySpeed: 3000,
       cssEase: "linear",
       slidesToShow: 1,
       slidesToScroll: 1,

@@ -13,14 +13,19 @@ function Footer(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div>
+      <div className={classes.footer}>
         <div className={classes.imgBacground}>
+          <img
+            className={classes.images}
+            src="/images/bg-footer.jpg"
+            alt="footer background"
+          ></img>
+
           <div
             className={
-
               location.pathname.startsWith("/dat-lich")
-              ? classes.layoutSecondary
-              : classes.layoutPrimary
+                ? classes.layoutSecondary
+                : classes.layoutPrimary
             }
           >
             <Container maxWidth="lg">

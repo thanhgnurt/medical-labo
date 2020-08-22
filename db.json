@@ -13,7 +13,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -23,7 +23,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -33,7 +33,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -43,7 +43,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -53,7 +53,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -63,7 +63,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -73,7 +73,7 @@
     {
       "nameTest": "Chức năng gan",
       "include": "(ALT, AST, GGT)",
-      "image": "https://vinmec-prod.s3.amazonaws.com/images/20190524_053937_118581_cach-chua-dieu-tri-.max-1800x1800.jpg",
+      "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
         "tittle": "Xét nghiệm chức năng gan thường được khuyến nghị trong các tình huống sau:",
@@ -138,7 +138,32 @@
     {
       "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
       "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
       "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
     },
     {
       "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
@@ -163,32 +188,7 @@
     {
       "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
       "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
-    },
-    {
-      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
-      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
-    },
-    {
-      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
-      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
-    },
-    {
-      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
-      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
-    },
-    {
-      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
-      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
-    },
-    {
-      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
-      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
-      "image": "./images/imgCarousel-6.jpg"
+      "image": "./images/imgCarousel-5.jpg"
     }
   ],
 

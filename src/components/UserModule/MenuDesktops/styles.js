@@ -31,6 +31,10 @@ const styles = (theme) => ({
     "& div" : {
       color :theme.palette.primary.hoverColor
     }
+  },
+  news :{
+    color :theme.palette.primary.hoverColor 
   }
+  
 });
 export default styles;

@@ -1,5 +1,6 @@
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import {useHistory} from 'react-router-dom'
 // import { useParams, useRouteMatch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
@@ -71,13 +72,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     color: "red",
     marginTop: 5,
-    paddingLeft: 5,
+    
   },
 }));
 
 function SetSchedule(props) {
   // let { id } = useParams();
   // let { url } = useRouteMatch();
+  let history = useHistory()
 
   const [name, setName] = React.useState("");
   const [phoneNumber, setNumberPhone] = React.useState("");
@@ -128,7 +130,7 @@ function SetSchedule(props) {
 
   const handleOnBlur = (event) => {
     if (!phoneNumber) {
-      const messageValidate = "Số điện thoại không được để trống.";
+      const messageValidate = " Số điện thoại không được để trống.";
       setMessage(messageValidate);
     } else {
       if (phoneNumber && isNaN(Number(phoneNumber))) {
@@ -152,6 +154,10 @@ function SetSchedule(props) {
     event.preventDefault();
     console.log(name, phoneNumber, address);
   };
+
+  const handleCancel=()=>{
+    history.push("/")
+  }
 
   return (
     <React.Fragment>
@@ -193,6 +199,7 @@ function SetSchedule(props) {
                   onChange={handelOnChange}
                   onBlur={handleOnBlur}
                   className={classes.textField}
+                  required={true}
                 />
                 {message === true ? null : (
                   <div className={classes.messageValidate}>{message}</div>
@@ -219,7 +226,7 @@ function SetSchedule(props) {
                   >
                     Đặt lịch
                   </Button>
-                  <Button variant="contained" color="secondary" size="small">
+                  <Button variant="contained" color="secondary" size="small"onClick={handleCancel}>
                     Hủy bỏ
                   </Button>
                 </div>

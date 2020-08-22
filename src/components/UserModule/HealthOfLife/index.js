@@ -8,12 +8,14 @@ import { Typography, Button } from "@material-ui/core";
 import MediumNews from "./MediumNews";
 import MenuIconStatus from "./MenuIconStatus";
 import * as Scroll from 'react-scroll';
+import { NavLink } from "react-router-dom";
+
 
 function HealthOfLife(props) {
   const { classes } = props;
   return (
     <Scroll.Element name="NEWS_MEDICAL">
-       <div id="ID_NEWS_MEDICAL">
+       <div id="ID_NEWS_MEDICAL" className={classes.heathOfLife}>
       <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
@@ -32,11 +34,12 @@ function HealthOfLife(props) {
                     alt="news"
                   ></img>
                 </div>
-                <div>
+                <NavLink to="/tin-tuc-&-cuoc-song/id">
                   <h6 type="button" className={classes.tittleNews}>
                     Gerard Butler cùng bồ cũ Deadpool tham gia Greenland
                   </h6>
-                </div>
+                </NavLink>
+               
                 <div>
                   <div className={classes.textNews}>
                     Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa

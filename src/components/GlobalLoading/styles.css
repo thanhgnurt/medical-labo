@@ -5,7 +5,7 @@
   height: 125px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top: 3px solid #fa3d03;
+  border-top: 3px solid #f52408;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   position: fixed;
@@ -25,7 +25,7 @@
   left: 5px;
   right: 5px;
   bottom: 5px;
-  border-top-color: #ff9800;
+  border-top-color: #353535f3;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3.5s linear infinite;
 }
@@ -34,7 +34,7 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border-top-color: #0734ff;
+  border-top-color: #ff9b06;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.75s linear infinite;
 }

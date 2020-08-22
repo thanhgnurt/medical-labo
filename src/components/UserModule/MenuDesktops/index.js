@@ -7,8 +7,14 @@ import { useLocation, NavLink } from "react-router-dom";
 function MenuDesktops(props) {
   const { classes, menus, trigger } = props;
   let location = useLocation();
+ 
   return menus.map((menu) => {
-    if ((location.pathname === "/" || location.pathname ==="/danh-muc-xet-nghiem" || location.pathname==="/luu-y-khi-lay-mau" || location.pathname==="/tin-tuc-y-khoa")) {
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/danh-muc-xet-nghiem" ||
+      location.pathname === "/luu-y-khi-lay-mau" ||
+      location.pathname === "/tin-tuc-y-khoa"
+    ) {
       return (
         <Link
           key={menu.to}
@@ -21,18 +27,22 @@ function MenuDesktops(props) {
           duration={500}
         >
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
-            {menu.name}
+           {menu.name}
           </div>
         </Link>
       );
     } else {
-      return(
-      <NavLink key={menu.to} to={{pathname:"/", prepage:menu.to}} >
-        <div className={trigger ? classes.menuScrolled : classes.menuMains}>
-          {menu.name}
-        </div>
-      </NavLink>
-      )
+      return (
+        <NavLink key={menu.to} to={{ pathname: "/", prepage: menu.to }}>
+          <div className={trigger ? classes.menuScrolled : classes.menuMains}>
+          {location.pathname.startsWith("/tin-tuc-&-cuoc-song") && menu.to === "/tin-tuc-&-cuoc-song" ? (
+              <span className={classes.news}>{menu.name}</span>
+            ) : (
+              menu.name
+            )}
+          </div>
+        </NavLink>
+      );
     }
   });
 }
