@@ -56,37 +56,41 @@ function NotLogged(props) {
           </IconButton>
         </NavLink>
 
-        <NavLink
-          to={{
-            pathname: "/login",
-            prepage: history.location.pathname,
-          }}
-        >
-          <Button
-            size="small"
-            variant="contained"
-            className={classes.buttonLogin}
+        <div className={classes.containerLoginButton}>
+          <NavLink
+            to={{
+              pathname: "/login",
+              prepage: history.location.pathname,
+            }}
           >
-            Đăng Nhập
-          </Button>
-        </NavLink>
+            <Button
+              size="small"
+              variant="contained"
+              className={classes.buttonLogin}
+            >
+              Đăng Nhập
+            </Button>
+          </NavLink>
+        </div>
       </div>
       <div className={classes.sectionMobile}>
-        <NavLink
-          to={{
-            pathname: "/login",
-            prepage: history.location.pathname,
-          }}
-        >
-          <Button
-            size="small"
-            variant="contained"
-            color="secondary"
-            className={classes.buttonLoginMobile}
+        <div className={classes.containerLoginButton}>
+          <NavLink
+            to={{
+              pathname: "/login",
+              prepage: history.location.pathname,
+            }}
           >
-            Đăng Nhập
-          </Button>
-        </NavLink>
+            <Button
+              size="small"
+              variant="contained"
+              color="secondary"
+              className={classes.buttonLoginMobile}
+            >
+              Đăng Nhập
+            </Button>
+          </NavLink>
+        </div>
 
         <IconButton
           aria-label="show more"

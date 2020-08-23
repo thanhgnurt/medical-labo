@@ -24,6 +24,11 @@ export const userLoginSuccess = (data) => {
     payload: { data },
   };
 };
+export const userLoginReset = ()=>{
+  return {
+    type: actionTypes.USER_LOGIN_RESET
+  }
+}
 export const userLoginFaild = (error) => {
   return {
     type: actionTypes.USER_LOGIN_FAILD,

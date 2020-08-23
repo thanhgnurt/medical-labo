@@ -8,6 +8,7 @@ import HealthOfLifeContainer from "../HealthOfLifeContainer";
 import ListGroupTestContainer from "../ListGroupTestContainer";
 import NavbarContainer from "../NavbarContainer";
 import { fetchListGroupTestRequest } from "./../../redux/actions/listGroupTest";
+import {userLoginReset} from './../../redux/actions/userActions'
 import * as userPageActionTypes from "./../../redux/actions/userPape";
 import styles from "./styles";
 import { useLocation } from "react-router-dom";
@@ -21,7 +22,7 @@ function UserModuleContainer(props) {
   const { classes } = props;
   let location = useLocation();
 
-  const { fetchListGroupTest } = props;
+  const { fetchListGroupTest, userLoginReset } = props;
   useEffect(() => {
     if (location.prepage !== "/") {
       switch (location.prepage ) {
@@ -80,7 +81,8 @@ function UserModuleContainer(props) {
       }
     }
     fetchListGroupTest();
-  }, [fetchListGroupTest,location.prepage]);
+    userLoginReset();
+  }, [fetchListGroupTest,location.prepage,userLoginReset]);
 
 
 
@@ -109,6 +111,9 @@ const mapDispatchToProps = (dispatch) => ({
   fetchListGroupTest: () => {
     dispatch(fetchListGroupTestRequest());
   },
+  userLoginReset:()=>{
+    dispatch(userLoginReset())
+  }
 });
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 export default compose(withStyles(styles), withConnect)(UserModuleContainer);
