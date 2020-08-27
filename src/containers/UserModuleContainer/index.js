@@ -16,13 +16,14 @@ import { animateScroll as scroll, scroller } from "react-scroll";
 import RegistrationTutorialContainer from "../RegistrationTutorialContainer";
 import CarouselContainer from "../CarouselContainer";
 import Progess from './../../components/Progess'
+import { fetchListNewsRequest } from "../../redux/actions/newsHealthOfLife";
 
 
 function UserModuleContainer(props) {
   const { classes } = props;
   let location = useLocation();
 
-  const { fetchListGroupTest, userLoginReset } = props;
+  const { fetchListGroupTest, userLoginReset,fetchListNews } = props;
   useEffect(() => {
     if (location.prepage !== "/") {
       switch (location.prepage ) {
@@ -82,7 +83,8 @@ function UserModuleContainer(props) {
     }
     fetchListGroupTest();
     userLoginReset();
-  }, [fetchListGroupTest,location.prepage,userLoginReset]);
+    fetchListNews();
+  }, [fetchListGroupTest,location.prepage,userLoginReset, fetchListNews]);
 
 
 
@@ -113,6 +115,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   userLoginReset:()=>{
     dispatch(userLoginReset())
+  },
+  fetchListNews : ()=>{
+    dispatch(fetchListNewsRequest())
   }
 });
 const withConnect = connect(mapStateToProps, mapDispatchToProps);

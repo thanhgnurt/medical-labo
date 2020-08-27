@@ -1,9 +1,6 @@
 const styles = (theme) => ({
   textNews: {
     fontSize: 13,
-    // textAlign: "justify",
-    // fontFamily: "'Quicksand', sans-serif",
-    // fontWeight: "400",
     overflow: "hidden",
     "-webkit-line-clamp": 3,
     "-webkit-box-orient": "vertical",
@@ -11,7 +8,7 @@ const styles = (theme) => ({
   },
 
   imageMedium: {
-    height: "auto",
+    height: "120px",
     width:"100%",
     objectFit: "cover",
     borderRadius: 5,
@@ -20,8 +17,6 @@ const styles = (theme) => ({
   },
 
   tittleNews: {
-    // fontFamily: "'Quicksand', sans-serif",
-    // fontWeight: "600",
     fontSize: 15,
     marginTop: 10,
     opacity : "90%",

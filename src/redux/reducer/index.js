@@ -7,6 +7,7 @@ import userReducer from './userReducer';
 import resultTest from './resultTest';
 import adminReducer from './adminReducer';
 import { reducer as formReducer } from 'redux-form';
+import newsHealthOfLife from './newsHealthOfLife';
 
 
 const rootReducer = combineReducers({
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   userReducer,
   resultTest,
   adminReducer,
+  newsHealthOfLife,
   form: formReducer
 });
 export default rootReducer;

@@ -9,7 +9,7 @@ button:focus{
    background-repeat: none;
    background-position: center;
    border-bottom: 1px solid white !important;
-   color: rgba(0, 0, 0, 0.692);
+   color: rgb(201, 147, 32);
    box-shadow: 2px 2px blue;
    
    

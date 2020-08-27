@@ -5,9 +5,11 @@ import Grid from "@material-ui/core/Grid";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-scroll";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Bottom(props) {
   const { classes } = props;
+  const location = useLocation();
   return (
     <div className={classes.background}>
       <React.Fragment>
@@ -18,19 +20,22 @@ function Bottom(props) {
               <Grid item xs={12} sm={12} md={7}>
                 <div className={classes.text}>
                   Copyright © 2020 by Thanhgnurt |{" "}
-                  <Link
-                    
-                    href=""
-                    to="ID_HOME"
-                    activeClass={classes.active}
-                    spy={true}
-                    smooth={true}
-                    // offset={menu.scroll.offset}
-                    duration={500}
-                  >
-                    {" "}
-                    Medical Lab
-                  </Link>
+                  {location.pathname !== "/" ? (
+                    <NavLink to="/">Medical Lab</NavLink>
+                  ) : (
+                    <Link
+                      href=""
+                      to="ID_HOME"
+                      activeClass={classes.active}
+                      spy={true}
+                      smooth={true}
+                      // offset={menu.scroll.offset}
+                      duration={500}
+                    >
+                      {" "}
+                      Medical Lab
+                    </Link>
+                  )}
                 </div>
               </Grid>
               <Grid item xs={12} sm={12} md={5} className={classes.paper}>

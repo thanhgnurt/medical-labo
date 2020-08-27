@@ -6,28 +6,32 @@ import Grid from "@material-ui/core/Grid";
 import MenuIconStatus from "../MenuIconStatus";
 
 function MediumNews(props) {
-  const { classes } = props;
+  const { classes,listNews } = props;
+  const showSmallNews = listNews =>{
+    let xhtml = [];
+    for(let i = 1;i<=4; i++){
+      xhtml.push(<SmallNews key ={i} listNews={listNews[i+3]}/>) 
+    }
+    return xhtml;
+  }
   return (
     <Grid container spacing={2} mt={2}>
       <Grid item xs={6} sm={4} md={4}>
         <div>
           <img
-            src="/images/imgCarousel-6.jpg"
+            src={listNews[2].image}
             className={classes.imageMedium}
             alt="news"
           ></img>
         </div>
         <div>
           <h6 type="button" className={classes.tittleNews}>
-            Gerard Butler cùng bồ cũ Deadpool tham gia Greenland
+            {listNews[2].tittle}
           </h6>
         </div>
         <div>
           <div className={classes.textNews}>
-            Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên
-            Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer
-            đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt
-            đại cảnh cháy nổ hoành tráng.
+            {listNews[2].description}
           </div>
         </div>
         <MenuIconStatus />
@@ -35,22 +39,19 @@ function MediumNews(props) {
       <Grid item xs={6} sm={4} md={4}>
         <div>
           <img
-            src="/images/imgCarousel-6.jpg"
+            src={listNews[3].image}
             className={classes.imageMedium}
             alt="news"
           ></img>
         </div>
         <div>
           <h6 type="button" className={classes.tittleNews}>
-            Gerard Butler cùng bồ cũ Deadpool tham gia Greenland
+            {listNews[3].tittle}
           </h6>
         </div>
         <div>
           <div className={classes.textNews}>
-            Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên
-            Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer
-            đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt
-            đại cảnh cháy nổ hoành tráng.
+            {listNews[3].description}
           </div>
         </div>
         <MenuIconStatus />
@@ -59,10 +60,8 @@ function MediumNews(props) {
       <Grid item md={4} sm={4} xs={12}>
 
         {/* small news */}
-        <SmallNews />
-        <SmallNews />
-        <SmallNews />
-        <SmallNews />
+        {showSmallNews(listNews)}
+  
       </Grid>
     </Grid>
   );

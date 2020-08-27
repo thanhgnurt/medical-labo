@@ -1,4 +1,4 @@
-import {getListGroupTest} from "./../../apis/getApis"
+import { getListGroupTest } from "./../../apis/getApis";
 import * as testActionTypes from "./../constantActions/test";
 import { openLoading, closeLoading } from "./ui";
 
@@ -8,12 +8,14 @@ export const fetchListGroupTestRequest = () => {
     dispatch(openLoading());
     getListGroupTest()
       .then((data) => {
-        dispatch(fetchListGroupTestSuccess(data, dispatch));
-        setTimeout( ()=>{dispatch(closeLoading())},1000)
+        dispatch(fetchListGroupTestSuccess(data));
+        setTimeout(() => {
+          dispatch(closeLoading());
+        }, 1000);
       })
       .catch((error) => {
         dispatch(fetchListGroupTestFaild(error));
-        dispatch(closeLoading())
+        dispatch(closeLoading());
       });
   };
 };
@@ -22,7 +24,6 @@ export const fetchListGroupTest = () => ({
   type: testActionTypes.FETCH_GROUP_TEST,
 });
 export const fetchListGroupTestSuccess = (data) => {
-  
   return {
     type: testActionTypes.FETCH_GROUP_TEST_SUCCESS,
     payload: {
@@ -36,7 +37,7 @@ export const fetchListGroupTestFaild = (error) => ({
     error,
   },
 });
-export const selectPaperTest = (paper)=>({
-  type : testActionTypes.SELECT_PAPER_TEST,
-  paper
-})
+export const selectPaperTest = (paper) => ({
+  type: testActionTypes.SELECT_PAPER_TEST,
+  paper,
+});
