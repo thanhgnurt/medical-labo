@@ -9,8 +9,19 @@ const styles = theme =>({
     margin : "5px 10px",
     color :"black"
   },
-  buttonMenuToggle :{
-    margin : "5px 10px"
+
+  buttonMenuToggle:{
+    margin : "5px 10px",
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  buttonMenuToggleMobile :{
+    display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   }
 
   

@@ -1,16 +1,22 @@
-import React from "react";
-import LoginPageContainer from "./../containers/LoginPageContainer";
-import SignupPageContainer from "./../containers/SignupPageContainer";
-import AdminPageContainer from "../containers/AdminModuleContainer";
-import UserModuleContainer from "./../containers/UserModuleContainer";
-import SetScheduleContainer from "./../containers/SetScheduleContainer";
-import ViewResult from "./../containers/ViewResultContainer";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
+import BlurOnIcon from '@material-ui/icons/BlurOn';
 import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
-import ContentAdmin from "./../containers/AdminModuleContainer/Content";
+import FiberNewIcon from '@material-ui/icons/FiberNew';
+import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
+import ListAltIcon from "@material-ui/icons/ListAlt";
+import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
+import React from "react";
+import AdminPageContainer from "../containers/AdminModuleContainer";
 import AdminLogin from "./../containers/AdminModuleContainer/AdminLogin";
+import ContentAdmin from "./../containers/AdminModuleContainer/Content";
 import HeathOfLifeItemContainer from './../containers/HeathOfLifeItemContainer';
+import LoginPageContainer from "./../containers/LoginPageContainer";
+import SetScheduleContainer from "./../containers/SetScheduleContainer";
+import SignupPageContainer from "./../containers/SignupPageContainer";
+import UserModuleContainer from "./../containers/UserModuleContainer";
+import ViewResultContainer from "./../containers/ViewResultContainer";
+import DetailTestContainer from './../containers/DetailTestContainer';
 
 export const ADMIN_ROUTES = [
   {
@@ -31,29 +37,34 @@ export const ADMIN_MENUS = [
   {
     path: "/admin/menu1fgf",
     name: "Xem kết quả",
+    icon:<VisibilityOutlinedIcon/>,
     component: ContentAdmin,
   },
 
   {
     path: "/admin/add-news",
-    name: "Thêm Tin Tức",
+    name: "Tin Tức",
+    icon:<FiberNewIcon/>,
     component: ContentAdmin,
   },
 
   {
     path: "/admin/menu1gg",
-    name: "Cài đặt xét nghiệm",
+    name: "Cài Đặt",
+    icon:<SettingsOutlinedIcon/>,
     component: ContentAdmin,
   },
   {
     path: "/admin/menu1gfggfg",
-    name: "Thêm kết quả ",
+    name: "Kết Quả",
     component: ContentAdmin,
+    icon : <PlaylistAddCheckIcon/>
   },
   {
     path: "/admin/menu1gfg",
     name: "Thống kê",
     component: ContentAdmin,
+    icon: <BlurOnIcon/>
   },
 ];
 export const USER_ROUTES = [
@@ -122,9 +133,15 @@ export const HEATH_OF_LIFE_ROUTE = {
   name: "Heath of life",
   component: HeathOfLifeItemContainer,
 };
+export const DETAIL_TEST_ROUTE = {
+  path: "/chi-tiet-xet-nghiem/:id",
+  name: "Detail test",
+  component: DetailTestContainer,
+};
 
 export const VIEW_RESULT_ROUTE = {
   path: "/ket-qua",
   name: "View result",
-  component: ViewResult,
+  component: ViewResultContainer,
 };
+

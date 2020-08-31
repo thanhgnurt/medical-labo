@@ -1,25 +1,31 @@
-const drawerWidth = 240;
+const drawerWidth = 200;
 const styles = (theme) => ({
+  sideBarDestop : {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
  
   root: {
     display: "flex",
     
   },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
+  // appBar: {
+  //   zIndex: theme.zIndex.drawer + 1,
+  //   transition: theme.transitions.create(["width", "margin"], {
+  //     easing: theme.transitions.easing.sharp,
+  //     duration: theme.transitions.duration.leavingScreen,
+  //   }),
+  // },
+  // appBarShift: {
+  //   marginLeft: drawerWidth,
+  //   width: `calc(100% - ${drawerWidth}px)`,
+  //   transition: theme.transitions.create(["width", "margin"], {
+  //     easing: theme.transitions.easing.sharp,
+  //     duration: theme.transitions.duration.enteringScreen,
+  //   }),
+  // },
   menuButton: {
     marginRight: 36,
   },
@@ -80,6 +86,14 @@ const styles = (theme) => ({
   },
   icon :{
     color : "black"
+  },
+  active :{
+    color : "orange",
+    "& svg": {
+      color : "orange"
+    }
   }
+
+
 });
 export default styles;

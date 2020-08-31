@@ -30,15 +30,7 @@ function NotLogged(props) {
   return (
     <Grid item>
       <div className={classes.sectionDesktop}>
-        {/* <IconButton
-          aria-label="show 4 new mails"
-          color="inherit"
-          className="cartMedical"
-        >
-          <Badge badgeContent={null} color="secondary">
-            <AddShoppingCartIcon />
-          </Badge>
-        </IconButton> */}
+
         <NavLink
           to={{
             pathname: "/login",

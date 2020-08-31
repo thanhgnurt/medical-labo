@@ -7,33 +7,32 @@ import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import React from "react";
 import styles from "./styles";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import SettingsIcon from '@material-ui/icons/Settings';
+import SettingsIcon from "@material-ui/icons/Settings";
 import MenuItem from "@material-ui/core/MenuItem";
 import Typography from "@material-ui/core/Typography";
 import { useHistory } from "react-router-dom";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Header(props) {
-  const { classes, open, handleDrawerOpen } = props;
+  const { classes, open, handleDrawerOpen, handleDrawerOpenMobile, openMobile } = props;
   const handleClose = () => {
     setAnchorEl(null);
   };
   const history = useHistory();
   const [anchorEl, setAnchorEl] = React.useState(null);
-const handleSeting = ()=>{
+  const handleSeting = () => {};
 
-}
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-const handleClick = (event) => {
-  setAnchorEl(event.currentTarget);
-};
-
-const handleLogout = () => {
-  localStorage.removeItem("ADMIN");
-  if (history.location.pathname === "/admin") {
-    history.replace("/")
-  }
-  history.replace(history.location.pathname);
-};
+  const handleLogout = () => {
+    localStorage.removeItem("ADMIN");
+    if (history.location.pathname === "/admin") {
+      history.replace("/");
+    }
+    history.replace(history.location.pathname);
+  };
   return (
     <Grid
       item
@@ -46,23 +45,36 @@ const handleLogout = () => {
     >
       <Grid item xs={2}>
         <IconButton
-        className ={classes.buttonMenuToggle}
+          className={classes.buttonMenuToggle}
           color="inherit"
           aria-label="open drawer"
           onClick={handleDrawerOpen}
         >
           {open ? <MoreVertIcon /> : <FormatListBulletedIcon />}
         </IconButton>
+        <IconButton
+          className={classes.buttonMenuToggleMobile}
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerOpenMobile}
+        >
+          {openMobile ? <CloseIcon /> : <FormatListBulletedIcon />}
+        </IconButton>
       </Grid>
+      
       <Grid item xs={6}>
         <Grid
           container
           direction="row"
           justify="flex-end"
           alignItems="baseline"
-          
         >
-          <IconButton color="secondary" aria-label="add an alarm" className={classes.menuPerson} onClick={handleClick}>
+          <IconButton
+            color="secondary"
+            aria-label="add an alarm"
+            className={classes.menuPerson}
+            onClick={handleClick}
+          >
             <PersonOutlineIcon />
           </IconButton>
           <Menu
@@ -73,7 +85,6 @@ const handleLogout = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-           
             <MenuItem onClick={handleSeting}>
               <ListItemIcon className={classes.iconLogged}>
                 <SettingsIcon fontSize="small" />

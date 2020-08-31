@@ -95,15 +95,7 @@ function Navbar(props) {
                     >
                       <MenuDesktops menus={MENUS} trigger={trigger} />
                       {viewResultNavLink()}
-                      {/* <NavLink to="/ket-qua/:id">
-                        <div
-                          className={
-                            trigger ? classes.menuScrolled : classes.menuMains
-                          }
-                        >
-                          Kết Quả
-                        </div>
-                      </NavLink> */}
+
                     </Grid>
                   </div>
                 </Grid>

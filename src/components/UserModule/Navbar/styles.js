@@ -137,7 +137,8 @@ const styles = (theme) => ({
 
   result : {
     color :theme.palette.primary.hoverColor
-  }
+  },
+
 
   
 });

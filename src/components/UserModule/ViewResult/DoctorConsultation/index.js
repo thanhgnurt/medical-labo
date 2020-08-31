@@ -4,6 +4,7 @@ import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop : theme.spacing(2),
     width: '100%',
     '& > * + *': {
       marginTop: theme.spacing(2),
@@ -16,7 +17,7 @@ export default function DortorConsultatin(props) {
 
   return (
     <div className={classes.root}>
-      <Alert severity="error">This is an error alert — check it out!</Alert>
+      <Alert severity="error">This is an error alert — check it out! This is an error alert — loren This is an error alert — check it out!This is an error alert — check it out!This is an error alert — check it out!This is an error alert — check it out! check it out! This is an error alert — check it out!</Alert>
       <Alert severity="warning">This is a warning alert — check it out!</Alert>
       <Alert severity="info">This is an info alert — check it out!</Alert>
       <Alert severity="success">This is a success alert — check it out!</Alert>

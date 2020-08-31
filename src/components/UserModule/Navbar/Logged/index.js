@@ -14,7 +14,23 @@ import styles from "./styles";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Typography from "@material-ui/core/Typography";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import SettingsIcon from '@material-ui/icons/Settings';
+import SettingsIcon from "@material-ui/icons/Settings";
+import Tooltip from "@material-ui/core/Tooltip";
+
+const LightTooltip = withStyles((theme) => ({
+  tooltip: {
+    backgroundColor: "rgb(0, 0, 0, 0.7)",
+    color: "rgb(255, 255, 255, 0.9)",
+    boxShadow: theme.shadows[1],
+    marginTop: 2,
+    fontSize: 11,
+    "& p":{
+      textTransform :"capitalize",
+      fontSize : 14,
+      color : "rgb(255, 255, 255, 0.6)"
+    }
+  },
+}))(Tooltip);
 
 Logged.propTypes = {
   window: PropTypes.func,
@@ -30,16 +46,26 @@ function Logged(props) {
     setAnchorEl(event.currentTarget);
   };
 
+  const showAccount=(user)=>{
+    let xhtml = "";
+    xhtml = (
+      <div>
+       <h6>Tài khoản</h6>
+       <p>{user.hoTen}</p>
+
+      </div>
+    )
+    return xhtml
+  }
+
   const handleClose = () => {
     setAnchorEl(null);
   };
-const handleSeting = ()=>{
-
-}
+  const handleSeting = () => {};
   const handleLogout = () => {
     localStorage.removeItem("USER");
     if (history.location.pathname === "/ket-qua") {
-      history.replace("/")
+      history.replace("/");
     }
     history.replace(history.location.pathname);
   };
@@ -51,15 +77,19 @@ const handleSeting = ()=>{
     return (
       <Grid item>
         <div className={classes.sectionDesktop}>
-          <IconButton className={classes.containerAvatar} onClick={handleClick}>
-            <Avatar size="small" className={classes.avatar} type="button">
-              {user.hoTen.slice(0, 1).toUpperCase()}
-            </Avatar>
-          </IconButton>
-          <Typography className={classes.hello}>
+          <LightTooltip title={showAccount(user)}>
+            <IconButton
+              className={classes.containerAvatar}
+              onClick={handleClick}
+            >
+              <Avatar size="small" className={classes.avatar} type="button">
+                {user.hoTen.slice(0, 1).toUpperCase()}
+              </Avatar>
+            </IconButton>
+          </LightTooltip>
+          {/* <Typography className={classes.hello}>
            Hello ! {user.hoTen}
-          </Typography>
-         
+          </Typography> */}
         </div>
         <div className={classes.sectionMobile}>
           <IconButton className={classes.containerAvatar} onClick={handleClick}>
@@ -67,7 +97,7 @@ const handleSeting = ()=>{
               {user.hoTen.slice(0, 1).toUpperCase()}
             </Avatar>
           </IconButton>
-          
+
           <Menu
             className={classes.menuUser}
             id="simple-menu"
@@ -76,7 +106,6 @@ const handleSeting = ()=>{
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-           
             <MenuItem onClick={handleSeting}>
               <ListItemIcon className={classes.iconLogged}>
                 <SettingsIcon fontSize="small" />

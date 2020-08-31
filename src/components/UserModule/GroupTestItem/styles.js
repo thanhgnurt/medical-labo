@@ -64,6 +64,7 @@ const styles = (theme) => ({
     "-webkit-box-orient": "vertical",
     display: "-webkit-box",
     textAlign : "justify"
-  }
+  },
+
 });
 export default styles;

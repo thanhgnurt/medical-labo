@@ -45,16 +45,7 @@ export const MENUS = [
 
     }
   },
-  // {
-  //   name: "Kết Quả",
-  //   to: "/lienhe",
-  //   icon: <AccessAlarmOutlinedIcon />,
-  //   scroll : {
-  //     id : "ID_NEWS_MEDICAL",
-  //     offset : -85,
 
-  //   }
-  // },
 ];
 
 

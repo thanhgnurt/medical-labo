@@ -13,6 +13,7 @@ const styles = (theme) => ({
     },
   },
   buttonLogin: {
+    display: "block",
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: 600,
     textTransform: "none",
@@ -56,9 +57,6 @@ const styles = (theme) => ({
       boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,
     },
   },
-  containerLoginButton:{
-    width : 129.16,
-    textAlign : "right"
-  }
+ 
 });
 export default styles;

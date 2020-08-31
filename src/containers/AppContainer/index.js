@@ -6,7 +6,8 @@ import {
   LOGIN_SIGNUP_ROUTES,
   SET_SCHEDULE_ROUTE,
   VIEW_RESULT_ROUTE,
-  HEATH_OF_LIFE_ROUTE
+  HEATH_OF_LIFE_ROUTE,
+  DETAIL_TEST_ROUTE
 } from "../../constantPages/routes";
 import { withStyles } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -85,13 +86,19 @@ function AppContainer(props) {
   };
   const renderHeathOfLifeRoutes = () => {
     return (
-      // <Route path="/dat-lich/:id">
-      //   <SetSchedule />
-      // </Route>
       <SetScheduleLayoutRoute
         path={HEATH_OF_LIFE_ROUTE.path}
         name={HEATH_OF_LIFE_ROUTE.name}
         component={HEATH_OF_LIFE_ROUTE.component}
+      />
+    );
+  };
+  const renderDetailTestRoutes = () => {
+    return (
+      <SetScheduleLayoutRoute
+        path={DETAIL_TEST_ROUTE.path}
+        name={DETAIL_TEST_ROUTE.name}
+        component={DETAIL_TEST_ROUTE.component}
       />
     );
   };
@@ -115,6 +122,7 @@ function AppContainer(props) {
         {renderSetScheduleRoutes()}
         {renderViewResult()}
         {renderHeathOfLifeRoutes()}
+        {renderDetailTestRoutes()}
         <Route path="">
           <Redirect to="/"></Redirect>
         </Route>

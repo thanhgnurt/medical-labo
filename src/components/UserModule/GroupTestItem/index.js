@@ -23,7 +23,10 @@ function GroupTestItem(props) {
         />
       </div>
       <div className={classes.detail}>
+        <NavLink to={`/chi-tiet-xet-nghiem/${setTest.nameTest}`}>
+
       <Button color="primary">Chi tiết</Button>
+        </NavLink>
       </div>
       <CardHeader
         className={classes.tittle}
@@ -41,7 +44,6 @@ function GroupTestItem(props) {
       </CardContent>
       <CardActions disableSpacing>
         <NavLink to={`/dat-lich/${setTest.id}`}>
-
         <Button
           variant="outlined"
           color="secondary"

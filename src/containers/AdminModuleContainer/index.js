@@ -5,6 +5,7 @@ import Content from "./Content";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import Grid from "@material-ui/core/Grid";
+import MobileSideBar from "./MobileSideBar";
 
 const drawerWidth = 240;
 
@@ -57,28 +58,37 @@ const useStyles = makeStyles((theme) => ({
       // width: theme.spacing(9) + 1,
     },
   },
+
+ 
 }));
 
 export default function MiniDrawer() {
   const classes = useStyles();
  
   const [open, setOpen] = React.useState(true);
+  const [openMobile, setOpenMobile] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(!open);
+  };
+  const handleDrawerOpenMobile = () => {
+    setOpenMobile(!openMobile);
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
   };
 
+
   return (
     <div className={classes.root}>
       <CssBaseline />
       <SideBar open={open} handleDrawerClose={handleDrawerClose} />
+      
       <Grid container>
         <Grid item xs={12} container>
-          <Header open={open} handleDrawerOpen={handleDrawerOpen} />
+          <Header open={open} handleDrawerOpen={handleDrawerOpen} handleDrawerOpenMobile={handleDrawerOpenMobile} openMobile={openMobile}/>
+          <MobileSideBar openMobile={openMobile} />
         </Grid>
         <Grid item xs={12}>
           <Content />

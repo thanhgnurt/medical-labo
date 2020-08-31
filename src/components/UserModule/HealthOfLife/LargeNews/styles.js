@@ -29,7 +29,7 @@ const styles = (theme) => ({
       marginTop: 10,
       opacity : "90%",
       marginBottom : 15,
-      color : "black"
+      color: theme.palette.primary.textColor
   
     },
   });

@@ -2,8 +2,8 @@
 const styles = (theme) => ({
   root: {
     position: "fixed",
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
+    bottom: 12,
+    right: 12,
     zIndex : 999,
   },
   backToTop : {

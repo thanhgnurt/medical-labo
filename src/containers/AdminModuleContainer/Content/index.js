@@ -7,7 +7,9 @@ function Content(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Paper />
+      <Paper>
+        Content
+      </Paper>
     </div>
   );
 }
