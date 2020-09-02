@@ -1,4 +1,3 @@
-import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
@@ -7,19 +6,20 @@ import { withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import PropTypes from "prop-types";
+import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
+import { NavLink, useLocation } from "react-router-dom";
 import { compose } from "redux";
-import ControlTheme from "../SomeSmallFeature/Switch";
 import { MENUS } from "./../../../constantPages/menus";
 import * as changeThemeActions from "./../../../redux/actions/userPape";
 import MenuDesktops from "./../MenuDesktops";
 import ScrollTop from "./../ScrollTop";
+import ButtonChangeTheme from './ButtonChangeTheme';
 import Logged from "./Logged";
 import NotLogged from "./NotLogged";
 import styles from "./styles";
 import "./styles.css";
-import { NavLink, useLocation } from "react-router-dom";
 
 
 Navbar.propTypes = {
@@ -82,7 +82,7 @@ function Navbar(props) {
                 alignItems="center"
               >
                 <Grid item className={classes.logo}>
-                  <ControlTheme changeTheme={changeTheme} />
+                  <ButtonChangeTheme changeTheme={changeTheme} trigger={trigger}/>
                 </Grid>
                 <Grid item>
                   <div className={classes.menu_list}>

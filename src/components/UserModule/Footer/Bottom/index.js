@@ -6,6 +6,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-scroll";
 import { NavLink, useLocation } from "react-router-dom";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import FacebookIcon from "@material-ui/icons/Facebook";
 
 function Bottom(props) {
   const { classes } = props;
@@ -21,9 +23,12 @@ function Bottom(props) {
                 <div className={classes.text}>
                   Copyright © 2020 by Thanhgnurt |{" "}
                   {location.pathname !== "/" ? (
-                    <NavLink to="/">Medical Lab</NavLink>
+                    <NavLink className={classes.medical} to="/">
+                      Medical Lab
+                    </NavLink>
                   ) : (
                     <Link
+                      className={classes.medical}
                       href=""
                       to="ID_HOME"
                       activeClass={classes.active}
@@ -32,7 +37,6 @@ function Bottom(props) {
                       // offset={menu.scroll.offset}
                       duration={500}
                     >
-                      {" "}
                       Medical Lab
                     </Link>
                   )}
@@ -41,17 +45,33 @@ function Bottom(props) {
               <Grid item xs={12} sm={12} md={5} className={classes.paper}>
                 <ul>
                   <li>
-                    <i className="fab fa-facebook-f mr-2" />
-                    Facebook
+                    <NavLink className={classes.contactIcon} to='/'>
+                      <FacebookIcon />
+                      <span className={classes.facebook}>
+
+                      Facebook
+                      </span>
+                    </NavLink>
                   </li>
                   <li>
-                    <i className="fab fa-twitter mr-2" />
-                    Twitter
+                    <NavLink className={classes.contactIcon} to="/">
+                      <TwitterIcon /> 
+                      <span className={classes.twitter}>
+
+                      Twitter
+                      </span>
+                    </NavLink>
                   </li>
-                  <li>
-                    <i className="fab fa-google-plus-g mr-2" />
+                  {/* <li>
+                    
                     Google +
-                  </li>
+                  </li> */}
+                  <NavLink className={classes.contactIcon} to="/">
+                    <li className={classes.zalo}>
+                      <span className={classes.zaloIcon}>Z</span>
+                      alo
+                    </li>
+                  </NavLink>
                 </ul>
               </Grid>
             </Grid>

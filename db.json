@@ -11,8 +11,8 @@
       }
     },
     {
-      "nameTest": "Chức năng gan",
-      "include": "(ALT, AST, GGT)",
+      "nameTest": "Chức năng thận",
+      "include": "(Ure, Cre)",
       "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
@@ -21,8 +21,8 @@
       }
     },
     {
-      "nameTest": "Chức năng gan",
-      "include": "(ALT, AST, GGT)",
+      "nameTest": "Bộ mỡ",
+      "include": "(Cholesterol, Triglycerid, HDL, LDL)",
       "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
@@ -31,8 +31,8 @@
       }
     },
     {
-      "nameTest": "Chức năng gan",
-      "include": "(ALT, AST, GGT)",
+      "nameTest": "Đường Huyết máu",
+      "include": "(Glucose, HbA1C)",
       "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
@@ -41,8 +41,8 @@
       }
     },
     {
-      "nameTest": "Chức năng gan",
-      "include": "(ALT, AST, GGT)",
+      "nameTest": "Men tim",
+      "include": "(CK-MB, CK, Troponin T, Troponin I)",
       "image": "./images/imgCarousel-5.jpg",
       "description": "Các xét nghiệm chức năng gan giúp bác sĩ kiểm tra chức năng của gan và phát hiện các tổn thương gan. Những xét nghiệm máu này đo nồng độ protein và enzyme trong máu của bạn.",
       "detail": {
@@ -131,7 +131,6 @@
       }
     }
   ],
-
 
 
   "newsMedical": [

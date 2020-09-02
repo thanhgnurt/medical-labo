@@ -8,24 +8,22 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import AlarmOnIcon from "@material-ui/icons/AlarmOn";
 import styles from "./styles";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import "./styles.css";
+import DetailsIcon from "@material-ui/icons/Details";
 
 function GroupTestItem(props) {
   const { setTest, classes } = props;
   return (
     <Paper className={classes.root} elevation={3}>
       <div>
-        <img
-          className={classes.media}
-          src={setTest.image}
-          alt="movie-2"
-        />
+        <img className={classes.media} src={setTest.image} alt="movie-2" />
       </div>
       <div className={classes.detail}>
         <NavLink to={`/chi-tiet-xet-nghiem/${setTest.nameTest}`}>
-
-      <Button color="primary">Chi tiết</Button>
+          <Button size="small" variant="contained" startIcon={<DetailsIcon />} color="primary">
+            Chi tiết
+          </Button>
         </NavLink>
       </div>
       <CardHeader
@@ -43,17 +41,17 @@ function GroupTestItem(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <NavLink to={`/dat-lich/${setTest.id}`}>
-        <Button
-          variant="outlined"
-          color="secondary"
-          aria-label="add to favorites"
-          className={classes.button}
-          startIcon={<AlarmOnIcon />}
-          size="small"
-        >
-          Đặt Lịch Lấy Mẫu
-        </Button>
+        <NavLink to={`/dat-lich/${setTest.nameTest}`}>
+          <Button
+            variant="outlined"
+            color="secondary"
+            aria-label="add to favorites"
+            className={classes.button}
+            startIcon={<AlarmOnIcon />}
+            size="small"
+          >
+            Đặt Lịch Lấy Mẫu
+          </Button>
         </NavLink>
       </CardActions>
     </Paper>

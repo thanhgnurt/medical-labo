@@ -20,7 +20,7 @@ function LargeNews(props) {
             ></img>
           </div>
           <NavLink to="/tin-tuc-&-cuoc-song/id">
-            <h6 type="button" className={classes.tittleNews}>
+            <h6 className={classes.tittleNews}>
               {listNews[0].tittle}
             </h6>
           </NavLink>
@@ -41,7 +41,7 @@ function LargeNews(props) {
             ></img>
           </div>
           <NavLink to="/tin-tuc-&-cuoc-song/id">
-            <h6 type="button" className={classes.tittleNews}>
+            <h6 className={classes.tittleNews}>
               {listNews[1].tittle}
             </h6>
           </NavLink>

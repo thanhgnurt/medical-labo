@@ -55,10 +55,46 @@ const styles = (theme) => ({
       textAlign: "center",
     },
   },
+  medical:{
+    color: "blue",
+    // "&:hover":{
+    //   color: theme.palette.primary.hoverColor
+    // }
+  },
   //   "@media (max-width: 960px)": {
   //     content: {
 
   //     },
   //   },
+
+  zaloIcon :{
+    fontWeight:"900",
+    fontSize : 20,
+    
+  },
+  zalo:{
+    position:"relative",
+    // top: -2.5
+
+  },
+  facebook:{
+    marginLeft: 2,
+    position : "relative",
+    bottom : -5
+  },
+  twitter:{
+    marginLeft: 2,
+    position : "relative",
+    bottom : -5
+
+  },
+  contactIcon:{
+    color: "black",
+    "&:hover":{
+      color:theme.palette.primary.hoverColor
+    }
+  }
+
+
 });
 export default styles;

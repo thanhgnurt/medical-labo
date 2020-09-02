@@ -25,7 +25,7 @@ function MediumNews(props) {
           ></img>
         </div>
         <div>
-          <h6 type="button" className={classes.tittleNews}>
+          <h6 className={classes.tittleNews}>
             {listNews[2].tittle}
           </h6>
         </div>
@@ -45,7 +45,7 @@ function MediumNews(props) {
           ></img>
         </div>
         <div>
-          <h6 type="button" className={classes.tittleNews}>
+          <h6 className={classes.tittleNews}>
             {listNews[3].tittle}
           </h6>
         </div>

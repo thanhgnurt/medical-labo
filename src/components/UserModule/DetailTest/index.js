@@ -4,7 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 
 export default function HealthOfLifeItem(props) {
-  const { id, listGroupTest } = props;
+  const { listGroupTest } = props;
 
   return (
     <React.Fragment>

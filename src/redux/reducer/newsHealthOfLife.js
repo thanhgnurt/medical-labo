@@ -1,7 +1,64 @@
 import * as actionTypes from "./../constantActions/userPape";
 
 const initialState = {
-  listNews: []
+  listNews: [
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-6.jpg"
+    },
+    {
+      "tittle": "Gerard Butler cùng bồ cũ Deadpool tham gia Greenland",
+      "description": "Bộ phim hành động mang đề tài tận thế Greenland: Thảm Họa Thiên Thạch đến từ nhà sản xuất của loạt phim John Wick đã tung ra trailer đầu tiên, hé lộ nội dung cốt truyện, dàn diễn viên, cùng hàng loạt đại cảnh cháy nổ hoành tráng.",
+      "image": "./images/imgCarousel-5.jpg"
+    }
+  ],
+
 };
 
 const myReducer = (state = initialState, action) => {
@@ -9,7 +66,7 @@ const myReducer = (state = initialState, action) => {
     case actionTypes.FETCH_LIST_NEWS:
       return {
         ...state,
-        listNews: [],
+        // listNews: [],
       };
     case actionTypes.FETCH_LIST_NEWS_SUCCESS:
         const {data}=action.payload
@@ -20,7 +77,7 @@ const myReducer = (state = initialState, action) => {
     case actionTypes.FETCH_LIST_NEWS_FAILD:
       return {
         ...state,
-        listNews: [],
+        // listNews: [],
       };
 
 

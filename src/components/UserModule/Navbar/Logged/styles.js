@@ -62,11 +62,13 @@ const styles = (theme) => ({
         
     },
     avatar: {
+      
         width: 37,
         height: 37,
         position : "relative",
         top : "50%",
-        backgroundColor : theme.palette.primary.hoverColor
+        backgroundColor : "beige",
+        padding : 6
       },
       menuUser :{
         marginTop : 50,

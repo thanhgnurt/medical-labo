@@ -9,6 +9,7 @@ import { MENUS } from "../../../constantPages/menus";
 import "./styles.css";
 import { NavLink } from "react-router-dom";
 import styles from "./styles";
+import DoneAllIcon from '@material-ui/icons/DoneAll';
 
 
 function MenuMobile(props) {
@@ -35,6 +36,16 @@ function MenuMobile(props) {
             </ListItem>
           </NavLink>
         ))}
+         <NavLink
+            to="/ket-qua"
+            className={classes.linkMobileMenu}
+            activeClassName={classes.activeSelection}
+          >
+            <ListItem button to="/ket-qua">
+              <div className={classes.icon}> <DoneAllIcon/></div>
+              <ListItemText primary="Kết quả" className={classes.listText} />
+            </ListItem>
+          </NavLink>
       </List>
       <Divider />
     </div>

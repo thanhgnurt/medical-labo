@@ -1,14 +1,14 @@
+import AddAlertIcon from '@material-ui/icons/AddAlert';
+import AppsIcon from '@material-ui/icons/Apps';
+import FiberNewIcon from '@material-ui/icons/FiberNew';
+import HomeIcon from '@material-ui/icons/Home';
 import React from "react";
-import ListAltIcon from "@material-ui/icons/ListAlt";
-import FormatListBulletedOutlinedIcon from "@material-ui/icons/FormatListBulletedOutlined";
-import CommentOutlinedIcon from "@material-ui/icons/CommentOutlined";
-// import AccessAlarmOutlinedIcon from "@material-ui/icons/AccessAlarmOutlined";
 
 export const MENUS = [
   {
     name: "Trang chủ",
     to: "/",
-    icon: <FormatListBulletedOutlinedIcon />,
+    icon: <HomeIcon />,
     scroll : {
       id : "ID_HOME",
       offset : 0,
@@ -18,7 +18,7 @@ export const MENUS = [
   {
     name: "Danh mục",
     to: "/danh-muc-xet-nghiem",
-    icon: <FormatListBulletedOutlinedIcon />,
+    icon: <AppsIcon />,
     scroll : {
       id : "ID_CATEGORY_TEST",
       offset : -65,
@@ -28,7 +28,7 @@ export const MENUS = [
   {
     name: "Lưu ý",
     to: "/luu-y-khi-lay-mau",
-    icon: <CommentOutlinedIcon />,
+    icon: <AddAlertIcon />,
     scroll : {
       id : "ID_NOTE",
       offset : -65
@@ -38,7 +38,7 @@ export const MENUS = [
   {
     name: "Tin tức",
     to: "/tin-tuc-&-cuoc-song",
-    icon: <ListAltIcon />,
+    icon: <FiberNewIcon />,
     scroll : {
       id : "ID_NEWS_MEDICAL",
       offset : -75,

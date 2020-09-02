@@ -20,7 +20,7 @@ const styles = (theme) => ({
   },
   
   layoutSecondary: {
-    backgroundColor: theme.palette.primary.layoutFooter,
+    // backgroundColor: theme.palette.primary.layoutFooter,
     height: "100%",
     position: "relative",
     zIndex: 10,
@@ -63,12 +63,44 @@ const styles = (theme) => ({
       display: "flex",
       padding : "40px 0px"
     },
+    images:{
+      height:280,
+    },
   },
   "@media (max-width: 960px)": {
+    images:{
+      height:320,
+    },
     content: {
       display: "flex",
       padding : "40px 40px"
     },
   },
+  "@media (max-width: 600px)": {
+    images:{
+      height:360,
+    },
+  },
+  "@media (max-width: 750px)": {
+    images:{
+      height:345,
+    },
+  },
+  "@media (max-width: 500px)": {
+    images:{
+      height:420,
+    },
+  },
+  "@media (max-width: 550px)": {
+    images:{
+      height:380,
+    },
+  },
+  "@media (max-width: 450px)": {
+    images:{
+      height:430,
+    },
+  },
+
 });
 export default styles;

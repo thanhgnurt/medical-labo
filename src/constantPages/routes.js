@@ -21,7 +21,7 @@ import DetailTestContainer from './../containers/DetailTestContainer';
 export const ADMIN_ROUTES = [
   {
     path: "/admin",
-    exact: true,
+    exact: false,
     name: "Page admin",
     component: AdminPageContainer,
   },
@@ -77,7 +77,7 @@ export const USER_ROUTES = [
   {
     name: "Danh mục xét nghiệm",
     path: "/danh-muc-xet-nghiem",
-    exact: true,
+    exact: false,
     icon: <FormatListBulletedOutlinedIcon />,
     scroll: {
       id: "ID_CATEGORY_TEST",
@@ -88,7 +88,7 @@ export const USER_ROUTES = [
 
   {
     path: "/luu-y-khi-lay-mau",
-    exact: true,
+    exact: false,
     name: "Lưu ý",
     icon: <CommentOutlinedIcon />,
     scroll: {
@@ -100,7 +100,7 @@ export const USER_ROUTES = [
   {
     name: "Tin tức y khoa",
     path: "/tin-tuc-y-khoa",
-    exact: true,
+    exact: false,
     icon: <ListAltIcon />,
     scroll: {
       id: "ID_NEWS_MEDICAL",

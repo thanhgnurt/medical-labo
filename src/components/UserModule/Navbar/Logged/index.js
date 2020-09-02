@@ -1,21 +1,21 @@
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { withStyles } from "@material-ui/core/styles";
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import MenuIcon from "@material-ui/icons/Menu";
+import SettingsIcon from "@material-ui/icons/Settings";
 import PropTypes from "prop-types";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import NotLogged from "../NotLogged";
 import styles from "./styles";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import Typography from "@material-ui/core/Typography";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import SettingsIcon from "@material-ui/icons/Settings";
-import Tooltip from "@material-ui/core/Tooltip";
 
 const LightTooltip = withStyles((theme) => ({
   tooltip: {
@@ -52,7 +52,6 @@ function Logged(props) {
       <div>
        <h6>Tài khoản</h6>
        <p>{user.hoTen}</p>
-
       </div>
     )
     return xhtml
@@ -82,20 +81,20 @@ function Logged(props) {
               className={classes.containerAvatar}
               onClick={handleClick}
             >
-              <Avatar size="small" className={classes.avatar} type="button">
+              {/* <Avatar size="medium" className={classes.avatar} >
                 {user.hoTen.slice(0, 1).toUpperCase()}
-              </Avatar>
+                <AccountCircleOutlinedIcon/>
+              </Avatar> */}
+              <Avatar className={classes.avatar} alt="Remy Sharp" src="/images/user-icon.png" />
             </IconButton>
           </LightTooltip>
-          {/* <Typography className={classes.hello}>
-           Hello ! {user.hoTen}
-          </Typography> */}
         </div>
         <div className={classes.sectionMobile}>
           <IconButton className={classes.containerAvatar} onClick={handleClick}>
-            <Avatar size="small" className={classes.avatar} type="button">
+            {/* <Avatar size="small" className={classes.avatar} type="button">
               {user.hoTen.slice(0, 1).toUpperCase()}
-            </Avatar>
+            </Avatar> */}
+            <Avatar className={classes.avatar} alt="Remy Sharp" src="/images/user-icon.png" />
           </IconButton>
 
           <Menu

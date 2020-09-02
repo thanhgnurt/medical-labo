@@ -1,9 +1,7 @@
-import Badge from "@material-ui/core/Badge";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles } from "@material-ui/core/styles";
-import AccountCircle from "@material-ui/icons/AccountCircle";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 import PropTypes from "prop-types";
@@ -31,22 +29,6 @@ function NotLogged(props) {
     <Grid item>
       <div className={classes.sectionDesktop}>
 
-        <NavLink
-          to={{
-            pathname: "/login",
-            prepage: history.location.pathname,
-          }}
-        >
-          <IconButton
-            aria-label="show 4 new mails"
-            color="inherit"
-            className={classes.iconLogin}
-          >
-            <Badge badgeContent={null} color="secondary">
-              <AccountCircle />
-            </Badge>
-          </IconButton>
-        </NavLink>
 
         <div className={classes.containerLoginButton}>
           <NavLink

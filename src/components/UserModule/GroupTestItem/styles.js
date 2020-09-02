@@ -43,7 +43,7 @@ const styles = (theme) => ({
   tittle : {
     padding : 0,
     marginTop : -20,
-    
+    height : 85,
     "& span" :{
       fontSize : 18,
 

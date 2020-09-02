@@ -13,7 +13,9 @@ import { withStyles } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { themeLight, themeDark } from "../../commons/Theme";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch,
+  //  Route, Redirect
+   } from "react-router-dom";
 import AdminLayoutRoute from "../../commons/Layout/AdminLayoutRoute";
 import UserLayoutRoute from "../../commons/Layout/UserLayoutRoute";
 import LoginSignupRoute from "../../commons/Layout/LoginSignupRoute";
@@ -64,7 +66,7 @@ function AppContainer(props) {
           key={route.path}
           path={route.path}
           component={route.component}
-          exact={route.exact}
+          // exact={route.exact}
           name={route.name}
         />
       );
@@ -74,9 +76,6 @@ function AppContainer(props) {
 
   const renderSetScheduleRoutes = () => {
     return (
-      // <Route path="/dat-lich/:id">
-      //   <SetSchedule />
-      // </Route>
       <SetScheduleLayoutRoute
         path={SET_SCHEDULE_ROUTE.path}
         name={SET_SCHEDULE_ROUTE.name}
@@ -117,15 +116,15 @@ function AppContainer(props) {
       <CssBaseline />
       <Switch>
         {renderAdminRoutes()}
-        {renderUserRoutes()}
         {renderLoginSignupRoutes()}
         {renderSetScheduleRoutes()}
         {renderViewResult()}
         {renderHeathOfLifeRoutes()}
         {renderDetailTestRoutes()}
-        <Route path="">
+        {renderUserRoutes()}
+        {/* <Route path="">
           <Redirect to="/"></Redirect>
-        </Route>
+        </Route> */}
       </Switch>
     </ThemeProvider>
   );

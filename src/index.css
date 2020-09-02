@@ -10,7 +10,8 @@ button:focus {
   background-position: center;
   border-bottom: 1px solid white !important;
   color: rgb(201, 147, 32);
-  box-shadow: 2px 2px blue;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  font-weight: 900;
 }
 
 ::-webkit-scrollbar-thumb {

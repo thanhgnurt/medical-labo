@@ -13,7 +13,7 @@ const styles = (theme) => ({
     },
   },
   buttonLogin: {
-    display: "block",
+    display: "flex",
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: 600,
     textTransform: "none",
@@ -27,9 +27,12 @@ const styles = (theme) => ({
       backgroundColor: theme.palette.primary.hoverColor,
       boxShadow: `0 0 0 0.2rem ${theme.palette.secondary.boxShadow}`,
     },
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
+    
+    position:"realative",
+    top : -5,
+    // [theme.breakpoints.down("sm")]: {
+    //   display: "flex",
+    // },
   },
   sectionMobile: {
     display: "flex",

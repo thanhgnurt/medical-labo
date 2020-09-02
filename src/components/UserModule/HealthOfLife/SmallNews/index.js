@@ -14,7 +14,7 @@ function SmallNews(props) {
         ></img>
       </div>
       <div className={classes.tittleContainer}>
-        <h6 type="button" className={classes.tittleNews}>
+        <h6 className={classes.tittleNews}>
           {listNews.tittle}
         </h6>
       </div>
