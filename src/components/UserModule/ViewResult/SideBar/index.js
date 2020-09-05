@@ -1,26 +1,20 @@
-import React from 'react';
 import { withStyles } from '@material-ui/core';
-import styles from './styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+import React from 'react';
+import styles from './styles';
 
 
 function SideBar(props) {
   const {classes}= props
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  // const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-  const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
-  };
+  // const handleListItemClick = (event, index) => {
+  //   setSelectedIndex(index);
+  // };
   return (
     <div className={classes.root}>
       <Divider />
-    <List component="nav" aria-label="main mailbox folders">
+    {/* <List component="nav" aria-label="main mailbox folders">
       <ListItem
         button
         selected={selectedIndex === 0}
@@ -51,7 +45,8 @@ function SideBar(props) {
         <ListItemText primary="Trash" />
       </ListItem>
     
-    </List>
+    </List> */}
+    {/* <ListResult/> */}
     <Divider />
   </div>
   )

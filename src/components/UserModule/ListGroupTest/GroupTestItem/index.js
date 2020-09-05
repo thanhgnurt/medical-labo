@@ -20,7 +20,7 @@ function GroupTestItem(props) {
         <img className={classes.media} src={setTest.image} alt="movie-2" />
       </div>
       <div className={classes.detail}>
-        <NavLink to={`/chi-tiet-xet-nghiem/${setTest.nameTest}`}>
+        <NavLink to={`/chi-tiet-xet-nghiem/${setTest.id}`}>
           <Button size="small" variant="contained" startIcon={<DetailsIcon />} color="primary">
             Chi tiết
           </Button>
@@ -41,7 +41,7 @@ function GroupTestItem(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <NavLink to={`/dat-lich/${setTest.nameTest}`}>
+        <NavLink to={`/dat-lich/${setTest.id}`}>
           <Button
             variant="outlined"
             color="secondary"

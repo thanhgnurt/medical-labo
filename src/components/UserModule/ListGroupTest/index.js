@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import BlurLinearIcon from '@material-ui/icons/BlurLinear';
 import React from "react";
 import * as Scroll from "react-scroll";
-import GroupTestItem from "../GroupTestItem";
+import GroupTestItem from "./GroupTestItem"
 import styles from "./styles";
 
 function ListGroupTest(props) {

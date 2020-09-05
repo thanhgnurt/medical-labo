@@ -38,12 +38,7 @@ export default function TableBodyResult(props) {
               key={row.name}
               selected={isItemSelected}
             >
-              {/* <TableCell padding="checkbox">
-                <Checkbox
-                  checked={isItemSelected}
-                  inputProps={{ "aria-labelledby": labelId }}
-                />
-              </TableCell> */}
+           
               <TableCell component="th" id={labelId} scope="row" padding="default">
                 {row.name}
               </TableCell>

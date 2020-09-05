@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-import {useHistory} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 // import { useParams, useRouteMatch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
@@ -72,14 +72,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     color: "red",
     marginTop: 5,
-    
+  },
+  div: {
+    height: 450,
   },
 }));
 
 function SetSchedule(props) {
-  // let { id } = useParams();
+  const { groupTest } = props;
+  console.log(groupTest.image);
+
   // let { url } = useRouteMatch();
-  let history = useHistory()
+  let history = useHistory();
 
   const [name, setName] = React.useState("");
   const [phoneNumber, setNumberPhone] = React.useState("");
@@ -155,19 +159,17 @@ function SetSchedule(props) {
     console.log(name, phoneNumber, address);
   };
 
-  const handleCancel=()=>{
-    history.push("/")
-  }
+  const handleCancel = () => {
+    history.push("/");
+  };
 
   return (
     <React.Fragment>
       <CssBaseline />
       <div className={classes.container}>
         <div className={classes.setSchedule}>
-          <img
-            src="/images/imgCarousel-6.jpg"
-            alt="backgroud set schedule"
-          ></img>
+          <img src={groupTest.image} alt="backgroud set schedule"></img>
+          {/* <div className={classes.div}></div> */}
           <div className={classes.content}>
             <form
               className={classes.root}
@@ -226,7 +228,12 @@ function SetSchedule(props) {
                   >
                     Đặt lịch
                   </Button>
-                  <Button variant="contained" color="secondary" size="small"onClick={handleCancel}>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="small"
+                    onClick={handleCancel}
+                  >
                     Hủy bỏ
                   </Button>
                 </div>

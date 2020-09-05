@@ -23,9 +23,10 @@ function Footer(props) {
 
           <div
             className={
-              location.pathname.startsWith("/dat-lich")
-                ? classes.layoutSecondary
-                : classes.layoutPrimary
+              // location.pathname.startsWith("/dat-lich")
+              location.pathname==="/"
+              ? classes.layoutPrimary
+                :classes.layoutSecondary
             }
           >
             <Container maxWidth="lg">

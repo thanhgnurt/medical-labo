@@ -5,7 +5,7 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { MENUS } from "../../../constantPages/menus";
+import { MENUS } from "../../../../constantPages/menus";
 import "./styles.css";
 import { NavLink } from "react-router-dom";
 import styles from "./styles";

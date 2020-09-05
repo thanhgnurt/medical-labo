@@ -13,14 +13,13 @@ import { NavLink, useLocation } from "react-router-dom";
 import { compose } from "redux";
 import { MENUS } from "./../../../constantPages/menus";
 import * as changeThemeActions from "./../../../redux/actions/userPape";
-import MenuDesktops from "./../MenuDesktops";
+import MenuDesktops from "./MenuDesktops";
 import ScrollTop from "./../ScrollTop";
-import ButtonChangeTheme from './ButtonChangeTheme';
+import ButtonChangeTheme from "./ButtonChangeTheme";
 import Logged from "./Logged";
 import NotLogged from "./NotLogged";
 import styles from "./styles";
 import "./styles.css";
-
 
 Navbar.propTypes = {
   window: PropTypes.func,
@@ -30,7 +29,7 @@ Navbar.propTypes = {
 };
 
 function Navbar(props) {
-  let location = useLocation()
+  let location = useLocation();
   const { window, classes } = props;
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
@@ -48,15 +47,17 @@ function Navbar(props) {
       return (
         <NavLink to="/ket-qua">
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
-            <span className={location.pathname==="/ket-qua" ? classes.result : ""}>
+            <span
+              className={location.pathname === "/ket-qua" ? classes.result : ""}
+            >
               Kết Quả
-              </span>
+            </span>
           </div>
         </NavLink>
       );
     } else {
       return (
-        <NavLink to={{pathname:"/login", prepage : "/ket-qua"}}>
+        <NavLink to={{ pathname: "/login", prepage: "/ket-qua" }}>
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
             Kết Quả
           </div>
@@ -82,7 +83,10 @@ function Navbar(props) {
                 alignItems="center"
               >
                 <Grid item className={classes.logo}>
-                  <ButtonChangeTheme changeTheme={changeTheme} trigger={trigger}/>
+                  <ButtonChangeTheme
+                    changeTheme={changeTheme}
+                    trigger={trigger}
+                  />
                 </Grid>
                 <Grid item>
                   <div className={classes.menu_list}>
@@ -95,7 +99,6 @@ function Navbar(props) {
                     >
                       <MenuDesktops menus={MENUS} trigger={trigger} />
                       {viewResultNavLink()}
-
                     </Grid>
                   </div>
                 </Grid>

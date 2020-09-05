@@ -1,23 +1,13 @@
-import React from "react";
 import { withStyles } from "@material-ui/core";
+import React from "react";
+import ImageTittleItem from "./../ImageTittleItem";
 import styles from "./styles";
 
 function SmallNews(props) {
-  const { classes, listNews } = props;
+  const { classes, news } = props;
   return (
     <div className={classes.smallNews}>
-      <div className={classes.image}>
-        <img
-          src={listNews.image}
-          className={classes.imageSmall}
-          alt="news"
-        ></img>
-      </div>
-      <div className={classes.tittleContainer}>
-        <h6 className={classes.tittleNews}>
-          {listNews.tittle}
-        </h6>
-      </div>
+      <ImageTittleItem news={news} typeNews="small"/>
     </div>
   );
 }

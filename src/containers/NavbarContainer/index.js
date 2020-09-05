@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/UserModule/Navbar";
 import { connect } from "react-redux";
 import { mobileMenuToggle } from "./../../redux/actions/userPape";
-import MenuMobiles from "../../components/UserModule/MenuMobiles";
+import MenuMobiles from "../../components/UserModule/Navbar/MenuMobiles";
 
 function NavbarContainer(props) {
   const mobileMenuToggle = () => {

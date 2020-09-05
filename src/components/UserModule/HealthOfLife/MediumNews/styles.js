@@ -20,7 +20,8 @@ const styles = (theme) => ({
     fontSize: 15,
     marginTop: 10,
     opacity : "90%",
-    marginBottom : 10
+    marginBottom : 10,
+    color: theme.palette.primary.textColor
     
   },
 });

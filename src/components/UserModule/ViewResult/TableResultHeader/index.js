@@ -34,9 +34,6 @@ function TableResultHeader(props) {
     <TableHead>
       
       <TableRow>
-        {/* <TableCell padding="checkbox" >
-          
-          </TableCell> */}
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}

@@ -20,7 +20,7 @@ const styles = (theme) => ({
   },
   
   layoutSecondary: {
-    // backgroundColor: theme.palette.primary.layoutFooter,
+    backgroundColor: theme.palette.primary.layoutFooter,
     height: "100%",
     position: "relative",
     zIndex: 10,

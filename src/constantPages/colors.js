@@ -32,6 +32,6 @@ export const COLORS={
 
     BACKGROUND_SET_SCHEDULE_LIGHT : "linear-gradient(to top, rgb(10, 32, 41), transparent 100%)",
     BACKGROUND_SET_SCHEDULE_DARK : "linear-gradient(to top, rgb(23, 24, 24), transparent 100%)",
-    LAYOUT_FOOTER_LIGHT : "rgb(10, 32, 41, 0.98)",
-    LAYOUT_FOOTER_DARK : "rgb(23, 24, 24, 0.98)",
+    LAYOUT_FOOTER_LIGHT : "rgb(10, 32, 41, 0.99)",
+    LAYOUT_FOOTER_DARK : "rgb(23, 24, 24, 0.99)",
 }

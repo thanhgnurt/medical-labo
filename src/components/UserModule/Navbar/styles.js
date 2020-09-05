@@ -18,6 +18,9 @@ const styles = (theme) => ({
 
   grow: {
     flexGrow: 1,
+    "& header":{
+      height : 61
+    }
     
   },
   menuButton: {

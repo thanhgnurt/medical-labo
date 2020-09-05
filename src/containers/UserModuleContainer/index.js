@@ -22,10 +22,9 @@ import { fetchListNewsRequest } from "../../redux/actions/newsHealthOfLife";
 function UserModuleContainer(props) {
   const { classes } = props;
   let location = useLocation();
-
   const { fetchListGroupTest, userLoginReset,fetchListNews } = props;
   useEffect(() => {
-    if (location.prepage !== "/") {
+    // if (location.prepage) {
       switch (location.prepage ) {
         case "/":
           setTimeout(() => {
@@ -80,7 +79,7 @@ function UserModuleContainer(props) {
         default:
           break;
       }
-    }
+    // }
     fetchListGroupTest();
     userLoginReset();
     fetchListNews();
