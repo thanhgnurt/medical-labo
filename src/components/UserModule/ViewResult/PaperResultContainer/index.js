@@ -2,7 +2,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from 'react';
 import TabResult from "./../TabResult";
-import ResultTest from './../ResultTest';
+import Result from '../Result';
 import DoctorConsultation from './../DoctorConsultation';
 import Feedback from "../Feedback";
 
@@ -22,7 +22,7 @@ const showRequestResult=(props,newValue)=>{
   switch (newValue) {
     case 0:
       
-      return <ResultTest resultTest={props.resultTest}/>
+      return <Result resultTest={props.resultTest}/>
     case 1:
       
       return  <DoctorConsultation/>
@@ -31,7 +31,7 @@ const showRequestResult=(props,newValue)=>{
       return  <Feedback/>
   
     default:
-      return <ResultTest resultTest={props.resultTest}/>
+      return <Result resultTest={props.resultTest}/>
   }
 }
 
@@ -41,6 +41,7 @@ export default function PaperResultContainer(props) {
     changeShowValue(newValue)
   }
   const classes = useStyles();
+ 
   return (
     
       <div className={classes.root}>

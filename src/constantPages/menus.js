@@ -31,13 +31,13 @@ export const MENUS = [
     icon: <AddAlertIcon />,
     scroll : {
       id : "ID_NOTE",
-      offset : -65
+      offset : -55.5
 
     }
   },
   {
     name: "Tin tức",
-    to: "/tin-tuc-&-cuoc-song",
+    to: "/tin-tuc-y-khoa",
     icon: <FiberNewIcon />,
     scroll : {
       id : "ID_NEWS_MEDICAL",

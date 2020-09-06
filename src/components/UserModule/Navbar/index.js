@@ -13,10 +13,11 @@ import { NavLink, useLocation } from "react-router-dom";
 import { compose } from "redux";
 import { MENUS } from "./../../../constantPages/menus";
 import * as changeThemeActions from "./../../../redux/actions/userPape";
-import MenuDesktops from "./MenuDesktops";
+import Progess from "./../../Progess";
 import ScrollTop from "./../ScrollTop";
 import ButtonChangeTheme from "./ButtonChangeTheme";
 import Logged from "./Logged";
+import MenuDesktops from "./MenuDesktops";
 import NotLogged from "./NotLogged";
 import styles from "./styles";
 import "./styles.css";
@@ -30,7 +31,7 @@ Navbar.propTypes = {
 
 function Navbar(props) {
   let location = useLocation();
-  const { window, classes } = props;
+  const { window, classes, showProgess } = props;
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -69,6 +70,7 @@ function Navbar(props) {
   return (
     <div id="ID_HOME">
       <React.Fragment>
+        <Progess showProgess={showProgess} />
         <div className={classes.grow}>
           <AppBar
             className={
@@ -83,10 +85,21 @@ function Navbar(props) {
                 alignItems="center"
               >
                 <Grid item className={classes.logo}>
-                  <ButtonChangeTheme
-                    changeTheme={changeTheme}
-                    trigger={trigger}
-                  />
+                  {/* <a href="/">
+                  <img className={classes.imgLogo } src="/images/iconLogo.png" alt="icon logo"></img>
+                  </a> */}
+
+                  <div className={classes.buttonTheme}>
+                    <ButtonChangeTheme
+                      changeTheme={changeTheme}
+                      trigger={trigger}
+                    />
+                  </div>
+                  <a href="/" className={classes.name}>
+                    <h4>
+                      <span className={classes.charUnder}>L</span>abo
+                    </h4>
+                  </a>
                 </Grid>
                 <Grid item>
                   <div className={classes.menu_list}>

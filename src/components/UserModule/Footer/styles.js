@@ -18,6 +18,11 @@ const styles = (theme) => ({
     objectFit: "cover",
 
   },
+  divider:{
+    backgroundColor:"rgba(255, 255, 255, 0.3)",
+    // height : 0.5
+  },
+
   
   layoutSecondary: {
     backgroundColor: theme.palette.primary.layoutFooter,
@@ -50,10 +55,13 @@ const styles = (theme) => ({
     padding: "15px 0px",
     fontFamily: "'Quicksand', sans-serif",
   },
-  hr: {
-    borderBottom: "0.5px solid white",
-    width: "70%",
-    opacity: "50%",
+
+
+  css_ul:{
+    "& li":{
+      // listStyle:"none"
+    },
+    marginLeft: -30
   },
 
   // responsive

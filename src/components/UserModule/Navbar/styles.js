@@ -142,6 +142,28 @@ const styles = (theme) => ({
     color :theme.palette.primary.hoverColor
   },
 
+  imgLogo :{
+    width : 40,
+    height : 40,
+  
+  },
+  name:{
+    marginTop:"auto",
+    "& :hover":{
+      color :theme.palette.primary.hoverColor
+    }
+  },
+  buttonTheme:{
+    "& :hover":{
+      color :theme.palette.primary.hoverColor
+    }
+  },
+  charUnder:{
+    color:theme.palette.primary.hoverColor,
+    fontWeight : "900",
+    fontSize : 28
+  }
+
 
   
 });

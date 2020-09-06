@@ -16,7 +16,7 @@ function ViewResultContainer(props) {
 }
 
 const mapStateToProps = state=>({
-    resultTest : state.resultTest.resultTest
+    resultTest : state.resultTest
 })
 
 const mapDispatchToProps=dispatch=>({

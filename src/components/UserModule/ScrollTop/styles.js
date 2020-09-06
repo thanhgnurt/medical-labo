@@ -80,6 +80,18 @@ const styles = (theme) => ({
   },
 
 
+  imgLogo :{
+  },
+  name:{
+  },
+  buttonTheme:{
+  },
+  charUnder:{
+  }
+
+
+
+
 
 
  

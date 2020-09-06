@@ -24,7 +24,7 @@ function MenuDesktops(props) {
           spy={true}
           smooth={true}
           offset={menu.scroll.offset}
-          duration={500}
+          duration={400}
         >
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
            {menu.name}
@@ -35,7 +35,7 @@ function MenuDesktops(props) {
       return (
         <NavLink key={menu.to} to={{ pathname: "/", prepage: menu.to }}>
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
-          {location.pathname.startsWith("/tin-tuc-&-cuoc-song") && menu.to === "/tin-tuc-&-cuoc-song" ? (
+          {location.pathname.startsWith("/tin-tuc-y-khoa") && menu.to === "/tin-tuc-y-khoa" ? (
               <span className={classes.news}>{menu.name}</span>
             ) : (
               menu.name

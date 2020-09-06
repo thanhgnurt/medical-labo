@@ -1,10 +1,16 @@
-
-const styles = (theme) => ({
-    root: {
-        width: '100%',
-        backgroundColor: theme.palette.background.paper,
-      },
-  
-  });
-  export default styles;
-  
+const styles = theme=>({
+    listMenu :{
+ 
+    },
+    itemList:{
+        listStyle :"none",
+        padding : 10,
+        "&:hover":{
+            color : theme.palette.primary.hoverColor
+        }
+ 
+    }
+     
+ });
+ export default styles;
+ 

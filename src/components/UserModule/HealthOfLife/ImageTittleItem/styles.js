@@ -24,7 +24,7 @@ const styles = (theme) => ({
   },
 
   tittleNews: {
-    fontSize: 15,
+    fontSize: 16,
     marginTop: 10,
     opacity: "90%",
     marginBottom: 10,
@@ -43,7 +43,7 @@ const styles = (theme) => ({
     "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   },
   tittleNewsSmall: {
-    fontSize: 15,
+    fontSize: 16,
     overflow: "hidden",
     "-webkit-line-clamp": 2,
     "-webkit-box-orient": "vertical",

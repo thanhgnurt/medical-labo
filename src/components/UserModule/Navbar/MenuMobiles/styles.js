@@ -1,14 +1,15 @@
 const styles = (theme) => ({
-  linkMobileMenu: {
-    color: theme.palette.primary.textColor,
-  },
+
 
   fullList: {
     width: "100%",
     height: "100%",
     backgroundColor : theme.palette.primary.backgroundPaper,
     position : "fixed",
-    zIndex : 1000
+    zIndex : 1000,
+    "& a":{
+      color: theme.palette.primary.textColor
+    }
     
   },
   drawerPaper: {
@@ -17,6 +18,14 @@ const styles = (theme) => ({
   listText: {
     marginLeft: 15,
     color: theme.palette.primary.textColor,
+  },
+  activeSelection:{
+    color:theme.palette.primary.hoverColor
+  },
+  active : {
+    "& div" : {
+      color :theme.palette.primary.hoverColor
+    }
   },
  
 });

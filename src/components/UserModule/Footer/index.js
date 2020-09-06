@@ -6,6 +6,7 @@ import Bottom from "./Bottom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { useLocation } from "react-router-dom";
+import Divider from '@material-ui/core/Divider';
 
 function Footer(props) {
   const { classes } = props;
@@ -24,31 +25,52 @@ function Footer(props) {
           <div
             className={
               // location.pathname.startsWith("/dat-lich")
-              location.pathname==="/"
-              ? classes.layoutPrimary
-                :classes.layoutSecondary
+              location.pathname === "/"
+                ? classes.layoutPrimary
+                : classes.layoutSecondary
             }
           >
             <Container maxWidth="lg">
               <div className={classes.content}>
                 <Grid container>
                   <Grid item md={7} sm={12}>
-                    <div className={classes.paper}>
-                      <span className="fa fa-user-md mr-3"></span>
-                      Giới Thiệu
-                    </div>
+                    <div className={classes.paper}>Giới Thiệu</div>
                     <div className={classes.contentAbout}>
-                      <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo.
-                      </p>
+                      <ul className={classes.css_ul}>
+                        <li>
+                          <span>Điện thoại 1 : 123456789</span>
+                        </li>
+                        <li>
+                          <span>Điện thoại 2 : 987654321</span>
+                        </li>
+                        <li>
+                          <span>Email : thanhgnurt@gmail.com </span>
+                        </li>
+                        
+                      </ul>
                     </div>
-                    <div className={classes.hr}></div>
+                    <Divider className={classes.divider}/>
+                   
                   </Grid>
                   <Grid item md={5} sm={12}>
                     <div className={classes.paper}>Link Nhanh</div>
+                    <div className={classes.contentAbout}>
+                      <ul className={classes.css_ul}>
+                        <li>
+                          <span>Điện thoại 1 : 123456789</span>
+                        </li>
+                        <li>
+                          <span>Điện thoại 2 : 987654321</span>
+                        </li>
+                        <li>
+                          <span>Email : thanhgnurt@gmail.com </span>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  
+                    <Divider className={classes.divider}/>
+                 
                   </Grid>
                 </Grid>
               </div>

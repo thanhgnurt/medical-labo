@@ -45,21 +45,15 @@ function Bottom(props) {
               <Grid item xs={12} sm={12} md={5} className={classes.paper}>
                 <ul>
                   <li>
-                    <NavLink className={classes.contactIcon} to='/'>
+                    <NavLink className={classes.contactIcon} to="/">
                       <FacebookIcon />
-                      <span className={classes.facebook}>
-
-                      Facebook
-                      </span>
+                      <span className={classes.facebook}>Facebook</span>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink className={classes.contactIcon} to="/">
-                      <TwitterIcon /> 
-                      <span className={classes.twitter}>
-
-                      Twitter
-                      </span>
+                      <TwitterIcon />
+                      <span className={classes.twitter}>Twitter</span>
                     </NavLink>
                   </li>
                   {/* <li>

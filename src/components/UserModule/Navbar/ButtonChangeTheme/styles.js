@@ -2,14 +2,14 @@ const styles = theme =>({
     icon :{
         color : "white",
         "& svg":{
-            fontSize : 26
+            fontSize : 20
         }
       
     },
     iconScroll :{
         color : theme.palette.primary.textColor,
         "& svg":{
-            fontSize : 26
+            fontSize : 20
         }
         
     }

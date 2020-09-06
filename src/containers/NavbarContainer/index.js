@@ -5,16 +5,19 @@ import { mobileMenuToggle } from "./../../redux/actions/userPape";
 import MenuMobiles from "../../components/UserModule/Navbar/MenuMobiles";
 
 function NavbarContainer(props) {
+  const { showProgess } = props;
   const mobileMenuToggle = () => {
     props.mobileMenuToggle();
   };
   return (
     <div>
       <Navbar
+        showProgess={showProgess}
         mobileMenuToggle={mobileMenuToggle}
         mobileMenu={props.userPape.mobileMenu}
       />
       <MenuMobiles
+        showProgess={showProgess}
         mobileMenuToggle={mobileMenuToggle}
         mobileMenu={props.userPape.mobileMenu}
       />

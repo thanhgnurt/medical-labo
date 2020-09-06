@@ -43,12 +43,23 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(1),
+    paddingLeft: 0,
+    paddingRight: 0,
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    zIndex:"10"
+    zIndex:"10",
+
   },
+  tab:{
+    fontSize :11,
+    
+  },
+  tabs:{
+  
+    
+  },
+  appbar:{
+  }
 }));
 
 export default function ScrollableTabsButtonAuto(props) {
@@ -62,7 +73,7 @@ export default function ScrollableTabsButtonAuto(props) {
 
   return (
     <Toolbar className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="default" className={classes.appbar}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -71,12 +82,12 @@ export default function ScrollableTabsButtonAuto(props) {
           variant="scrollable"
           scrollButtons="on"
           aria-label="scrollable auto tabs example"
+          className={classes.tabs}
      
         >
-          <Tab label="Bảng kết quả xét nghiệm" {...a11yProps(0)} />
-          <Tab label="Tư vấn từ Bác Sĩ" {...a11yProps(1)} />
-          <Tab label="Phản hồi & góp ý" {...a11yProps(2)} />
-        
+          <Tab className={classes.tab} label="Kết quả" {...a11yProps(0)} />
+          <Tab className={classes.tab} label="Tư vấn" {...a11yProps(1)} />
+          <Tab className={classes.tab} label="Góp ý" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
   

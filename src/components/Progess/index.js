@@ -5,8 +5,8 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    position: "relative",
-    zIndex: 100000,
+    position: "absolute",
+    zIndex: 10000,
     top: -2,
   },
 });
@@ -15,7 +15,6 @@ export default function Progess(props) {
   const { showProgess } = props;
   const classes = useStyles();
   const [progress, setProgress] = React.useState(0);
-
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {

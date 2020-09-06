@@ -4,12 +4,12 @@ import BasicPagination from "../../components/UserModule/BasicPagination";
 import ListGroupTest from "../../components/UserModule/ListGroupTest";
 import {
   fetchListGroupTestRequest,
-  selectPaperTest
+  selectPaperTest,
 } from "./../../redux/actions/listGroupTest";
 
 function ListGroupTestContainer(props) {
   const { listGroupTest, paperSelect } = props.listGroupTest;
-  
+
   const totalPapers = (n) => {
     let papers = 0;
     if ((listGroupTest.length + 1) % n === 0) {
@@ -41,11 +41,8 @@ function ListGroupTestContainer(props) {
     props.selectPaperTest(paper);
   };
 
-
-
   return (
     <div>
-      
       <ListGroupTest
         devideGroupTest={devideGroupTest}
         paperSelect={paperSelect}
@@ -53,7 +50,7 @@ function ListGroupTestContainer(props) {
       <BasicPagination
         selectPaperTest={selectPaperTest}
         papers={totalPapers(6)}
-        page ={paperSelect}
+        page={paperSelect}
       />
     </div>
   );

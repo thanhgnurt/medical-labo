@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/core";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { animateScroll as scroll, scroller } from "react-scroll";
 import { bindActionCreators, compose } from "redux";
 import LinePager from "../../components/UserModule/LinePager";
+import { fetchListNewsRequest } from "../../redux/actions/newsHealthOfLife";
+import CarouselContainer from "../CarouselContainer";
 import FooterContainer from "../FooterContainer";
 import HealthOfLifeContainer from "../HealthOfLifeContainer";
 import ListGroupTestContainer from "../ListGroupTestContainer";
 import NavbarContainer from "../NavbarContainer";
+import RegistrationTutorialContainer from "../RegistrationTutorialContainer";
 import { fetchListGroupTestRequest } from "./../../redux/actions/listGroupTest";
-import {userLoginReset} from './../../redux/actions/userActions'
+import { userLoginReset } from './../../redux/actions/userActions';
 import * as userPageActionTypes from "./../../redux/actions/userPape";
 import styles from "./styles";
-import { useLocation } from "react-router-dom";
-import { animateScroll as scroll, scroller } from "react-scroll";
-import RegistrationTutorialContainer from "../RegistrationTutorialContainer";
-import CarouselContainer from "../CarouselContainer";
-import Progess from './../../components/Progess'
-import { fetchListNewsRequest } from "../../redux/actions/newsHealthOfLife";
 
 
 function UserModuleContainer(props) {
@@ -25,11 +24,11 @@ function UserModuleContainer(props) {
   const { fetchListGroupTest, userLoginReset,fetchListNews } = props;
   useEffect(() => {
     // if (location.prepage) {
-      switch (location.prepage ) {
+      switch (location.prepage) {
         case "/":
           setTimeout(() => {
             scroll.scrollTo(0);
-          }, 500);
+          }, 1000);
 
           break;
         case "":
@@ -42,8 +41,7 @@ function UserModuleContainer(props) {
           
           setTimeout(() => {
             scroll.scrollTo(0);
-          }, 1000);
-
+          }, 800);
           break;
         case "/danh-muc-xet-nghiem":
           setTimeout(() => {
@@ -53,7 +51,7 @@ function UserModuleContainer(props) {
               smooth: true,
               offset: -65,
             });
-          }, 500);
+          }, 200);
           break;
         case "/luu-y-khi-lay-mau":
           setTimeout(() => {
@@ -61,11 +59,11 @@ function UserModuleContainer(props) {
               duration: 1500,
               delay: 100,
               smooth: true,
-              offset: -65,
+              offset: -55,
             });
-          }, 500);
+          }, 200);
           break;
-        case "/tin-tuc-&-cuoc-song":
+        case "/tin-tuc-y-khoa":
           setTimeout(() => {
             scroller.scrollTo("NEWS_MEDICAL", {
               duration: 1500,
@@ -73,7 +71,7 @@ function UserModuleContainer(props) {
               smooth: true,
               offset: -75,
             });
-          }, 500);
+          }, 200);
           break;
 
         default:
@@ -89,8 +87,8 @@ function UserModuleContainer(props) {
 
   return (
     <div className={classes.userPaper}>
-      <Progess showProgess={props.showLoading} />
-      <NavbarContainer />
+      {/* <Progess showProgess={props.showLoading} /> */}
+      <NavbarContainer showProgess={props.showLoading} />
       <CarouselContainer showProgess={props.showLoading}/>
       <ListGroupTestContainer />
       <LinePager />

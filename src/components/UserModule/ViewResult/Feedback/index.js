@@ -9,10 +9,28 @@ const useStyles = makeStyles((theme) => ({
   root: {
       textAlign:"center",
     '& .MuiTextField-root': {
-      margin: theme.spacing(2),
       width: '500px',
+      marginTop: 15
+      
       
     },
+    "@media screen and (max-width: 700px)": {
+      '& .MuiTextField-root': {
+        width: '420px',
+        marginTop : 15
+        
+      },
+          "@media screen and (max-width: 500px)": {
+            '& .MuiTextField-root': {
+              width: '350px',
+              marginTop : 15
+              
+            },
+            
+          },
+      
+    }
+  
     
   },
   button: {
