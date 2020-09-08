@@ -14,8 +14,7 @@ button:focus {
   font-weight: 900;
   background-repeat: no-repeat;
   text-decoration: none;
-  list-style: none;
-  color: rgba(255, 255, 255, 0.432);
+ 
 }
 
 ::-webkit-scrollbar-thumb {
