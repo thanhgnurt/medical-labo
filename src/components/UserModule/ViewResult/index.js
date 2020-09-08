@@ -11,10 +11,10 @@ function ViewResult(props) {
   const { classes, resultTest } = props;
   return (
     <Grid container>
-      <Grid item md={2} xs={2} sm={2} className={classes.sidebar}>
+      <Grid md={2} lg={2} xl={2}  item className={classes.sidebar}>
         <SideBar resultTest={resultTest} />
       </Grid>
-      <Grid item sm={10} xs={10} md={10} className={classes.contentResult}>
+      <Grid item xs={12} sm={12} md={10} lg={10} xl={10} className={classes.contentResult}>
         <Route path="/ket-qua/:id">
           <PaperResultContainer resultTest={resultTest} />
         </Route>

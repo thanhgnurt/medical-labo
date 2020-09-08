@@ -10,7 +10,7 @@ import Feedback from "../Feedback";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    padding: "0 10px",
+    padding: "0 2px",
   },
   paper: {
     width: "100%",

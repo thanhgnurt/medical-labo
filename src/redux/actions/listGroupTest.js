@@ -9,17 +9,13 @@ export const fetchListGroupTestRequest = () => {
     getListGroupTest()
       .then((data) => {
         dispatch(fetchListGroupTestSuccess(data));
-        setTimeout(() => {
           
           dispatch(closeLoading());
-        }, 500);
       })
       .catch((error) => {
         dispatch(fetchListGroupTestFaild(error));
-        setTimeout(() => {
-          
           dispatch(closeLoading());
-        }, 500);
+        
       });
   };
 };

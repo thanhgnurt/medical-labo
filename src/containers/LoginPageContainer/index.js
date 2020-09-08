@@ -51,7 +51,7 @@ function LoginPageContainer(props) {
     });
   };
   if (localStorage.getItem("USER")&&location.prepage!=="/ket-qua") {
-    return <div history={history.goBack()} />;
+    return <div history={history.push("/")} />;
   }
   return (
     <div className={classes.bg}>

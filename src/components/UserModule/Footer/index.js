@@ -6,80 +6,78 @@ import Bottom from "./Bottom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { useLocation } from "react-router-dom";
-import Divider from '@material-ui/core/Divider';
+import Divider from "@material-ui/core/Divider";
 
 function Footer(props) {
   const { classes } = props;
   let location = useLocation();
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <div className={classes.footer}>
-        <div className={classes.imgBacground}>
-          <img
-            className={classes.images}
-            src="/images/bg-footer.jpg"
-            alt="footer background"
-          ></img>
+    
+      <React.Fragment>
+        <CssBaseline />
+        <div className={classes.footer}>
+          <div className={classes.imgBacground}>
+            <img
+              className={classes.images}
+              src="/images/bg-footer.jpg"
+              alt="footer background"
+            ></img>
 
-          <div
-            className={
-              // location.pathname.startsWith("/dat-lich")
-              location.pathname === "/"
-                ? classes.layoutPrimary
-                : classes.layoutSecondary
-            }
-          >
-            <Container maxWidth="lg">
-              <div className={classes.content}>
-                <Grid container>
-                  <Grid item md={7} sm={12}>
-                    <div className={classes.paper}>Giới Thiệu</div>
-                    <div className={classes.contentAbout}>
-                      <ul className={classes.css_ul}>
-                        <li>
-                          <span>Điện thoại 1 : 123456789</span>
-                        </li>
-                        <li>
-                          <span>Điện thoại 2 : 987654321</span>
-                        </li>
-                        <li>
-                          <span>Email : thanhgnurt@gmail.com </span>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                    <Divider className={classes.divider}/>
-                   
+            <div
+              className={
+                // location.pathname.startsWith("/dat-lich")
+                location.pathname === "/"
+                  ? classes.layoutPrimary
+                  : classes.layoutSecondary
+              }
+            >
+              <Container maxWidth="lg">
+                <div className={classes.content}>
+                  <Grid container>
+                    <Grid item md={7} sm={12}>
+                      <div className={classes.paper}>Giới Thiệu</div>
+                      <div className={classes.contentAbout}>
+                        <ul className={classes.css_ul}>
+                          <li>
+                            <span>Điện thoại 1 : 123456789</span>
+                          </li>
+                          <li>
+                            <span>Điện thoại 2 : 987654321</span>
+                          </li>
+                          <li>
+                            <span>Email : thanhgnurt@gmail.com </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <Divider className={classes.divider} />
+                    </Grid>
+                    <Grid item md={5} sm={12}>
+                      <div className={classes.paper}>Link Nhanh</div>
+                      <div className={classes.contentAbout}>
+                        <ul className={classes.css_ul}>
+                          <li>
+                            <span>Điện thoại 1 : 123456789</span>
+                          </li>
+                          <li>
+                            <span>Điện thoại 2 : 987654321</span>
+                          </li>
+                          <li>
+                            <span>Email : thanhgnurt@gmail.com </span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <Divider className={classes.divider} />
+                    </Grid>
                   </Grid>
-                  <Grid item md={5} sm={12}>
-                    <div className={classes.paper}>Link Nhanh</div>
-                    <div className={classes.contentAbout}>
-                      <ul className={classes.css_ul}>
-                        <li>
-                          <span>Điện thoại 1 : 123456789</span>
-                        </li>
-                        <li>
-                          <span>Điện thoại 2 : 987654321</span>
-                        </li>
-                        <li>
-                          <span>Email : thanhgnurt@gmail.com </span>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                  
-                    <Divider className={classes.divider}/>
-                 
-                  </Grid>
-                </Grid>
-              </div>
-            </Container>
+                </div>
+              </Container>
+            </div>
           </div>
+          <Bottom />
         </div>
-        <Bottom />
-      </div>
-    </React.Fragment>
+      </React.Fragment>
+ 
   );
 }
 export default withStyles(styles)(Footer);

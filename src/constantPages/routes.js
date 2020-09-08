@@ -148,7 +148,7 @@ export const SET_SCHEDULE_ROUTE = {
   component: SetScheduleContainer,
 };
 export const HEATH_OF_LIFE_ROUTE = {
-  path: "/tin-tuc-&-cuoc-song/:id",
+  path: "/tin-tuc-y-khoa/:id",
   name: "Heath of life",
   component: HeathOfLifeItemContainer,
 };

@@ -28,7 +28,7 @@ function ImageTittleItem(props) {
       <div>
         <img src={news.image} className={cssImage} alt="news"></img>
       </div>
-      <NavLink to="/tin-tuc-&-cuoc-song/id">
+      <NavLink to={`/tin-tuc-y-khoa/${news.tittle}`}>
         <h6 className={cssTittle}>{news.tittle}</h6>
       </NavLink>
     </div>

@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function TableHeader(props) {
     return (
-        <thead className="table-secondary">
+        <thead className="table-dark ">
         <tr>
           <th className="thead_test">Xét nghiệm</th>
           <th className="thead_result">Kết quả</th>
