@@ -63,19 +63,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ScrollableTabsButtonAuto(props) {
+  const {showValueTabResult, handleChangeResult}= props
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-    props.handleChangeResult(newValue)
+    
+    handleChangeResult(newValue)
   };
 
   return (
     <Toolbar className={classes.root}>
       <AppBar position="static" color="default" className={classes.appbar}>
         <Tabs
-          value={value}
+          value={showValueTabResult}
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
@@ -83,7 +84,6 @@ export default function ScrollableTabsButtonAuto(props) {
           scrollButtons="on"
           aria-label="scrollable auto tabs example"
           className={classes.tabs}
-     
         >
           <Tab className={classes.tab} label="Kết quả" {...a11yProps(0)} />
           <Tab className={classes.tab} label="Tư vấn" {...a11yProps(1)} />

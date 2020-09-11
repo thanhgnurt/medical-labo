@@ -10,27 +10,34 @@ function MediumNews(props) {
   const { classes, listNews } = props;
   const showSmallNews = (listNews) => {
     let xhtml = [];
-    for (let i = 1; i <= 4; i++) {
-      xhtml.push(<SmallNews key={i} news={listNews[i + 3]} />);
+    if (listNews.length >= 8) {
+      for (let i = 1; i <= 4; i++) {
+        xhtml.push(<SmallNews key={i} news={listNews[i + 3]} />);
+      }
+    }
+    return xhtml;
+  };
+  const showMediumNews = (listNews) => {
+    let xhtml = [];
+    if (listNews.length >= 4) {
+      for (let i = 2; i <= 3; i++) {
+        xhtml.push(
+          <Grid item xs={6} sm={4} md={4} key={i}>
+            <ImageTittleItem news={listNews[i]} typeNews="medium" />
+            <div>
+              <div className={classes.textNews}>{listNews[i].description}</div>
+            </div>
+            <MenuIconStatus />
+          </Grid>
+        );
+      }
     }
     return xhtml;
   };
   return (
     <Grid container spacing={2} mt={2}>
-      <Grid item xs={6} sm={4} md={4}>
-        <ImageTittleItem news={listNews[2]} typeNews="medium" />
-        <div>
-          <div className={classes.textNews}>{listNews[2].description}</div>
-        </div>
-        <MenuIconStatus />
-      </Grid>
-      <Grid item xs={6} sm={4} md={4}>
-        <ImageTittleItem news={listNews[3]} typeNews="medium" />
-        <div>
-          <div className={classes.textNews}>{listNews[3].description}</div>
-        </div>
-        <MenuIconStatus />
-      </Grid>
+      {showMediumNews(listNews)}
+
 
       <Grid item md={4} sm={4} xs={12}>
         {/* small news */}

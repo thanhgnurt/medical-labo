@@ -9,7 +9,6 @@ export const fetchListGroupTestRequest = () => {
     getListGroupTest()
       .then((data) => {
         dispatch(fetchListGroupTestSuccess(data));
-          
           dispatch(closeLoading());
       })
       .catch((error) => {

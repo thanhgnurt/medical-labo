@@ -14,17 +14,27 @@ const styles = (theme) => ({
   listMenu: {
     width: "100%",
     marginTop: 10,
+    paddingInlineStart : 0,
+    textAlign :"center",
   },
   listMenuDropdown:{
       width: "100%",
-
+      textAlign:"center",
+      paddingInlineStart : 0,
   },
+
   itemList: {
     listStyle: "none",
     padding: 10,
     "&:hover": {
       color: theme.palette.primary.hoverColor,
     },
+    "& a":{
+      color : "black",
+      "&:hover": {
+        color: theme.palette.primary.hoverColor,
+      },
+    }
   },
   tittle: {
     border: "1px solid rgba(255, 255, 255, 0.432)",
@@ -48,5 +58,12 @@ const styles = (theme) => ({
       display: "none",
     },
   },
+  active :{
+      color: "red !important"
+  
+  },
+  activeFirst:{
+    color : "red !important"
+  }
 });
 export default styles;

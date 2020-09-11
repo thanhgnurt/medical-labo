@@ -6,7 +6,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import styles from "./styles";
-import RenalFunction from "./../../ListGroupTest/DetailTest/RenalFunction";
+import RenalFunction from "./PreventDiabetes";
 
 const useStyles = makeStyles((theme) => ({
   setSchedule: {

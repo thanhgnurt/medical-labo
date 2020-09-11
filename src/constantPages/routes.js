@@ -21,7 +21,7 @@ import ViewResultContainer from "./../containers/ViewResultContainer";
 export const ADMIN_ROUTES = [
   {
     path: "/admin",
-    exact: false,
+    exact: true,
     name: "Page admin",
     component: AdminPageContainer,
   },

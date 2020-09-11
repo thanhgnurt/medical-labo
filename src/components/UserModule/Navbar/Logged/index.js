@@ -63,7 +63,7 @@ function Logged(props) {
   const handleSeting = () => {};
   const handleLogout = () => {
     localStorage.removeItem("USER");
-    if (history.location.pathname === "/ket-qua") {
+    if (history.location.pathname.startsWith("/ket-qua")) {
       history.replace("/");
     }
     history.replace(history.location.pathname);
@@ -81,19 +81,14 @@ function Logged(props) {
               className={classes.containerAvatar}
               onClick={handleClick}
             >
-              {/* <Avatar size="medium" className={classes.avatar} >
-                {user.hoTen.slice(0, 1).toUpperCase()}
-                <AccountCircleOutlinedIcon/>
-              </Avatar> */}
+            
               <Avatar className={classes.avatar} alt="Remy Sharp" src="/images/user-icon.png" />
             </IconButton>
           </LightTooltip>
         </div>
         <div className={classes.sectionMobile}>
           <IconButton className={classes.containerAvatar} onClick={handleClick}>
-            {/* <Avatar size="small" className={classes.avatar} type="button">
-              {user.hoTen.slice(0, 1).toUpperCase()}
-            </Avatar> */}
+       
             <Avatar className={classes.avatar} alt="Remy Sharp" src="/images/user-icon.png" />
           </IconButton>
 

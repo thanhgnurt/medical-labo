@@ -33,3 +33,7 @@ a.selected {
 .demo_{
   color: tomato;
 }
+.MuiToolbar-regular {
+  min-height: 56px;
+  height: 61px;}
+  

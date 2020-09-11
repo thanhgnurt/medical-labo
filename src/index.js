@@ -10,18 +10,19 @@ import "popper.js/dist/umd/popper.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./index.css";
 
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from "./redux/configureStore";
+import {HashRouter} from "react-router-dom"
 
 const store = configureStore();
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <Provider store={store}>
       <App />
     </Provider>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
 

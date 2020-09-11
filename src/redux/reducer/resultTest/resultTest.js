@@ -1,5 +1,5 @@
-import * as actionTypes from "./../constantActions/user";
-import {resultTest} from './data'
+import * as actionTypes from "./../../constantActions/resultTest";
+import {resultTest} from './../dataResult'
 
 const initialState = resultTest
 

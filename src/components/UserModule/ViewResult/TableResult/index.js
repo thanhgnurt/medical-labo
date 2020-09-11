@@ -11,7 +11,7 @@ function TableResult(props) {
     <div>
       <table className="table table-bordered table-striped px-4">
         <TableHeader/>
-        <TableBody resultTest={props.resultTest}/>
+        <TableBody resultTest={props.resultTest} idDefault={props.id}/>
       </table>
     </div>
   );

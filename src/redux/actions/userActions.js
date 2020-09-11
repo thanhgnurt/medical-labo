@@ -1,4 +1,5 @@
 import * as actionTypes from "./../constantActions/user";
+import * as actionTypeResults from './../constantActions/resultTest'
 import * as userApi from "./../../apis/user";
 import { openLoading, closeLoading } from "./ui";
 import {getListResultTest} from './../../apis/getApis';
@@ -57,14 +58,19 @@ export const fetchResultRequest = ()=>{
 
 export const fetchResultSuccess = (data)=>{
   return {
-    type : actionTypes.USER_LOADDING_RESULT_SUCCESS,
+    type : actionTypeResults.USER_LOADDING_RESULT_SUCCESS,
     payload : {data}
   }
 }
 
 export const fetchResultFaild = (error)=>{
   return {
-    type : actionTypes.USER_LOADDING_RESULT_FAILD,
+    type : actionTypeResults.USER_LOADDING_RESULT_FAILD,
     payload : {error}
   }
 }
+
+export const changeTabResultAdvisoryFeedback = data=>({
+  type: actionTypeResults.CHANGE_RESULT_ADVISORY_FEEDBACK,
+  data 
+})

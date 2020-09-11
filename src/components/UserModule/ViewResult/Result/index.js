@@ -7,7 +7,7 @@ import TableResult from './../TableResult'
 function ResultTest(props) {
   return (
     <div>
-      <TableResult resultTest={props.resultTest}/>
+      <TableResult resultTest={props.resultTest} id={props.id}/>
     </div>
   )
 }

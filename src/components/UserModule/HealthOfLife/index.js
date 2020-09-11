@@ -16,9 +16,7 @@ const showListNews = (listNews) => {
       <Grid container>
         {/* news large */}
         <LargeNews listNews={listNews} />
-
         {/* medium news */}
-
         <MediumNews listNews={listNews} />
       </Grid>
     );
@@ -40,7 +38,6 @@ function HealthOfLife(props) {
             </Typography>
             <div className={classes.root}>
               {showListNews(listNews.listNews)}
-             
             </div>
             <div className={classes.seeMore}>
               <Button variant="outlined" color="secondary">

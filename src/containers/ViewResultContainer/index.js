@@ -13,7 +13,10 @@ function ViewResultContainer(props) {
   scroll.scrollTo(0);
   
   return <ViewResult resultTest={props.resultTest} />;
+
 }
+
+
 
 const mapStateToProps = state=>({
     resultTest : state.resultTest

@@ -4,10 +4,11 @@ import userPape from './userPape';
 import theme from './theme';
 import ui from './ui';
 import userReducer from './userReducer';
-import resultTest from './resultTest';
+import resultTest from './resultTest/resultTest';
 import adminReducer from './adminReducer';
 import { reducer as formReducer } from 'redux-form';
 import newsHealthOfLife from './newsHealthOfLife';
+import tabResult from './resultTest/tabResultAdvisory';
 
 
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   resultTest,
   adminReducer,
   newsHealthOfLife,
+  tabResult,
   form: formReducer
 });
 export default rootReducer;

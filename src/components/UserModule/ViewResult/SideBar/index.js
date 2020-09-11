@@ -1,20 +1,47 @@
 import { Button, withStyles } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./styles";
 import "./styles.css";
 import Grid from "@material-ui/core/Grid";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
+import { useLocation } from "react-router-dom";
 
 function SideBar(props) {
-  const { classes, resultTest } = props;
+  const { classes, resultTest, changeTabResult } = props;
+  let location = useLocation();
+  const [date, setDate] = useState(0);
+  const handleOnClick = (date) => {
+    if (date) {
+      date = showDate(date);
+      setDate(`Ngày ${date}`);
+    }
+    changeTabResult();
+  };
+  const showDate = (date) => {
+    if (date.length === 8) {
+      return date.slice(0, 2) + "/" + date.slice(2, 4) + "/" + date.slice(4, 8);
+    }
+    return date;
+  };
   const showListResult = (resultTest) => {
     if (resultTest.length > 0) {
-      return resultTest.map((item) => {
+      return resultTest.map((item, index) => {
         return (
           <li className={classes.itemList} key={item.id}>
-            <NavLink to={`/ket-qua/${item.id}`}>{item.ngay_xet_nghiem}</NavLink>
+            <NavLink
+              activeClassName={classes.active}
+              className={
+                index === 0 && location.pathname === "/ket-qua"
+                  ? classes.activeFirst
+                  : ""
+              }
+              to={`/ket-qua/${item.id}`}
+              onClick={() => handleOnClick(item.ngay_xet_nghiem)}
+            >
+              Ngày {showDate(item.ngay_xet_nghiem)}
+            </NavLink>
           </li>
         );
       });
@@ -32,7 +59,7 @@ function SideBar(props) {
               data-toggle="dropdown"
               size="small"
             >
-              Danh sách
+              {date === 0 ? "Danh sách kết quả" : date}
             </Button>
 
             <div className="dropdown-menu mobile_dropdown">
