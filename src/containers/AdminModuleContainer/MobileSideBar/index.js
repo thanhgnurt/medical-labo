@@ -5,14 +5,15 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { MENUS } from "./../../../constantPages/menus";
 import "./styles.css";
 import { NavLink } from "react-router-dom";
 import styles from "./styles";
+import { ADMIN_MENUS } from "./../../../constantPages/routes";
+import CloseIcon from "@material-ui/icons/Close";
 
 
 function MenuMobile(props) {
-  const { openMobile, classes } = props;
+  const { openMobile, classes, handleDrawerOpenMobile } = props;
   
 
   const listMenu = () => (
@@ -22,36 +23,39 @@ function MenuMobile(props) {
       onClick={props.mobileMenuToggle}
       onKeyDown={props.mobileMenuToggle}
     >
+      <div className={classes.closeIconContainer}><CloseIcon className={classes.iconClose} onClick={()=>handleDrawerOpenMobile()}/></div>
       <List>
-        {MENUS.map((item, index) => (
+      <Divider />
+        {ADMIN_MENUS.map((item, index) => (
           <NavLink
-            key={item.to}
-            to={item.to}
+            key={item.path}
+            to={item.path}
             className={classes.linkMobileMenu}
             activeClassName={classes.activeSelection}
           >
-            <ListItem button key={item.to} to={item.to}>
+            <ListItem button key={item.path} to={item.path} className={classes.listItem}>
               <div className={classes.icon}>{item.icon}</div>
               <ListItemText primary={item.name} className={classes.listText} />
             </ListItem>
+            <Divider />
           </NavLink>
+          
         ))}
       </List>
-      <Divider />
+      {/* <Divider /> */}
     </div>
   );
 
   return (
     <div className={classes.menuMobile}>
-      <React.Fragment key="left">
+      <React.Fragment>
         <Drawer
-          anchor="left"
           open={openMobile}
+          anchor="left"
           onClose={props.mobileMenuToggle}
           variant="persistent"
         >
           {listMenu()}
-   
         </Drawer>
       </React.Fragment>
     </div>

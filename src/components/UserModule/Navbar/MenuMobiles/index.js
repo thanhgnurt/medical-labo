@@ -26,7 +26,7 @@ function MenuMobile(props) {
       ) {
         return (
           <Link
-          onClick={mobileMenuToggle}
+            onClick={mobileMenuToggle}
             href=""
             activeClass={classes.active}
             spy={true}
@@ -57,7 +57,7 @@ function MenuMobile(props) {
 
   return (
     <div className={classes.menuMobile}>
-      <React.Fragment key="right">
+      <React.Fragment>
         <Drawer
           anchor="right"
           open={mobileMenu}

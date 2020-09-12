@@ -14,7 +14,13 @@ import { useHistory } from "react-router-dom";
 import CloseIcon from "@material-ui/icons/Close";
 
 function Header(props) {
-  const { classes, open, handleDrawerOpen, handleDrawerOpenMobile, openMobile } = props;
+  const {
+    classes,
+    open,
+    handleDrawerOpen,
+    handleDrawerOpenMobile,
+    openMobile,
+  } = props;
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -61,7 +67,7 @@ function Header(props) {
           {openMobile ? <CloseIcon /> : <FormatListBulletedIcon />}
         </IconButton>
       </Grid>
-      
+
       <Grid item xs={6}>
         <Grid
           container

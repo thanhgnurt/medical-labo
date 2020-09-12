@@ -4,12 +4,9 @@ const styles = (theme) => ({
   },
 
   fullList: {
-    top: 65,
-    width: 200,
     height: "100%",
     backgroundColor: theme.palette.primary.backgroundPaper,
-    position: "fixed",
-    zIndex: 1000,
+    zIndex: 100,
   },
   drawerPaper: {
     height: "auto",
@@ -18,12 +15,29 @@ const styles = (theme) => ({
     marginLeft: 15,
     color: theme.palette.primary.textColor,
   },
-  menuMobile : {
-    display: "block",
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-  },
+  listItem:{
+    padding : "10px 50px"
 
+  },
+  menuMobile: {
+    position: "relative",
+    zIndex: 1000,
+    // display: "block",
+    // [theme.breakpoints.up("sm")]: {
+    //   display: "none",
+    // },
+  },
+  closeIconContainer:{
+    height : 58,
+    background : "white",
+    textAlign :"right",
+    
+    
+  },
+  iconClose:{
+    marginTop : 15,
+    fontSize : 30,
+    marginRight : 20
+  }
 });
 export default styles;

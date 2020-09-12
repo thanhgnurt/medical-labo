@@ -8,7 +8,6 @@ import Grid from "@material-ui/core/Grid";
 import MobileSideBar from "./MobileSideBar";
 
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -58,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
       // width: theme.spacing(9) + 1,
     },
   },
-
  
 }));
 
@@ -83,12 +81,11 @@ export default function MiniDrawer() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <SideBar open={open} handleDrawerClose={handleDrawerClose} />
-      
+      <SideBar open={open} handleDrawerClose={handleDrawerClose}/>
       <Grid container>
         <Grid item xs={12} container>
           <Header open={open} handleDrawerOpen={handleDrawerOpen} handleDrawerOpenMobile={handleDrawerOpenMobile} openMobile={openMobile}/>
-          <MobileSideBar openMobile={openMobile} />
+          <MobileSideBar openMobile={openMobile} handleDrawerOpenMobile={handleDrawerOpenMobile}/>
         </Grid>
         <Grid item xs={12}>
           <Content />

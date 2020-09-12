@@ -1,10 +1,15 @@
 
 const styles = theme =>({
+  appBar:{
+    position:"relative",
+    zIndex : 100
+
+  },
 
  
-  header :{
-    width : "100%"
-  },
+  // header :{
+  //   width : "100%"
+  // },
   menuPerson :{
     margin : "5px 10px",
     color :"black"
