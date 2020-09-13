@@ -4,7 +4,6 @@ const styles = theme =>({
     },
     divImage :{
         height : 470,
-       
         zIndex : 2
 
     },

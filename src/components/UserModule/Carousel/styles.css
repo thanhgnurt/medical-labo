@@ -61,24 +61,38 @@ img {
   outline: none;
 }
 .iconPre {
- 
-  font-size: 40px !important;
+  padding: 11px;
+  font-size: 15px !important;
   font-weight: 100 !important;
-  /* margin-right: 150px !important; */
   position: relative;
   text-align: center;
-  right: 95px;
+  right: 94px;
   top: 20px;
-  background: rgba(224, 223, 223, 0.76);
+  background: rgba(255, 255, 255, 0.822);
   border-radius: 50%;
-  height:50px !important;
+  height: 50px !important;
   width: 50px !important;
-  border : 3px solid rgb(145, 144, 144);
   color: rgb(145, 144, 144);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+  
 }
 .iconPre:hover{
-  color: rgba(34, 34, 34, 0.733);
+  color: rgba(34, 34, 34, 0.699);
   background: rgb(255, 255, 255) !important;
-  border : 3px solid rgba(34, 34, 34, 0.692) !important;
+  /* border : 3px solid rgba(34, 34, 34, 0.377) !important; */
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.15)
+  
 }
 
+.carousel button:active .iconPre {
+  padding:16px;
+  opacity:1;
+  transition:0s;
+  
+}
+
+@media screen and (max-width: 700px) {
+ .iconPre{
+  right: -5px;
+ }
+}

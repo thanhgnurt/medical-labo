@@ -102,7 +102,7 @@ function LoginPageContainer(props) {
                 className={classes.b_login}
                 onClick={handleClose}
                 variant="contained"
-                color="secondary"
+                color="inherit"
                 size="small"
               >
                 Hủy bỏ

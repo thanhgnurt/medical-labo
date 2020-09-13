@@ -21,56 +21,6 @@ function CarouselItem1(props) {
         ></img>
       </div>
       <div className={classes.backgroundLayer}></div>
-      {/* <div className={classes.content}>
-        <div className={classes.text}>
-          <h2>Vì sao nên xét nghiệm máu tại nhà ? </h2>
-          <div className={classes.description}>
-            Xét nghiệm máu tại nhà với nhiều lợi ích đáng ghi nhận
-          </div>
-          <Container maxWidth="md">
-            <Grid container className={classes.gridContainer}>
-              <Grid item lg={6}>
-                <ul className={classes.listAsk}>
-                  <li>Tiện lợi, Hỗ trợ xem kết quả ngay trên website</li>
-                  <li>Nhanh chóng và chính xác</li>
-                  <li>Được hỗ trợ tư vấn đọc kết quả xét nghiệm</li>
-                </ul>
-              </Grid>
-              <Grid item lg={6}>
-                <ul className={classes.listAsk}>
-                  <li>Tiết kiệm thời gian</li>
-                  <li>Chi phí hợp lý</li>
-                  <li>Được hỗ trợ tư vấn đọc kết quả xét nghiệm</li>
-                </ul>
-              </Grid>
-            </Grid>
-          </Container>
-          <div className={classes.setSchedule}>
-            <NavLink to="/dat-lich/001">
-               <Button
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              endIcon={<AlarmOnIcon/>}
-            
-            >
-              Đặt lịch ngay
-            </Button>
-            </NavLink>
-           
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              endIcon={<PhoneIcon/>}
-            > 
-           
-              Liên hệ 
-            </Button>
-          </div>
-        </div>
-      </div> */}
-
       <Greeting/>
     </div>
   );

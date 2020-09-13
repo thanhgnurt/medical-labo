@@ -228,7 +228,7 @@ function SetSchedule(props) {
                   </Button>
                   <Button
                     variant="contained"
-                    color="secondary"
+                    color="inherit"
                     size="small"
                     onClick={handleCancel}
                   >

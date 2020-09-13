@@ -104,7 +104,7 @@ function SignupPageContainer(props) {
             onClick={handleClose}
             size="small"
             variant="contained"
-            color="secondary"
+            color="inherit"
           >
             Hủy Bỏ
           </Button>

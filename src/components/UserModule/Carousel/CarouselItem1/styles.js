@@ -11,7 +11,7 @@ const styles = theme =>({
         objectFit :"cover",
         position:"absolute",
         zIndex : 1,
-        borderRadius : "10px"
+        borderRadius : "10px",
     },
     backgroundLayer:{
         position:"absolute",
@@ -21,7 +21,8 @@ const styles = theme =>({
         bottom:0,
         left : 0,
         right : 0,
-        borderRadius : "10px"
+        borderRadius : "10px",
+        
     },
     content :{
         position :"absolute",
