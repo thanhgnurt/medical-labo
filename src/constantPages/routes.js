@@ -143,6 +143,7 @@ export const LOGIN_SIGNUP_ROUTES = [
 ];
 
 export const SET_SCHEDULE_ROUTE = {
+  exact : true,
   path: "/dat-lich/:id",
   name: "Set a sampling schedule",
   component: SetScheduleContainer,

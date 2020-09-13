@@ -13,7 +13,7 @@ import { withStyles } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { themeLight, themeDark } from "../../commons/Theme";
-import { Switch,
+import { Redirect, Route, Switch,
   //  Route, Redirect
    } from "react-router-dom";
 import AdminLayoutRoute from "../../commons/Layout/AdminLayoutRoute";
@@ -122,9 +122,12 @@ function AppContainer(props) {
         {renderHeathOfLifeRoutes()}
         {renderDetailTestRoutes()}
         {renderUserRoutes()}
-        {/* <Route path="">
+        <Route path="/dat-lich">
+          <Redirect to="/dat-lich/carousel"></Redirect>
+        </Route>
+        <Route path="">
           <Redirect to="/"></Redirect>
-        </Route> */}
+        </Route>
       </Switch>
     </ThemeProvider>
   );

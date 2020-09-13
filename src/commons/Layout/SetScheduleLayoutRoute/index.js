@@ -21,6 +21,19 @@ export default function SetScheduleLayoutRoute(props) {
           );
         }}
       />
+      <Route 
+        {...remainProps}
+        render={(routeProps) => {
+          return (
+            <div>
+              <NavbarContainer {...remainProps}>
+                <YourComponent {...routeProps} />
+                <FooterContainer/>
+              </NavbarContainer>
+            </div>
+          );
+        }}
+      />
     </Switch>
   );
 }

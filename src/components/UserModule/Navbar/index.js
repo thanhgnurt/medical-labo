@@ -97,7 +97,7 @@ function Navbar(props) {
                   </div>
                   <a href="/" className={classes.name}>
                     <h4>
-                      <span className={classes.charUnder}>L</span>abo
+                      <span className={classes.charUnder}>L</span>ab
                     </h4>
                   </a>
                 </Grid>

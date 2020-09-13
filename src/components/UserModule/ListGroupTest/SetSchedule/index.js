@@ -80,8 +80,6 @@ const useStyles = makeStyles((theme) => ({
 
 function SetSchedule(props) {
   const { groupTest } = props;
-  console.log(groupTest.image);
-
   // let { url } = useRouteMatch();
   let history = useHistory();
 

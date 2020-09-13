@@ -21,7 +21,7 @@ export const MENUS = [
     icon: <AppsIcon />,
     scroll : {
       id : "ID_CATEGORY_TEST",
-      offset : -65,
+      offset : -55,
 
     }
   },
@@ -41,7 +41,7 @@ export const MENUS = [
     icon: <FiberNewIcon />,
     scroll : {
       id : "ID_NEWS_MEDICAL",
-      offset : -75,
+      offset : -65,
 
     }
   },

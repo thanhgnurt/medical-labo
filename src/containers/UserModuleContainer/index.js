@@ -46,17 +46,17 @@ function UserModuleContainer(props) {
         case "/danh-muc-xet-nghiem":
           setTimeout(() => {
             scroller.scrollTo("CATEGORY_TEST", {
-              duration: 1500,
+              duration: 500,
               delay: 100,
               smooth: true,
-              offset: -65,
+              offset: -55,
             });
           }, 200);
           break;
         case "/luu-y-khi-lay-mau":
           setTimeout(() => {
             scroller.scrollTo("NOTE", {
-              duration: 1500,
+              duration: 500,
               delay: 100,
               smooth: true,
               offset: -55,
@@ -66,10 +66,10 @@ function UserModuleContainer(props) {
         case "/tin-tuc-y-khoa":
           setTimeout(() => {
             scroller.scrollTo("NEWS_MEDICAL", {
-              duration: 1500,
+              duration: 500,
               delay: 100,
               smooth: true,
-              offset: -75,
+              offset: -70,
             });
           }, 200);
           break;

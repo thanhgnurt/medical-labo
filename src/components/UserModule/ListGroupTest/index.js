@@ -2,7 +2,7 @@ import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
-import AppsIcon from '@material-ui/icons/Apps';
+import AppsIcon from "@material-ui/icons/Apps";
 import React from "react";
 import * as Scroll from "react-scroll";
 import GroupTestItem from "./GroupTestItem";
@@ -30,10 +30,8 @@ function ListGroupTest(props) {
           <Container maxWidth="md">
             <div className={classes.root}>
               <div className={classes.tittle}>
-                <AppsIcon /> 
-                <span className={classes.tittleText}>
-                Danh Mục Xét Nghiệm
-                </span>
+                <AppsIcon />
+                <span className={classes.tittleText}>Danh Mục Xét Nghiệm</span>
               </div>
               <Grid container spacing={3} direction="row">
                 {showGroupTest()}

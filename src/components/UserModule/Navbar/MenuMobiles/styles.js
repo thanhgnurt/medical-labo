@@ -19,6 +19,10 @@ const styles = (theme) => ({
     marginLeft: 15,
     color: theme.palette.primary.textColor,
   },
+  activeResult:{
+    marginLeft: 15,
+    color: theme.palette.primary.hoverColor,
+  },
   activeSelection:{
     color:theme.palette.primary.hoverColor
   },
@@ -27,6 +31,9 @@ const styles = (theme) => ({
       color :theme.palette.primary.hoverColor
     }
   },
+  activeiconResult:{
+    color: theme.palette.primary.hoverColor,
+  }
  
 });
 export default styles;

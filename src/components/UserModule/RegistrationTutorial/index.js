@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: 600,
     textAlign: "center",
-    padding: 20,
+    padding: "30px 10px",
     color: theme.palette.secondary.main,
     background:
       "linear-gradient(to top,rgb(243, 242, 242,0.5),transparent 100%)",

@@ -9,7 +9,8 @@ const styles = (theme) => ({
   },
   header: {
     marginTop: 20,
-    color : theme.palette.primary.hoverColor
+    color : theme.palette.primary.hoverColor,
+    padding : "20px 10px"
   },
   paper: {
     padding: theme.spacing(2),

@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Carousel from "./../../components/UserModule/Carousel";
 
 function CarouselContainer(props) {
@@ -8,4 +9,8 @@ function CarouselContainer(props) {
     </div>
   );
 }
-export default CarouselContainer;
+const mapStateToProps = state=>({
+
+
+})
+export default connect(mapStateToProps, null) (CarouselContainer);

@@ -3,12 +3,19 @@ import SetSchedule from "./../../components/UserModule/ListGroupTest/SetSchedule
 import { animateScroll as scroll } from "react-scroll";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
+import {IMAGE_HOME} from './../../constantPages/images'
 
 function SetScheduleContainer(props) {
   scroll.scrollTo(0);
   let { id } = useParams();
   const { listGroupTest } = props;
   let groupTest = {};
+  if (id==="carousel") {
+    groupTest={
+      image : IMAGE_HOME.imageDefault
+    }
+    
+  }
   const findId = (id) => {
     for (let i = 0; i < listGroupTest.length; i++) {
       if (listGroupTest[i].id === id) {
@@ -16,7 +23,7 @@ function SetScheduleContainer(props) {
       }
     }
   };
-  if (listGroupTest.length > 0) {
+  if (listGroupTest.length > 0 && id!=="carousel") {
     groupTest = listGroupTest[findId(id)];
   }
 

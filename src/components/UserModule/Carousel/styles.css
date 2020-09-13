@@ -15,6 +15,7 @@
 .slick-prev {
   left: 25px !important;
   z-index: 2 !important;
+  display: none !important;
 }
 .slick-next {
   right: 40px !important;
@@ -30,7 +31,7 @@ img {
 }
 .slick-arrow {
   top: 40% !important;
-  color: gray !important;
+  color: rgb(128, 128, 128) !important;
   position: absolute;
   z-index: 2;
 }
@@ -40,7 +41,7 @@ img {
 }
 
 .slick-dots button::before {
-  font-size: 13px !important;
+  font-size: 10px !important;
   color: rgb(255, 255, 255) !important;
   opacity: 0.8 !important ;
 }
@@ -55,8 +56,29 @@ img {
 
 .slick-dots li.slick-active button::before {
   color: rgb(255, 5, 5) !important;
- 
 }
 :focus {
   outline: none;
 }
+.iconPre {
+ 
+  font-size: 40px !important;
+  font-weight: 100 !important;
+  /* margin-right: 150px !important; */
+  position: relative;
+  text-align: center;
+  right: 95px;
+  top: 20px;
+  background: rgba(224, 223, 223, 0.76);
+  border-radius: 50%;
+  height:50px !important;
+  width: 50px !important;
+  border : 3px solid rgb(145, 144, 144);
+  color: rgb(145, 144, 144);
+}
+.iconPre:hover{
+  color: rgba(34, 34, 34, 0.733);
+  background: rgb(255, 255, 255) !important;
+  border : 3px solid rgba(34, 34, 34, 0.692) !important;
+}
+

@@ -78,12 +78,12 @@ function MenuMobile(props) {
                 activeClassName={classes.activeSelection}
               >
                 <ListItem button to="/ket-qua">
-                  <div className={classes.icon}>
+                  <div className={location.pathname.startsWith("/ket-qua")?classes.activeiconResult :classes.icon}>
                     <DoneAllIcon />
                   </div>
                   <ListItemText
                     primary="Kết quả"
-                    className={classes.listText}
+                    className={location.pathname.startsWith("/ket-qua")?classes.activeResult :classes.listText}
                   />
                 </ListItem>
               </NavLink>
