@@ -1,17 +1,17 @@
 const styles = (theme) => ({
   greeting: {
     position: "absolute",
-    height: "80%",
+    height: "76%",
     width: "70%",
-    zIndex: 2000000000,
-    background: "rgba(255, 255, 255, 0.7)",
-    top: 30,
+    zIndex: 20000,
+    background: "rgba(255, 255, 255, 0.85)",
+    top: 40,
     left: -10,
     borderTopRightRadius: 10,
-    borderBottomRightRadius: "250px",
+    borderBottomRightRadius: "10px",
     // boxShadow: "0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2)",
     // borderBottom:"10px solid rgba(0, 0, 0, 0.3)",
-    boxShadow: "0 0 0 0.5rem rgba(255, 255, 255, 0.15)",
+    // boxShadow: "0 0 0 1rem rgba(255, 255, 255, 0.15)",
     marginLeft: 128,
   },
   tittle: {
@@ -38,7 +38,7 @@ const styles = (theme) => ({
       display: "none",
     },
     greeting: {
-      borderBottomRightRadius: "200px",
+      borderBottomRightRadius: "10px",
       height: "80%",
       width: "80%",
     },
@@ -55,7 +55,7 @@ const styles = (theme) => ({
       display: "none",
     },
     greeting: {
-      borderBottomRightRadius: "200px",
+      borderBottomRightRadius: "10px",
       height: "80%",
       width: "80%",
     },
@@ -109,11 +109,11 @@ const styles = (theme) => ({
       display: "none",
     },
     greeting: {
-      borderBottomRightRadius: "10px",
-      height: "80%",
+      height: "85%",
       width: "95%",
       marginLeft: 0,
       left: 0,
+      top: 17,
     },
     tittle: {
       fontSize: 26,

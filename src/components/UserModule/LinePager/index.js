@@ -7,7 +7,7 @@ import styles from "./styles";
 function LinePager(props) {
   const { classes } = props;
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       <Typography component="div" className={classes.linePager} />
     </Container>
   );

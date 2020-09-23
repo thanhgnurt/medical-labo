@@ -12,7 +12,7 @@ const styles = (theme) => ({
     paddingBottom : 16,
   },
   paper: {
-    marginTop: -10,
+    marginTop: -20,
   },
   listMenu: {
     width: "100%",

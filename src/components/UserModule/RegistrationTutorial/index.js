@@ -96,7 +96,7 @@ export default function RegistrationTutorial() {
 
   return (
       <div >
-        <Container maxWidth="md" className={classes.root}>
+        <Container maxWidth="lg" className={classes.root}>
           <Paper>
             <div className={classes.tittle}>
               <h4>Các bước xét nghiệm máu tại nhà</h4>

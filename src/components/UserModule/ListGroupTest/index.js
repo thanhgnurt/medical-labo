@@ -27,7 +27,7 @@ function ListGroupTest(props) {
       <div className={classes.header_paper} id="ID_CATEGORY_TEST">
         <React.Fragment>
           <CssBaseline />
-          <Container maxWidth="md">
+          <Container maxWidth="lg">
             <div className={classes.root}>
               <div className={classes.tittle}>
                 <AppsIcon />

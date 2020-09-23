@@ -7,14 +7,15 @@ const styles = (theme) => ({
     display: "-webkit-box",
   },
 
-  imageMedium: {
-    height: "120px",
-    width:"100%",
-    objectFit: "cover",
-    borderRadius: 5,
-    boxShadow:
-    "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
-  },
+  // imageMedium: {
+  //   height: "120px",
+  //   width:"100%",
+  //   objectFit: "cover",
+  //   borderRadius: 5,
+  //   boxShadow:
+  //   "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+  // },
+
 
   tittleNews: {
     fontSize: 15,

@@ -30,6 +30,9 @@ const styles = (theme) => ({
   },
   news :{
     color :theme.palette.primary.hoverColor 
+  },
+  menuScreenDoctor:{
+    display : "flex"
   }
   
 });

@@ -26,9 +26,20 @@ const styles = (theme) => ({
     // marginTop:15
   },
  
+ 
 
   smallTittle : {
     textAlign : "left"
-  }
+  },
+  "@media screen and (min-width: 992px)": {
+    smallNews :{
+      marginBottom :32
+    }
+  },
+  "@media screen and (max-width: 599px)": {
+    smallNews :{
+      marginBottom :32
+    }
+  },
 });
 export default styles;

@@ -10,7 +10,12 @@ export const userLogin = (dataLogin) => {
       .userLoginApi(dataLogin.user)
       .then((data) => {
         localStorage.setItem("USER", JSON.stringify(data.data));
-        dispatch(userLoginSuccess(data.data));
+        if(data.data.maLoaiNguoiDung==="QuanTri"){
+          dispatch(userLoginDoctorSuccess(data.data))
+        } else {
+          dispatch(userLoginSuccess(data.data));
+
+        }
         dataLogin.history.replace(dataLogin.navigation)
       })
       .catch((error) => {
@@ -23,6 +28,12 @@ export const userLoginSuccess = (data) => {
   return {
     type: actionTypes.USER_LOGIN_SUCCESS,
     payload: { data },
+  };
+};
+export const userLoginDoctorSuccess = (data) => {
+  return {
+    type: actionTypes.USER_LOGIN_SUCCESS,
+    payload: data,
   };
 };
 export const userLoginReset = ()=>{

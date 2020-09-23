@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import NavbarContainer from "../../../containers/NavbarContainer";
-import BottomContact from './../../../components/UserModule/Footer/Bottom'
+import FooterContainer from "./../../../containers/FooterContainer";
+// import Bottom from './../../../components/UserModule/Footer/Bottom'
 
 export default function ViewResultLayoutRoute(props) {
   const { component: YourComponent, name, ...remainProps } = props;
@@ -20,7 +21,8 @@ export default function ViewResultLayoutRoute(props) {
             <div>
               <NavbarContainer {...remainProps}>
                 <YourComponent {...routeProps} />
-                <BottomContact />
+                {/* <Bottom/> */}
+                <FooterContainer />
               </NavbarContainer>
             </div>
           );

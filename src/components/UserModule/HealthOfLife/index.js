@@ -32,7 +32,7 @@ function HealthOfLife(props) {
       <div id="ID_NEWS_MEDICAL" className={classes.heathOfLife}>
         <React.Fragment>
           <CssBaseline />
-          <Container maxWidth="md">
+          <Container maxWidth="lg">
             <Typography align="center" variant="h5" className={classes.header}>
               Sức Khỏe & Cuộc Sống
             </Typography>

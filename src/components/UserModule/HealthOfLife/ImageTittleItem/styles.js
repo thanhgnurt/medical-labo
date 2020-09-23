@@ -14,6 +14,15 @@ const styles = (theme) => ({
   //     color: theme.palette.primary.textColor
 
   //   },
+  imageSmall: {
+    borderRadius: 5,
+    height: "50px",
+    width: "50px",
+    objectFit: "cover",
+    marginRight: 10,
+    boxShadow:
+    "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+  },
   imageMedium: {
     height: "120px",
     width: "100%",
@@ -22,6 +31,7 @@ const styles = (theme) => ({
     boxShadow:
       "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   },
+
 
   tittleNews: {
     fontSize: 16,
@@ -33,15 +43,17 @@ const styles = (theme) => ({
         color : theme.palette.primary.hoverColor
     }
   },
-  imageSmall: {
-    borderRadius: 5,
-    height: "50px",
-    width: "50px",
-    objectFit: "cover",
-    marginRight: 10,
-    boxShadow:
-    "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+  iconSmallNews:{
+    position :"absolute",
+    marginTop : 35,
+    "& button":{
+      padding :"5px !important",
+      height : 35,
+      width : 35,
+      marginRight: 10
+    }
   },
+
   tittleNewsSmall: {
     fontSize: 16,
     overflow: "hidden",
@@ -54,5 +66,33 @@ const styles = (theme) => ({
         color : theme.palette.primary.hoverColor
     }
   },
+  smallDescription:{
+    overflow: "hidden",
+    "-webkit-line-clamp": 2,
+    "-webkit-box-orient": "vertical",
+    display: "-webkit-box !important",
+    lineHeight : "23px"
+  
+  },
+  "@media screen and (min-width: 992px)": {
+    imageMedium: {
+      height: "200px",
+    },
+    imageLarge: {
+      height : 250
+    },
+    imageSmall: {
+      height: "70px",
+      width: "70px",
+    },
+  },
+  "@media screen and (max-width: 599px)": {
+  
+    imageSmall: {
+      height: "70px",
+      width: "70px",
+    },
+  },
+
 });
 export default styles;

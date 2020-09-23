@@ -1,17 +1,24 @@
+
+
+let heightScreen =window.innerHeight -100;
+if(heightScreen<550){
+    heightScreen = "var(--heightCarousel)"
+}
 const styles = theme =>({
     carouselItem:{
         position :"relative",
     },
     divImage :{
-        height : 470,
-        zIndex : 2
+        // height : "var(--heightCarousel)",
+        height :heightScreen
+       
 
     },
     image :{
         objectFit :"cover",
         position:"absolute",
         zIndex : 1,
-        borderRadius : "10px"
+        borderRadius : "4px"
     },
     backgroundLayer:{
         position:"absolute",
@@ -21,7 +28,7 @@ const styles = theme =>({
         bottom:0,
         left : 0,
         right : 0,
-        borderRadius : "10px"
+        borderRadius : "4px"
     },
     content :{
         position :"absolute",

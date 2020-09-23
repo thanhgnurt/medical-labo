@@ -37,19 +37,23 @@ function Navbar(props) {
     disableHysteresis: true,
     threshold: 100,
   });
+  let typeUser =JSON.parse(localStorage.getItem("USER")) ;
+  if(typeUser){
+    typeUser = typeUser.maLoaiNguoiDung
+  }
 
   const changeTheme = () => {
     props.handleChangeTheme();
   };
 
   const viewResultNavLink = () => {
-    if (localStorage.getItem("USER")) {
+    if (typeUser) {
       // let user = JSON.parse(localStorage.getItem("USER"));
       return (
         <NavLink to="/ket-qua">
           <div className={trigger ? classes.menuScrolled : classes.menuMains}>
             <span
-              className={location.pathname === "/ket-qua" ? classes.result : ""}
+              className={location.pathname.startsWith("/ket-qua")? classes.result : ""}
             >
               Kết Quả
             </span>
@@ -111,7 +115,7 @@ function Navbar(props) {
                       alignItems="center"
                     >
                       <MenuDesktops menus={MENUS} trigger={trigger} />
-                      {viewResultNavLink()}
+                      {typeUser==="QuanTri" && location.pathname.startsWith("/ket-qua") ?"":viewResultNavLink()}
                     </Grid>
                   </div>
                 </Grid>

@@ -151,7 +151,8 @@ const styles = (theme) => ({
     marginTop:"auto",
     "& :hover":{
       color :theme.palette.primary.hoverColor
-    }
+    },
+    marginLeft : 5
   },
   buttonTheme:{
     "& :hover":{

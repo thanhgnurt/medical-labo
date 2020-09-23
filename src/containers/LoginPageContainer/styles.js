@@ -8,6 +8,7 @@ const styles = (theme)=>({
         left: 0,
         right: 0,
         height: "100%",
+        
         "& img": {
           filter: "blur(15px)",
           top: 0,
@@ -18,6 +19,7 @@ const styles = (theme)=>({
           margin: "-11px 0 -5px -10px",
           width: "calc(100% + 5px)",
           objectFit: "cover",
+          // minHeight : 600,
         },
       },
       root: {
@@ -53,7 +55,7 @@ const styles = (theme)=>({
         right: 0,
         bottom:0,
         backgroundColor: "rgba(0, 0, 0, 0.4)",
-    
+        // minHeight : 600,
         margin: "auto",
       },
       note1:{

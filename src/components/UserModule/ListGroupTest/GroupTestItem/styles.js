@@ -16,8 +16,7 @@ const styles = (theme) => ({
     justifyContent: "center",
     top: -30,
     width: "90%",
-    height : "180px",
-  
+    height : "200px",
     borderRadius: 6,
     position: "relative",
     pointEvents: "none",
@@ -26,6 +25,16 @@ const styles = (theme) => ({
     zIndex: 10,
     objectFit: "cover",
    
+  },
+  "@media screen and (min-width: 992px)": {
+    media :{
+      height : 225
+    }
+  },
+  "@media screen and (max-width: 599px)": {
+    media :{
+      height : 220
+    }
   },
 
 

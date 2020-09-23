@@ -6,8 +6,13 @@ import styles from "./styles";
 function SmallNews(props) {
   const { classes, news } = props;
   return (
-    <div className={classes.smallNews}>
-      <ImageTittleItem news={news} typeNews="small"/>
+    <div>
+      <div className={classes.smallNews}>
+        <ImageTittleItem news={news} typeNews="small" />
+      </div>
+      
+     
+
     </div>
   );
 }

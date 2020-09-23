@@ -11,6 +11,7 @@ import RenalFunction from "./RenalFunction";
 const useStyles = makeStyles((theme) => ({
   setSchedule: {
     position: "relative",
+    width:"100%"
   },
   image: {
     position: "absolute",
