@@ -8,23 +8,23 @@ export const resultTest = [
     ket_qua: [
       {
         name: "Ure",
-        result: 12.5,
+        result: 10.5,
       },
       {
         name: "Creatinin",
-        result: 30.5,
+        result: 38.5,
       },
       {
         name: "Triglycerid",
-        result: 16.5,
+        result: 5.5,
       },
       {
         name: "AST(GOT)",
-        result: 30.5,
+        result: 38.5,
       },
       {
         name: "ALT(GPT)",
-        result: 25.7,
+        result: 65.7,
       },
       {
         name: "Glucose",
@@ -32,7 +32,7 @@ export const resultTest = [
       },
       {
         name: "HDL",
-        result: 25.7,
+        result: 2.7,
       },
       {
         name: "LDL",
@@ -85,11 +85,11 @@ export const resultTest = [
       },
       {
         name: "Triglycerid",
-        result: 16.5,
+        result: 36.5,
       },
       {
         name: "AST(GOT)",
-        result: 30.5,
+        result: 70.5,
       },
       {
         name: "ALT(GPT)",
@@ -97,7 +97,7 @@ export const resultTest = [
       },
       {
         name: "Glucose",
-        result: 11.3,
+        result: 21.3,
       },
       {
         name: "HDL",
@@ -146,11 +146,11 @@ export const resultTest = [
     ket_qua: [
       {
         name: "Ure",
-        result: 12.5,
+        result: 22.5,
       },
       {
         name: "Creatinin",
-        result: 30.5,
+        result: 60.5,
       },
       {
         name: "Triglycerid",
@@ -166,7 +166,7 @@ export const resultTest = [
       },
       {
         name: "Glucose",
-        result: 11.3,
+        result: 51.3,
       },
       {
         name: "HDL",
@@ -215,11 +215,11 @@ export const resultTest = [
     ket_qua: [
       {
         name: "Ure",
-        result: 12.5,
+        result: 32.5,
       },
       {
         name: "Creatinin",
-        result: 30.5,
+        result: 70.5,
       },
       {
         name: "Triglycerid",
@@ -231,7 +231,7 @@ export const resultTest = [
       },
       {
         name: "ALT(GPT)",
-        result: 25.7,
+        result: 55.7,
       },
       {
         name: "Glucose",

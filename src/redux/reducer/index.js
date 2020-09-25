@@ -9,6 +9,7 @@ import adminReducer from './adminReducer';
 import { reducer as formReducer } from 'redux-form';
 import newsHealthOfLife from './newsHealthOfLife';
 import tabResult from './resultTest/tabResultAdvisory';
+import screenDoctor from './screenDoctor';
 
 
 const rootReducer = combineReducers({
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   adminReducer,
   newsHealthOfLife,
   tabResult,
+  screenDoctor,
   form: formReducer
 });
 export default rootReducer;

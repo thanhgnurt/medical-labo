@@ -7,6 +7,14 @@ const styles = theme =>({
     },
     sidebar :{
         width : "100%"
-    }
+    },
+    root: {
+        width: "100%",
+        padding: "0 2px",
+      },
+    paper: {
+        width: "100%",
+        marginBottom: theme.spacing(2),
+      },
 });
 export default styles;

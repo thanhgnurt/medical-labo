@@ -17,7 +17,7 @@ function MenuDesktops(props) {
   if (location.pathname.startsWith("/ket-qua") && typeUser === "QuanTri") {
     return MENU_SCREEN_DOCTOR.map((menu) => {
       return (
-        <MenuScreenDoctor menu={menu} key={menu.to}/>
+        <MenuScreenDoctor menu={menu} key={menu.to} trigger={trigger}/>
       );
     });
   } else {

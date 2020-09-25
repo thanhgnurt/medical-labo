@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     width:"100%"
   },
   image: {
+    width : "100%",
     position: "absolute",
     "& img": {
       filter: "blur(15px)",

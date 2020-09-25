@@ -11,8 +11,10 @@ import RenalFunction from "./PreventDiabetes";
 const useStyles = makeStyles((theme) => ({
   setSchedule: {
     position: "relative",
+    width:"100%",
   },
   image: {
+    width: "100%",
     position: "absolute",
     "& img": {
       filter: "blur(15px)",

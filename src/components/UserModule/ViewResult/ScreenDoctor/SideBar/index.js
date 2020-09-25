@@ -1,35 +1,44 @@
-import { Button, withStyles } from "@material-ui/core";
+import { InputBase, withStyles } from "@material-ui/core";
+import Divider from "@material-ui/core/Divider";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 import Paper from "@material-ui/core/Paper";
+import SearchIcon from "@material-ui/icons/Search";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./styles";
 import "./styles.css";
-import Grid from "@material-ui/core/Grid";
-import AcUnitIcon from "@material-ui/icons/AcUnit";
-import { useLocation } from "react-router-dom";
-
 function SideBar(props) {
-  const { classes, resultTest, changeTabResult } = props;
+  const { classes, changeTabResult, screenDoctor } = props;
+  const { listPatients } = screenDoctor;
+
   let location = useLocation();
-  const [date, setDate] = useState(0);
-  const handleOnClick = (date) => {
-    if (date) {
-      date = showDate(date);
-      setDate(`Ngày ${date}`);
+  const [active, setActive] = useState(listPatients[0].id);
+  const handleOnClick = (patients) => {
+    if (patients.id) {
+      setActive(patients.id);
     }
     changeTabResult();
   };
-  const showDate = (date) => {
-    if (date.length === 8) {
-      return date.slice(0, 2) + "/" + date.slice(2, 4) + "/" + date.slice(4, 8);
-    }
-    return date;
-  };
-  const showListResult = (resultTest) => {
-    if (resultTest.length > 0) {
-      return resultTest.map((item, index) => {
+  // const showDate = (date) => {
+  //   if (date.length === 8) {
+  //     return date.slice(0, 2) + "/" + date.slice(2, 4) + "/" + date.slice(4, 8);
+  //   }
+  //   return date;
+  // };
+  const showListResult = (listPatients) => {
+    if (listPatients.length > 0) {
+      return listPatients.map((item, index) => {
         return (
-          <li className={classes.itemList} key={item.id}>
+          <ListItem
+            onClick={() => handleOnClick(item)}
+            button
+            divider
+            className={
+              item.id === active ? classes.activeItem : classes.itemList
+            }
+            key={index}
+          >
             <NavLink
               activeClassName={classes.active}
               className={
@@ -38,11 +47,12 @@ function SideBar(props) {
                   : ""
               }
               to={`/ket-qua/${item.id}`}
-              onClick={() => handleOnClick(item.ngay_xet_nghiem)}
             >
-              Ngày {showDate(item.ngay_xet_nghiem)}
+              {item.name} <span className={classes.year}>({item.year})</span>
             </NavLink>
-          </li>
+
+            <Divider light />
+          </ListItem>
         );
       });
     }
@@ -51,8 +61,8 @@ function SideBar(props) {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <Grid justify="space-between" container className={classes.dropdown}>
-          <Grid item className="dropdown">
+        {/* <Grid justify="space-between" container className={classes.dropdown}> */}
+        {/* <Grid item className="dropdown">
             <Button
               variant="contained"
               className="btn btn-primary dropdown-toggle"
@@ -67,18 +77,44 @@ function SideBar(props) {
                 {showListResult(resultTest)}
               </ul>
             </div>
-          </Grid>
-          <Grid item>
+          </Grid> */}
+        {/* <Grid item>
             <Button variant="contained" endIcon={<AcUnitIcon />} size="small">
               Button
             </Button>
-          </Grid>
-        </Grid>
+          </Grid> */}
+        {/* </Grid> */}
         <div className={classes.menuDesktop}>
-          <div className={classes.tittle}>Danh sách bệnh nhân</div>
-          <ul className={classes.listMenu}>{showListResult(resultTest)}</ul>
+          <div className={classes.tittle}>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Tên bệnh nhân…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
+          </div>
+
+          <List
+            component="nav"
+            className={classes.listMenu}
+            aria-label="mailbox folders"
+          >
+            {showListResult(listPatients)}
+          </List>
         </div>
+        
+        <Divider />
+        <Divider />
+        <Divider />
       </Paper>
+
     </div>
   );
 }

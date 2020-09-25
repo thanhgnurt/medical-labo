@@ -4,10 +4,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import Feedback from "../Feedback";
-import Result from "../Result";
 import { changeTabResultAdvisoryFeedback } from "./../../../../redux/actions/userActions";
 import DoctorConsultation from "./../DoctorConsultation";
 import TabResult from "./../TabResult";
+import TableResult from './../TableResult';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,34 +19,26 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
 }));
-const showRequestResult = (props, newValue, id) => {
+const showRequestResult = (resultTest, newValue, id) => {
   switch (newValue) {
     case 0:
-      return <Result resultTest={props.resultTest} id={id} />;
+      return <TableResult resultTest={resultTest} id={id} />;
     case 1:
       return (
-        <DoctorConsultation resultTest={props.resultTest} idDefault={id} />
+        <DoctorConsultation resultTest={resultTest} idDefault={id} />
       );
     case 2:
       return <Feedback id={id} />;
 
     default:
-      return <Result resultTest={props.resultTest} id={id} />;
+      return <TableResult resultTest={resultTest} id={id} />;
   }
 };
 
 function PaperResultContainer(props) {
-  // const [showValue ,changeShowValue] = useState(0);
   const { showValueTabResult, changeTabResult } = props;
-  // const changeTabResult=(newValue)=>{
-  //   changeTabResult(newValue)
-  // }
   const classes = useStyles();
-  const { resultTest } = props;
-  let id = "";
-  if (resultTest.length > 0) {
-    id = resultTest[0].id;
-  }
+  const { resultTest, id } = props;
 
   return (
     <div className={classes.root}>
@@ -57,10 +49,10 @@ function PaperResultContainer(props) {
         />
         <Switch>
           <Route path="/ket-qua/:id">
-            {showRequestResult(props, showValueTabResult)}
+            {showRequestResult(resultTest, showValueTabResult)}
           </Route>
           <Route path="/ket-qua">
-            {showRequestResult(props, showValueTabResult, id)}
+            {showRequestResult(resultTest, showValueTabResult, id)}
           </Route>
         </Switch>
       </Paper>

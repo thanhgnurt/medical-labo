@@ -1,7 +1,7 @@
-import AddAlertIcon from '@material-ui/icons/AddAlert';
+// import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
+import AddIcon from '@material-ui/icons/Add';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
-// import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import React from "react";
 
 export const MENU_SCREEN_DOCTOR = [
@@ -36,9 +36,9 @@ export const MENU_SCREEN_DOCTOR = [
     }
   },
   {
-    name: "Tư vấn",
+    name: "Thêm bệnh nhân",
     to: "/ket-qua/tu-van",
-    icon: <AddAlertIcon />,
+    icon: <AddIcon />,
     scroll : {
       id : "ID_NOTE",
       offset : -55.5

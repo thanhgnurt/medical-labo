@@ -12,14 +12,15 @@ function ViewResultContainer(props) {
     },[fetchResultRequest])
   scroll.scrollTo(0);
   
-  return <ViewResult resultTest={props.resultTest} />;
+  return <ViewResult resultTest={props.resultTest} screenDoctor={props.screenDoctor}/>;
 
 }
 
 
 
 const mapStateToProps = state=>({
-    resultTest : state.resultTest
+    resultTest : state.resultTest,
+    screenDoctor : state.screenDoctor
 })
 
 const mapDispatchToProps=dispatch=>({

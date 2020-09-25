@@ -3,7 +3,7 @@ export const COLORS={
     DARK : "rgb(0, 0, 0)",
     BLUE : "rgb(24, 77, 250)",
     RED : "rgb(245, 37, 37)",
-    ORANGE : "rgb(218, 60, 50)",
+    ORANGE : "rgba(255, 17, 0)",
     GRAY : "rgb(128, 128, 128)",
     VIOLET : "rgb(90, 23, 245)",
     YELLOW : "rgba(209, 127, 19)",
